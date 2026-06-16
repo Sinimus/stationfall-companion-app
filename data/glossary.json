@@ -1,0 +1,1635 @@
+[
+  {
+    "id": "konspirator",
+    "nameCs": "Konspirátor",
+    "kind": "pojem",
+    "text": "Vaším konspirátorem je živá nezachráněná postava, na jejíž kartě máte alespoň jednu svou kostku vlivu a žádný jiný hráč na ní nemá větší počet kostek vlivu než vy. Pouze své konspirátory můžete aktivovat. Vaším konspirátorem je také vaše živá HP.",
+    "ruleRefs": [
+      "4.3",
+      "15.5.2"
+    ],
+    "seeAlso": [
+      "kostky-vlivu",
+      "limit-vlivu",
+      "aktivace",
+      "hracova-postava"
+    ]
+  },
+  {
+    "id": "hracova-postava",
+    "nameCs": "Hráčova postava (HP)",
+    "kind": "pojem",
+    "text": "Postava, kterou hráč již odhalil ze své skryté identity. Po odhalení se aktivují její Schopnosti po odhalení a může ji aktivovat jen tento hráč.",
+    "ruleRefs": [
+      "4.1.1",
+      "3.5"
+    ],
+    "seeAlso": [
+      "skryta-identita",
+      "cizi-postava",
+      "bonusova-postava",
+      "odhaleni"
+    ]
+  },
+  {
+    "id": "cizi-postava",
+    "nameCs": "Cizí postava (CP)",
+    "kind": "pojem",
+    "text": "Postava, kterou žádný hráč zatím neodhalil jako svou. Lze ji ovlivňovat a aktivovat jako konspirátora.",
+    "ruleRefs": [
+      "4.1.2"
+    ],
+    "seeAlso": [
+      "hracova-postava",
+      "konspirator"
+    ]
+  },
+  {
+    "id": "skryta-identita",
+    "nameCs": "Skrytá identita",
+    "kind": "pojem",
+    "text": "Na začátku hry si každý hráč zvolí jednu ze svých karet identity jako skrytou identitu (skrytá informace). Zbylé karty identity se stanou jeho bonusovými postavami. Skrytou identitu lze v průběhu hry odhalit, čímž se z ní stane hráčova postava.",
+    "ruleRefs": [
+      "3.4",
+      "3.5"
+    ],
+    "seeAlso": [
+      "hracova-postava",
+      "bonusova-postava",
+      "odhaleni",
+      "schrodingerovo-odhaleni"
+    ]
+  },
+  {
+    "id": "bonusova-postava",
+    "nameCs": "Bonusová postava (BP)",
+    "kind": "pojem",
+    "text": "Zbylé karty identity hráče (kromě skryté identity) jsou bonusové postavy, otočené o 180°. Hráč za ně získává bonusové body podle toho, zda je daná BP přítel (zachráněná) nebo nepřítel (vyřazená a nezachráněná).",
+    "ruleRefs": [
+      "3.4",
+      "16.4.5"
+    ],
+    "seeAlso": [
+      "skryta-identita",
+      "konec-hry-scoring"
+    ]
+  },
+  {
+    "id": "kostky-vlivu",
+    "nameCs": "Kostky vlivu",
+    "kind": "pojem",
+    "text": "Každý hráč má 8 kostek vlivu své barvy. Umisťováním kostek na karty postav získává nad nimi kontrolu (konspirátorství). Kostky nad limit vlivu mimo zásobu na konci hry stojí body.",
+    "ruleRefs": [
+      "15.4",
+      "2.5"
+    ],
+    "seeAlso": [
+      "limit-vlivu",
+      "konspirator",
+      "pole-zrady",
+      "ovlivneni"
+    ]
+  },
+  {
+    "id": "limit-vlivu",
+    "nameCs": "Limit vlivu",
+    "kind": "pojem",
+    "text": "Bílá kostka na kartě postavy udává nejvyšší počet kostek vlivu, které můžete mít mimo svou zásobu na konci hry při pádu stanice, aniž byste za ně ztratili body. Za každou kostku nad limit ztratíte 1 bod.",
+    "ruleRefs": [
+      "15.4.2",
+      "16.4.7"
+    ],
+    "seeAlso": [
+      "kostky-vlivu",
+      "konec-hry-scoring"
+    ]
+  },
+  {
+    "id": "pole-zrady",
+    "nameCs": "Pole zrady",
+    "kind": "pojem",
+    "text": "Při odhalení HP se na pole zrady přesunou všechny cizí kostky vlivu z karty této postavy. Kostky na poli zrady lze vrátit do zásoby akcí Meditace (pouze HP v Terapeutické zahradě).",
+    "ruleRefs": [
+      "15.3.1",
+      "13.10"
+    ],
+    "seeAlso": [
+      "odhaleni",
+      "meditace",
+      "kostky-vlivu"
+    ]
+  },
+  {
+    "id": "vlastnictvi",
+    "nameCs": "Vlastnictví",
+    "kind": "pojem",
+    "text": "Postava může vlastnit předměty (umístěné vpravo na kartě), data (nahoře) a úplatky (vlevo). Postava typu předmět nebo data nemůže vlastnit žádné předměty ani data, pokud nejsou integrální. Postava nemůže vlastnit více předmětů než její limit počtu předmětů.",
+    "ruleRefs": [
+      "4.5",
+      "8.4"
+    ],
+    "seeAlso": [
+      "data-pojem",
+      "integralni"
+    ]
+  },
+  {
+    "id": "integralni",
+    "nameCs": "Integrální předmět",
+    "kind": "pojem",
+    "text": "Integrální předměty nelze z vlastnictví postavy žádným způsobem odstranit. Mohou však být anihilovány určitými účinky nebo schopnostmi.",
+    "ruleRefs": [
+      "8.4"
+    ],
+    "seeAlso": [
+      "vlastnictvi"
+    ]
+  },
+  {
+    "id": "volna-akce",
+    "nameCs": "Volná akce",
+    "kind": "pojem",
+    "text": "Volné akce se nepočítají do limitu 1 nebo 2 akcí, které může konspirátor provést při své aktivaci. Typicky volné zvednutí/upuštění; některé schopnosti poskytují další volné akce.",
+    "ruleRefs": [
+      "11.3",
+      "15.5.3"
+    ],
+    "seeAlso": [
+      "aktivace",
+      "pohyb"
+    ]
+  },
+  {
+    "id": "ve-stejne-sekci",
+    "nameCs": "Ve své / stejné sekci",
+    "kind": "pojem",
+    "text": "Znamená, že se dvě komponenty nacházejí ve stejné sekci. Mnoho akcí (útok, okradení, předání, oživení) vyžaduje, aby byly cíl i aktér ve stejné sekci.",
+    "ruleRefs": [
+      "5.2"
+    ],
+    "seeAlso": [
+      "osvetlena-sekce",
+      "chodby"
+    ]
+  },
+  {
+    "id": "pud-sebezachovy",
+    "nameCs": "Pud sebezáchovy",
+    "kind": "pojem",
+    "text": "Pokud by akce postavy způsobila, že tato postava bude okamžitě vyřazena nebo anihilována, postava tuto akci nemůže provést (pokud to popis akce nedovoluje). Některé schopnosti pud sebezáchovy ignorují.",
+    "ruleRefs": [
+      "11.2"
+    ],
+    "seeAlso": [
+      "vyrazena",
+      "anihilovana"
+    ]
+  },
+  {
+    "id": "schrodingerovo-odhaleni",
+    "nameCs": "Schrödingerovo odhalení",
+    "kind": "pojem",
+    "text": "Hráč může odhodit svou skrytou identitu, aniž by ji odhalil, a místo toho odhalit svou BP, která se tím stane jeho HP. V takovém případě nezíská žádné bonusové body. Není možné ve hře 2 hráčů ani v týmové variantě.",
+    "ruleRefs": [
+      "3.5.1",
+      "15.3.1"
+    ],
+    "seeAlso": [
+      "odhaleni",
+      "skryta-identita",
+      "bonusova-postava"
+    ]
+  },
+  {
+    "id": "ziva",
+    "nameCs": "Živá",
+    "kind": "stav",
+    "text": "Živou postavu lze ovlivnit, aktivovat a může provádět akce. Je to postava, která není vyřazená ani anihilovaná.",
+    "ruleRefs": [
+      "4.6"
+    ],
+    "seeAlso": [
+      "vyrazena",
+      "anihilovana",
+      "konspirator"
+    ]
+  },
+  {
+    "id": "vyrazena",
+    "nameCs": "Vyřazená",
+    "kind": "stav",
+    "text": "Postava zneškodněná nebezpečím nebo útokem. Otočí se na vyřazenou stranu. Nemůže být ovlivněna, aktivována ani provádět akce. Stále vlastní své předměty (lze je zvednout jinými postavami). Vyřazený člověk/robot může být oživen nanogelem, robot i opravou.",
+    "ruleRefs": [
+      "4.6.1",
+      "4.6.2",
+      "12.11"
+    ],
+    "seeAlso": [
+      "ziva",
+      "anihilovana",
+      "nanogel",
+      "oziveni",
+      "oprava"
+    ]
+  },
+  {
+    "id": "anihilovana",
+    "nameCs": "Anihilovaná",
+    "kind": "stav",
+    "text": "Postava nebo předmět anihilovaný vlivem události. Figurka se odstraní z plánu a umístí žeton anihilace. Anihilované postavy a předměty jsou mimo hru – nelze je oživit, ovlivnit, aktivovat, vyjednávat s nimi; nepovažují se za zachráněné. Pro účely bodů se počítají jako vyřazené.",
+    "ruleRefs": [
+      "4.6.5",
+      "16.4.2"
+    ],
+    "seeAlso": [
+      "vyrazena",
+      "zachranena"
+    ]
+  },
+  {
+    "id": "zachranena",
+    "nameCs": "Zachráněná",
+    "kind": "stav",
+    "text": "Postavy, předměty a data v mezosféře (a v institucích) jsou zachráněné nezávisle na tom, zda jsou živé či vyřazené. Na kartu se umístí žeton záchrany. Postavy bez žetonu záchrany nebo s žetonem anihilace jsou nezachráněné. Zachráněné nelze ovlivnit, aktivovat ani s nimi vyjednávat.",
+    "ruleRefs": [
+      "4.6.6",
+      "16.4.1"
+    ],
+    "seeAlso": [
+      "mezosfera",
+      "anihilovana",
+      "unikovy-modul"
+    ]
+  },
+  {
+    "id": "kontaminovana",
+    "nameCs": "Kontaminovaná",
+    "kind": "stav",
+    "text": "Žeton kontaminace zabírá jedno místo pro předmět. Pokud postava nemá volné místo, musí jeden předmět upustit (nepočítá se jako akce). Postava může mít nejvýše 1 žeton kontaminace. Odstraní se akcí Dekontaminace (v Nádržích). Důležité pro úkoly některých postav.",
+    "ruleRefs": [
+      "8.5.1",
+      "13.4"
+    ],
+    "seeAlso": [
+      "dekontaminace"
+    ]
+  },
+  {
+    "id": "nevinny",
+    "nameCs": "Nevinný",
+    "kind": "stav",
+    "text": "Každý hráč začíná hru jako nevinný (ukazatel viny na poli „Nevinen“). Vinný hráč nemůže zvítězit, dokud se viny nezbaví.",
+    "ruleRefs": [
+      "3.2",
+      "10.1.1"
+    ],
+    "seeAlso": [
+      "podezrely",
+      "vinny"
+    ]
+  },
+  {
+    "id": "podezrely",
+    "nameCs": "Podezřelý",
+    "kind": "stav",
+    "text": "Aktivní hráč se stává podezřelým, pokud během své fáze aktivace provede akci, která způsobí, že je živý člověk vyřazen v osvětlené sekci, když jsou zapnuté kamery. Také pokud odmítne požadovanou akci při použití kompromatu na jeho nevinnou HP.",
+    "ruleRefs": [
+      "10.1",
+      "15.5.5.2"
+    ],
+    "seeAlso": [
+      "nevinny",
+      "vinny",
+      "kamery",
+      "kompromat"
+    ]
+  },
+  {
+    "id": "vinny",
+    "nameCs": "Vinný",
+    "kind": "stav",
+    "text": "Pokud hráč pošle důkazy úřadům (akce přenosu dat), všichni ostatní podezřelí hráči se stanou vinnými. Vinný hráč nemůže zvítězit (pokud mu to karta postavy neumožňuje ignorovat).",
+    "ruleRefs": [
+      "10.2"
+    ],
+    "seeAlso": [
+      "podezrely",
+      "dukazy",
+      "prenos-dat"
+    ]
+  },
+  {
+    "id": "helma",
+    "nameCs": "Helma",
+    "kind": "predmet",
+    "text": "Chrání člověka (nikoli robota) před nebezpečím, okradením a útoky pomocí hasáku. Člověk s helmou se vždy považuje za člověka s helmou; bez helmy za člověka bez helmy. Robot je vždy považován za postavu bez helmy.",
+    "ruleRefs": [
+      "8.1.1"
+    ],
+    "seeAlso": [
+      "ohen",
+      "uduseni",
+      "hasak",
+      "okradeni"
+    ]
+  },
+  {
+    "id": "nanogel",
+    "nameCs": "Nanogel",
+    "kind": "predmet",
+    "text": "Lze použít k oživení vyřazeného člověka, robota nebo nestvůry. Po použití otočte žeton z hodnoty „2“ na „1“, nebo jej vraťte do zásoby, pokud měl hodnotu „1“. Nelze oživit, pokud by byl tvor okamžitě vyřazen znovu.",
+    "ruleRefs": [
+      "8.1.2",
+      "12.11"
+    ],
+    "seeAlso": [
+      "oziveni",
+      "vyrazena"
+    ]
+  },
+  {
+    "id": "ohniva-bomba",
+    "nameCs": "Ohnivá bomba",
+    "kind": "predmet",
+    "text": "Může být upuštěna nebo hozena – v obou případech aktivní hráč rozhodne, zda ji zapálí, což způsobí oheň v dané sekci. V takovém případě se ohnivá bomba vrátí do zásoby.",
+    "ruleRefs": [
+      "8.1.3"
+    ],
+    "seeAlso": [
+      "ohen",
+      "hozeni"
+    ]
+  },
+  {
+    "id": "hasak",
+    "nameCs": "Hasák",
+    "kind": "predmet",
+    "text": "Lze použít k útoku na lidi bez helmy nebo roboty, k okradení nebo k poškození sekce (sabotáž). Hasákem nelze vyřadit Strážce.",
+    "ruleRefs": [
+      "8.1.4",
+      "12.8",
+      "12.9",
+      "12.10"
+    ],
+    "seeAlso": [
+      "utok",
+      "okradeni",
+      "sabotaz",
+      "pistole"
+    ]
+  },
+  {
+    "id": "pistole",
+    "nameCs": "Pistole",
+    "kind": "predmet",
+    "text": "Lze použít k útoku na libovolnou postavu (s helmou i bez) nebo nestvůru, k okradení libovolné živé postavy nebo k poškození sekce. Pistolí nelze okrást Kaskadérku ani Velitelku stanice.",
+    "ruleRefs": [
+      "8.1.5",
+      "12.8",
+      "12.9",
+      "12.10"
+    ],
+    "seeAlso": [
+      "utok",
+      "okradeni",
+      "sabotaz",
+      "hasak"
+    ]
+  },
+  {
+    "id": "artefakt",
+    "nameCs": "Artefakt",
+    "kind": "predmet",
+    "text": "Unikátní předmět důležitý pro úkoly některých postav. Nemá žádné zvláštní schopnosti.",
+    "ruleRefs": [
+      "8.2"
+    ],
+    "seeAlso": [
+      "kufrik"
+    ]
+  },
+  {
+    "id": "kufrik",
+    "nameCs": "Kufřík",
+    "kind": "predmet",
+    "text": "Unikátní předmět důležitý pro úkoly některých postav. Nemá žádné zvláštní schopnosti.",
+    "ruleRefs": [
+      "8.2"
+    ],
+    "seeAlso": [
+      "artefakt"
+    ]
+  },
+  {
+    "id": "antihmota",
+    "nameCs": "Antihmota",
+    "kind": "predmet",
+    "text": "Předmět, který se odjistí, pokud je přesunut mimo Magnetickou komoru nebo je spuštěna autodestrukce. Otočte ji na odjištěnou (červenou) stranu a zahajte evakuaci; umístěte žeton času 4 minuty do budoucnosti. Při vyhodnocení žetonu odjištěná antihmota exploduje. Pokud by měla být anihilována, místo toho okamžitě exploduje.",
+    "ruleRefs": [
+      "7.3",
+      "13.5",
+      "13.12"
+    ],
+    "seeAlso": [
+      "detonace-antihmoty",
+      "odhozeni-antihmoty",
+      "autodestrukce",
+      "evakuace"
+    ]
+  },
+  {
+    "id": "kompromat",
+    "nameCs": "Kompromat",
+    "kind": "predmet",
+    "text": "Lze jej zvednout jako předmět, ale aktivní hráč si jej vezme do své zásoby. Použitím kompromatu (jednou za tah) můžete provést jednu volnou akci s uvedenou postavou; pokud jde o CP, nebo můžete požádat postavu (přes hráče), aby provedla akci. Když hráč hrající za HP odmítne, stane se podezřelým. Hráč může mít libovolný počet kompromatů.",
+    "ruleRefs": [
+      "8.5.2",
+      "15.5.5"
+    ],
+    "seeAlso": [
+      "uplatek",
+      "podezrely",
+      "hracova-postava"
+    ]
+  },
+  {
+    "id": "uplatek",
+    "nameCs": "Úplatek",
+    "kind": "predmet",
+    "text": "Každý hráč začíná hru s jedním úplatkem. Jednou za tah jej může položit na kartu libovolné živé postavy (dosud nezachráněné), aby s ní provedl jednu volnou akci. Pokud jde o HP jiného hráče, ten může požadovanou akci po oznámení odmítnout (úplatek se vrátí). Nelze použít úplatek na vlastní HP. Nepoužitý úplatek = 1 bod.",
+    "ruleRefs": [
+      "15.5.4",
+      "16.4.6"
+    ],
+    "seeAlso": [
+      "kompromat",
+      "konec-hry-scoring"
+    ]
+  },
+  {
+    "id": "tajemstvi-x",
+    "nameCs": "Tajemství X",
+    "kind": "data",
+    "text": "Typ dat, který může být vyroben v Biolaboratoři. Jakmile aktivujete postavu, která vlastní tajemství X, můžete od té chvíle kdykoli nahlédnout na kartu Projektu X, aniž byste ji ukázali ostatním.",
+    "ruleRefs": [
+      "9.4.1"
+    ],
+    "seeAlso": [
+      "data-pojem",
+      "projekt-x",
+      "dukazy"
+    ]
+  },
+  {
+    "id": "dukazy",
+    "nameCs": "Důkazy",
+    "kind": "data",
+    "text": "Typ dat, který může být vyroben v Bezpečnostní stanici. Důležité pro podezření a vinu: přenosem důkazů úřadům se všichni ostatní podezřelí hráči stanou vinnými.",
+    "ruleRefs": [
+      "9.4.2",
+      "10.2.1"
+    ],
+    "seeAlso": [
+      "data-pojem",
+      "vinny",
+      "prenos-dat"
+    ]
+  },
+  {
+    "id": "data-pojem",
+    "nameCs": "Data",
+    "kind": "data",
+    "text": "Kosočtvercové žetony; nejsou předměty. Nelze je zvednout ani upustit. Lze je vyrobit, zkopírovat, smazat, ukrást jiné postavě nebo přenést institucím. Každá postava může vlastnit jen jednu kopii od každého typu dat.",
+    "ruleRefs": [
+      "9.1",
+      "9.2"
+    ],
+    "seeAlso": [
+      "tajemstvi-x",
+      "dukazy",
+      "kopirovani",
+      "prenos-dat",
+      "rusicky"
+    ]
+  },
+  {
+    "id": "ohen",
+    "nameCs": "Oheň",
+    "kind": "nebezpeci",
+    "text": "Nebezpečí ohně okamžitě poškodí každou sekci, ve které se nachází; takovou sekci nelze opravit. Oheň nemůže začít v sekci s nebezpečím udušení. Pokud se v sekci nachází oheň i udušení zároveň, oheň odstraňte. Lze odstranit akcí hasicího a odvětrávacího systému.",
+    "ruleRefs": [
+      "6.5",
+      "14.1"
+    ],
+    "seeAlso": [
+      "uduseni",
+      "poskozena-sekce",
+      "hasici-system",
+      "helma"
+    ]
+  },
+  {
+    "id": "uduseni",
+    "nameCs": "Nebezpečí udušení",
+    "kind": "nebezpeci",
+    "text": "Vyřazení lidé bez helmy nemohou být v sekci s udušením oživeni. Lidé bez helmy v sekci s udušením jsou vyřazeni. Lze odstranit akcí hasicího a odvětrávacího systému. V Okolním vesmíru se nachází neodstranitelné nebezpečí udušení.",
+    "ruleRefs": [
+      "6.2",
+      "6.3",
+      "6.4"
+    ],
+    "seeAlso": [
+      "ohen",
+      "helma",
+      "okolni-vesmir",
+      "hasici-system"
+    ]
+  },
+  {
+    "id": "okolni-vesmir",
+    "nameCs": "Okolní vesmír",
+    "kind": "nebezpeci",
+    "text": "Zvláštní sekce zahrnující veškerý vesmír v blízkosti stanice. Přístupný pouze přes přechodové komory. Nelze jej poškodit a jeho neodstranitelné nebezpečí udušení nelze odstranit. Při explozi antihmoty zde se anihiluje vše a poškodí se sekce se šipkami z a do Okolního vesmíru.",
+    "ruleRefs": [
+      "5.1.7",
+      "6.4",
+      "7.3.2"
+    ],
+    "seeAlso": [
+      "uduseni",
+      "prechodova-komora",
+      "detonace-antihmoty",
+      "mezosfera"
+    ]
+  },
+  {
+    "id": "uroven-energie",
+    "nameCs": "Úroveň energie",
+    "kind": "system",
+    "text": "Snižuje se, pokud je poškozena kterákoli ze tří napájecích sekcí (blesk). Při poškození napájecí sekce posuňte ukazatel doprava, při opravě doleva. Stanice začíná na „Běžné úrovni“.",
+    "ruleRefs": [
+      "7.2"
+    ],
+    "seeAlso": [
+      "zalozni-energie",
+      "blackout",
+      "napajeci-sekce"
+    ]
+  },
+  {
+    "id": "zalozni-energie",
+    "nameCs": "Záložní energie",
+    "kind": "system",
+    "text": "Pokud je poškozena právě jedna napájecí sekce, posuňte ukazatel na „Záložní energie“. Tím se vypnou kamery a rušičky a nemohou být zapnuty, dokud nebude tato sekce opravena.",
+    "ruleRefs": [
+      "7.2.1"
+    ],
+    "seeAlso": [
+      "uroven-energie",
+      "blackout",
+      "kamery",
+      "rusicky"
+    ]
+  },
+  {
+    "id": "blackout",
+    "nameCs": "Blackout",
+    "kind": "system",
+    "text": "Pokud jsou poškozeny alespoň dvě napájecí sekce, nastane blackout. Všechny sekce jsou považovány za temné. Nelze provádět akce ovládacího panelu ani akce sekcí (kromě vypuštění s odpočtem a přechodové komory). Zahajte evakuaci, ale neodstraňujte zámky. Spusťte Projekt X. Při blackoutu mají všichni lidé i roboti schopnost Proražení.",
+    "ruleRefs": [
+      "7.2.2"
+    ],
+    "seeAlso": [
+      "uroven-energie",
+      "zalozni-energie",
+      "osvetlena-sekce",
+      "prorazeni",
+      "evakuace",
+      "projekt-x"
+    ]
+  },
+  {
+    "id": "evakuace",
+    "nameCs": "Evakuace",
+    "kind": "system",
+    "text": "Může být zahájena jako akce sekce (Můstek, jen Důstojník) nebo automaticky v několika vyhrocených situacích (náhlé smrtelné ohrožení stanice). Po zahájení otočte žeton evakuace a odstraňte všechny zámky. Únikové moduly, jejichž jedinou podmínkou vypuštění je zahájení evakuace, mohou být odteď vypuštěny.",
+    "ruleRefs": [
+      "7.1",
+      "13.1"
+    ],
+    "seeAlso": [
+      "unikovy-modul",
+      "zamky",
+      "vstup-do-atmosfery",
+      "pad-stanice"
+    ]
+  },
+  {
+    "id": "vstup-do-atmosfery",
+    "nameCs": "Vstup do atmosféry",
+    "kind": "system",
+    "text": "Jakmile ukazatel minut dosáhne pole „0“, otočte žeton vstupu do atmosféry. Pokud je na něm zobrazena ohnivá koule, pád stanice nastane okamžitě. V opačném případě dojde k pádu stanice až na konci minuty „0“.",
+    "ruleRefs": [
+      "15.8.3"
+    ],
+    "seeAlso": [
+      "pad-stanice",
+      "evakuace",
+      "minuty"
+    ]
+  },
+  {
+    "id": "pad-stanice",
+    "nameCs": "Pád stanice",
+    "kind": "system",
+    "text": "Konec hry. Postupně posouvejte ukazatel minut a vyhodnocujte pokyny: odjištěná antihmota exploduje; neodhalení hráči odhalí; zachráněné HP poskytnou data institucím; spočítají se body. Vítězem je hráč s nejvíce body, který není vinen.",
+    "ruleRefs": [
+      "16"
+    ],
+    "seeAlso": [
+      "konec-hry-scoring",
+      "vstup-do-atmosfery",
+      "detonace-antihmoty"
+    ]
+  },
+  {
+    "id": "kamery",
+    "nameCs": "Kamery",
+    "kind": "system",
+    "text": "Zaznamenávají, když je nějaký člověk vyřazen v osvětlené sekci, což je důležité pro podezření. Mohou být vypnuty nebo zapnuty akcí sekce (v Bezpečnostní stanici). Při záložní energii a blackoutu jsou vypnuté.",
+    "ruleRefs": [
+      "7.5",
+      "13.14"
+    ],
+    "seeAlso": [
+      "podezrely",
+      "rusicky",
+      "osvetlena-sekce",
+      "zalozni-energie"
+    ]
+  },
+  {
+    "id": "rusicky",
+    "nameCs": "Rušičky",
+    "kind": "system",
+    "text": "Omezují možnosti kopírování dat mezi postavami. Při zapnutých rušičkách lze kopírovat data jen postavě ve stejné sekci. Při vypnutých rušičkách lze kopírovat data libovolné nezachráněné a neanihilované postavě. Zapínají/vypínají se akcí ovládacího panelu.",
+    "ruleRefs": [
+      "7.4",
+      "14.2"
+    ],
+    "seeAlso": [
+      "kopirovani",
+      "kamery",
+      "data-pojem",
+      "zalozni-energie"
+    ]
+  },
+  {
+    "id": "projekt-x",
+    "nameCs": "Projekt X",
+    "kind": "system",
+    "text": "Tajný experiment představovaný kartou Projektu X. Spustí se při blackoutu, akcí Spuštění Projektu X nebo poškozením Krypty X. Po spuštění otočte jeho kartu a řiďte se pokyny na ní (může přivést na plán nestvůru).",
+    "ruleRefs": [
+      "7.6",
+      "13.3"
+    ],
+    "seeAlso": [
+      "nestvura",
+      "spusteni-projektu-x",
+      "tajemstvi-x",
+      "spusteni-projektu-x-flow"
+    ]
+  },
+  {
+    "id": "nestvura",
+    "nameCs": "Nestvůra",
+    "kind": "system",
+    "text": "Protivník představovaný červenou figurkou, který může být umístěn na plán při spuštění určitých Projektů X. Nestvůra není postavou, ale může mít stejné schopnosti jako postava. Provádí své akce na konci tahu každého hráče podle pokynů na své kartě.",
+    "ruleRefs": [
+      "7.6.2",
+      "15.7.3"
+    ],
+    "seeAlso": [
+      "projekt-x"
+    ]
+  },
+  {
+    "id": "gravitace",
+    "nameCs": "Gravitace",
+    "kind": "sekce",
+    "text": "Modré sekce mají gravitaci. Růžové a zelené sekce mají nulovou gravitaci. Některé schopnosti (např. Narozen ve vesmíru) souvisejí s gravitací.",
+    "ruleRefs": [
+      "5.1.2"
+    ],
+    "seeAlso": [
+      "osvetlena-sekce",
+      "narozen-ve-vesmiru"
+    ]
+  },
+  {
+    "id": "osvetlena-sekce",
+    "nameCs": "Osvětlená / temná sekce",
+    "kind": "sekce",
+    "text": "Sekce jsou buď osvětlené, nebo temné (symbol temnoty). Temná sekce se nikdy nemůže stát osvětlenou. Osvětlenost je důležitá pro vyhodnocení podezření (kamery zaznamenávají vyřazení člověka v osvětlené sekci). Při blackoutu jsou všechny sekce temné.",
+    "ruleRefs": [
+      "5.1.3",
+      "7.2.2"
+    ],
+    "seeAlso": [
+      "kamery",
+      "podezrely",
+      "blackout"
+    ]
+  },
+  {
+    "id": "poskozena-sekce",
+    "nameCs": "Poškozená sekce",
+    "kind": "sekce",
+    "text": "Sekci lze poškodit (žeton poškození). Akce této sekce ani akce ovládacího panelu v ní nelze provádět, dokud není opravena (schopnost Provizorní oprava nebo Rozmontování). Poškození napájecích sekcí ovlivňuje úroveň energie.",
+    "ruleRefs": [
+      "5.1.4",
+      "5.1.5"
+    ],
+    "seeAlso": [
+      "sabotaz",
+      "provizorni-oprava",
+      "uroven-energie"
+    ]
+  },
+  {
+    "id": "chodby",
+    "nameCs": "Chodby",
+    "kind": "sekce",
+    "text": "Plné barevné čáry propojující sekce. Postavy se po nich pohybují akcí Pohyb.",
+    "ruleRefs": [
+      "5.3"
+    ],
+    "seeAlso": [
+      "pohyb",
+      "sachty",
+      "zamky"
+    ]
+  },
+  {
+    "id": "sachty",
+    "nameCs": "Šachty",
+    "kind": "sekce",
+    "text": "Žluté přerušované čáry propojující sekce. Skrz šachty nelze házet předměty. Pohybovat se skrz ně mohou jen postavy se schopností Tunelová krysa. Šachty nelze zamknout.",
+    "ruleRefs": [
+      "5.4"
+    ],
+    "seeAlso": [
+      "tunelova-krysa",
+      "chodby",
+      "zamky",
+      "hozeni"
+    ]
+  },
+  {
+    "id": "zamky",
+    "nameCs": "Zámky",
+    "kind": "sekce",
+    "text": "Zabraňují pohybu skrz některé chodby. Postavy se schopností Důstojník se mohou pohybovat skrz zámky, které se tím odstraní (nefunguje při blackoutu). Pohyb přes zámky (a jejich odstranění) je možný i při tažení vyřazené postavy Důstojníkem.",
+    "ruleRefs": [
+      "12.1.3",
+      "7.2.2.3"
+    ],
+    "seeAlso": [
+      "dustojnik",
+      "prorazeni",
+      "chodby",
+      "blackout"
+    ]
+  },
+  {
+    "id": "unikovy-modul",
+    "nameCs": "Únikový modul",
+    "kind": "sekce",
+    "text": "Zelené oddělitelné sekce umožňující záchranu ze stanice. Modul je obsazený, pokud se v něm nachází člověk, robot nebo nestvůra. Počet míst v modulu je omezen. Vypouští se akcí vypuštění s odpočtem, vypuštění ze sekce nebo vypuštění z Můstku. Při vypuštění poškozeného modulu dojde k jeho anihilaci se vším uvnitř.",
+    "ruleRefs": [
+      "5.5"
+    ],
+    "seeAlso": [
+      "mezosfera",
+      "vypusteni",
+      "zachranena",
+      "evakuace"
+    ]
+  },
+  {
+    "id": "mezosfera",
+    "nameCs": "Mezosféra",
+    "kind": "sekce",
+    "text": "Oblast na spodním okraji herního plánu. Všechno v mezosféře je zachráněno, mimo hru až do pádu stanice, a nemůže být nijak ovlivněno (pokud není řečeno jinak). Antihmota může v mezosféře explodovat.",
+    "ruleRefs": [
+      "5.6"
+    ],
+    "seeAlso": [
+      "zachranena",
+      "unikovy-modul",
+      "detonace-antihmoty"
+    ]
+  },
+  {
+    "id": "prechodova-komora",
+    "nameCs": "Přechodová komora",
+    "kind": "sekce",
+    "text": "Akce sekce: přesune postavu ve směru šipky z nebo do Okolního vesmíru; postava může táhnout jinou postavu (přechodová komora s sebou). Místo toho lze hodit předmět nebo vyhodit vyřazenou postavu do Okolního vesmíru. Nelze provést do poškozené sekce.",
+    "ruleRefs": [
+      "13.13"
+    ],
+    "seeAlso": [
+      "okolni-vesmir",
+      "hozeni",
+      "pohyb"
+    ]
+  },
+  {
+    "id": "napajeci-sekce",
+    "nameCs": "Napájecí sekce",
+    "kind": "sekce",
+    "text": "Sekce se symbolem blesku. Poškození napájecích sekcí ovlivňuje úroveň energie (jedna = záložní energie, dvě a více = blackout).",
+    "ruleRefs": [
+      "5.1.5",
+      "7.2"
+    ],
+    "seeAlso": [
+      "uroven-energie",
+      "zalozni-energie",
+      "blackout"
+    ]
+  },
+  {
+    "id": "pohyb",
+    "nameCs": "Pohyb",
+    "kind": "akce",
+    "text": "Přesuňte postavu do propojené sekce skrz chodbu. Postava se schopností Tunelová krysa se může přesouvat skrz šachty. Tažení: při pohybu může postava táhnout jinou vyřazenou postavu ve stejné sekci, a to nejvýše o jednu sekci.",
+    "ruleRefs": [
+      "12.1"
+    ],
+    "seeAlso": [
+      "chodby",
+      "sachty",
+      "zamky",
+      "tunelova-krysa",
+      "dustojnik"
+    ]
+  },
+  {
+    "id": "zvednuti",
+    "nameCs": "Zvednutí",
+    "kind": "akce",
+    "text": "Přesuňte předmět ve stejné sekci na kartu aktivované postavy (nyní jej vlastní). Nelze překročit limit počtu předmětů. Nelze zvednout předměty vlastněné živou postavou; lze zvednout předměty vyřazené postavy. Kompromat se při zvednutí přesune do zásoby aktivního hráče.",
+    "ruleRefs": [
+      "12.2"
+    ],
+    "seeAlso": [
+      "upusteni",
+      "predani",
+      "vlastnictvi",
+      "kompromat"
+    ]
+  },
+  {
+    "id": "upusteni",
+    "nameCs": "Upuštění",
+    "kind": "akce",
+    "text": "Přesuňte předmět z karty aktivované postavy do sekce, v níž se nachází.",
+    "ruleRefs": [
+      "12.3"
+    ],
+    "seeAlso": [
+      "zvednuti",
+      "hozeni"
+    ]
+  },
+  {
+    "id": "predani",
+    "nameCs": "Předání",
+    "kind": "akce",
+    "text": "Přesuňte předmět z karty aktivované postavy na kartu jiné postavy ve stejné sekci. Nelze předat, pokud by to překročilo limit příjemce. Předaný předmět nelze odmítnout.",
+    "ruleRefs": [
+      "12.4"
+    ],
+    "seeAlso": [
+      "zvednuti",
+      "upusteni"
+    ]
+  },
+  {
+    "id": "hozeni",
+    "nameCs": "Hození",
+    "kind": "akce",
+    "text": "Přesuňte vlastněný předmět do libovolné sekce propojené skrz chodbu bez zámku. Nelze házet skrz šachty. Do Okolního vesmíru lze házet jen akcí přechodové komory.",
+    "ruleRefs": [
+      "12.5"
+    ],
+    "seeAlso": [
+      "upusteni",
+      "sachty",
+      "prechodova-komora"
+    ]
+  },
+  {
+    "id": "kopirovani",
+    "nameCs": "Kopírování",
+    "kind": "akce",
+    "text": "Umístěte kopii jednoho typu vlastněných dat na kartu jiné postavy ve stejné sekci. Pokud jsou vypnuté rušičky, data můžete umístit na kartu libovolné postavy ve hře, která není zachráněná ani anihilovaná.",
+    "ruleRefs": [
+      "12.6"
+    ],
+    "seeAlso": [
+      "data-pojem",
+      "rusicky",
+      "prenos-dat",
+      "smazani"
+    ]
+  },
+  {
+    "id": "smazani",
+    "nameCs": "Smazání",
+    "kind": "akce",
+    "text": "Můžete vrátit jeden typ dat z karty své (a žádné jiné) HP do společné zásoby.",
+    "ruleRefs": [
+      "12.7"
+    ],
+    "seeAlso": [
+      "data-pojem",
+      "kopirovani"
+    ]
+  },
+  {
+    "id": "utok",
+    "nameCs": "Útok",
+    "kind": "akce",
+    "text": "Vlastní-li postava hasák, může vyřadit jednoho jiného robota, jiného člověka bez helmy nebo nestvůru ve stejné sekci. Vlastní-li pistoli, může vyřadit jednu libovolnou postavu nebo nestvůru ve stejné sekci.",
+    "ruleRefs": [
+      "12.8"
+    ],
+    "seeAlso": [
+      "hasak",
+      "pistole",
+      "okradeni",
+      "vyrazena"
+    ]
+  },
+  {
+    "id": "okradeni",
+    "nameCs": "Okradení",
+    "kind": "akce",
+    "text": "Vlastní-li postava hasák, může si vzít jeden předmět nebo kopii dat od živého robota nebo živého člověka bez helmy ve stejné sekci. Vlastní-li pistoli, může okrást libovolnou živou postavu ve stejné sekci. Nelze ukrást helmu člověku v sekci s nebezpečím, pokud by ho to okamžitě vyřadilo.",
+    "ruleRefs": [
+      "12.9"
+    ],
+    "seeAlso": [
+      "hasak",
+      "pistole",
+      "utok",
+      "helma"
+    ]
+  },
+  {
+    "id": "sabotaz",
+    "nameCs": "Sabotáž",
+    "kind": "akce",
+    "text": "Vlastní-li postava hasák nebo pistoli, může poškodit sekci, v níž se nachází (pokud tato sekce ještě není poškozená). Dokud není sekce opravena, nelze v ní provádět její akce sekce ani akce ovládacího panelu.",
+    "ruleRefs": [
+      "12.10"
+    ],
+    "seeAlso": [
+      "poskozena-sekce",
+      "hasak",
+      "pistole",
+      "uroven-energie"
+    ]
+  },
+  {
+    "id": "oziveni",
+    "nameCs": "Oživení",
+    "kind": "akce",
+    "text": "Vlastní-li postava nanogel, může v sekci, v níž se nachází, oživit jednoho vyřazeného člověka, robota nebo nestvůru. Po použití snižte hodnotu nanogelu o 1. Nelze oživit člověka, pokud by byl okamžitě vyřazen znovu (např. bez helmy v sekci s nebezpečím).",
+    "ruleRefs": [
+      "12.11"
+    ],
+    "seeAlso": [
+      "nanogel",
+      "vyrazena",
+      "oprava",
+      "uduseni"
+    ]
+  },
+  {
+    "id": "cekani",
+    "nameCs": "Čekání",
+    "kind": "akce",
+    "text": "Přeskočte akci. Můžete si vrátit svůj aktivační disk do své zásoby.",
+    "ruleRefs": [
+      "12.12"
+    ],
+    "seeAlso": [
+      "aktivace",
+      "vyjednavani"
+    ]
+  },
+  {
+    "id": "vyroba",
+    "nameCs": "Výroba",
+    "kind": "akce",
+    "text": "Akce sekce (Biolaboratoř, Chemická laboratoř, Nanotovárna, 3D tiskárna, Bezpečnostní stanice): vytvořte nový předmět nebo data – postava je nyní vlastní. Vyžaduje volnou pozici na předmět; pistole vyžaduje postavu se schopností Důstojník.",
+    "ruleRefs": [
+      "13.9"
+    ],
+    "seeAlso": [
+      "data-pojem",
+      "tajemstvi-x",
+      "dukazy",
+      "vlastnictvi"
+    ]
+  },
+  {
+    "id": "prenos-dat",
+    "nameCs": "Přenos dat",
+    "kind": "akce",
+    "text": "Akce sekce (Komunikační místnost): zkopírujte jeden typ dat, která vlastníte, jedné instituci (úřady nebo média). Tuto akci neovlivňují rušičky. Pokud jsou důkazy přeneseny úřadům, všichni ostatní podezřelí hráči se stanou vinnými.",
+    "ruleRefs": [
+      "13.2"
+    ],
+    "seeAlso": [
+      "data-pojem",
+      "dukazy",
+      "vinny",
+      "instituce"
+    ]
+  },
+  {
+    "id": "dekontaminace",
+    "nameCs": "Dekontaminace",
+    "kind": "akce",
+    "text": "Akce sekce (Nádrže): vraťte do společné zásoby žeton kontaminace z jedné libovolné postavy nacházející se v Nádržích.",
+    "ruleRefs": [
+      "13.4"
+    ],
+    "seeAlso": [
+      "kontaminovana"
+    ]
+  },
+  {
+    "id": "oprava",
+    "nameCs": "Oprava",
+    "kind": "akce",
+    "text": "Akce sekce (Dílna): oživte jednoho vyřazeného robota, který se v ní nachází.",
+    "ruleRefs": [
+      "13.11"
+    ],
+    "seeAlso": [
+      "vyrazena",
+      "oziveni",
+      "provizorni-oprava"
+    ]
+  },
+  {
+    "id": "meditace",
+    "nameCs": "Meditace",
+    "kind": "akce",
+    "text": "Akce sekce (Terapeutická zahrada, pouze HP): vezměte si zpět do své zásoby všechny své kostky vlivu z pole zrady.",
+    "ruleRefs": [
+      "13.10"
+    ],
+    "seeAlso": [
+      "pole-zrady",
+      "kostky-vlivu",
+      "hracova-postava"
+    ]
+  },
+  {
+    "id": "vypusteni",
+    "nameCs": "Vypuštění",
+    "kind": "akce",
+    "text": "Vypuštění únikového modulu do mezosféry. Tři varianty: vypuštění s odpočtem (umístí žeton času na modul), vypuštění ze sekce (okamžité, ze sousedního obsazeného modulu) a vypuštění z Můstku (okamžité, všechny způsobilé moduly, jen Důstojník po zahájení evakuace). Poškozený modul je při vypuštění anihilován i se vším uvnitř.",
+    "ruleRefs": [
+      "13.6",
+      "13.7",
+      "13.8"
+    ],
+    "seeAlso": [
+      "unikovy-modul",
+      "mezosfera",
+      "evakuace",
+      "dustojnik"
+    ]
+  },
+  {
+    "id": "autodestrukce",
+    "nameCs": "Autodestrukce",
+    "kind": "akce",
+    "text": "Akce sekce (Můstek, jen Důstojník): zahajte evakuaci a odjistěte antihmotu.",
+    "ruleRefs": [
+      "13.12"
+    ],
+    "seeAlso": [
+      "antihmota",
+      "evakuace",
+      "detonace-antihmoty",
+      "dustojnik"
+    ]
+  },
+  {
+    "id": "spusteni-projektu-x",
+    "nameCs": "Spuštění Projektu X",
+    "kind": "akce",
+    "text": "Akce sekce (Můstek nebo Kryolaboratoř, jen Důstojník): kromě spuštění Projektu X také automaticky zahajte evakuaci.",
+    "ruleRefs": [
+      "13.3"
+    ],
+    "seeAlso": [
+      "projekt-x",
+      "evakuace",
+      "dustojnik"
+    ]
+  },
+  {
+    "id": "odhozeni-antihmoty",
+    "nameCs": "Odhození antihmoty",
+    "kind": "akce",
+    "text": "Akce sekce (Magnetická komora): pokud se antihmota nachází v Magnetické komoře a nikdo ji nevlastní, přesuňte ji do Okolního vesmíru a odjistěte ji.",
+    "ruleRefs": [
+      "13.5"
+    ],
+    "seeAlso": [
+      "antihmota",
+      "okolni-vesmir",
+      "detonace-antihmoty"
+    ]
+  },
+  {
+    "id": "hasici-system",
+    "nameCs": "Hasicí a odvětrávací systém",
+    "kind": "akce",
+    "text": "Akce ovládacího panelu: v jedné sekci změňte nebezpečí ohně na nebezpečí udušení nebo odstraňte nebezpečí udušení.",
+    "ruleRefs": [
+      "14.1"
+    ],
+    "seeAlso": [
+      "ohen",
+      "uduseni"
+    ]
+  },
+  {
+    "id": "instituce",
+    "nameCs": "Instituce",
+    "kind": "pojem",
+    "text": "Dva subjekty (úřady a média), které mohou obdržet kopii dat. Data v institucích jsou zachráněná a mohou být důležitá pro úkoly a podezření. Přenos dat probíhá přes Komunikační místnost.",
+    "ruleRefs": [
+      "9.6"
+    ],
+    "seeAlso": [
+      "prenos-dat",
+      "dukazy",
+      "zachranena"
+    ]
+  },
+  {
+    "id": "aktivace",
+    "nameCs": "Aktivace",
+    "kind": "pojem",
+    "text": "Fáze tahu: umístěte svůj aktivační disk na kartu svého živého konspirátora a proveďte s ním jednu akci (pokud je vyčerpaný), nebo dvě akce (pokud vyčerpaný není). Lze použít úplatek a kompromat.",
+    "ruleRefs": [
+      "15.5"
+    ],
+    "seeAlso": [
+      "konspirator",
+      "vyjednavani",
+      "uplatek",
+      "kompromat",
+      "volna-akce"
+    ]
+  },
+  {
+    "id": "vyjednavani",
+    "nameCs": "Vyjednávání",
+    "kind": "pojem",
+    "text": "Namísto aktivace si vraťte svůj aktivační disk do své zásoby. V této fázi nelze provést žádné akce. Navíc si můžete vrátit jednu kostku vlivu z karty postavy, která není zachráněná ani anihilovaná.",
+    "ruleRefs": [
+      "15.6"
+    ],
+    "seeAlso": [
+      "aktivace",
+      "kostky-vlivu"
+    ]
+  },
+  {
+    "id": "odhaleni",
+    "nameCs": "Odhalení",
+    "kind": "pojem",
+    "text": "Volitelná první fáze tahu: odhalte svou skrytou identitu. Položte kartu lícem nahoru, umístěte žeton odhalení, vezměte si kostky vlivu z této karty zpět do zásoby a přesuňte všechny ostatní kostky vlivu z této karty na pole zrady. Aktivují se schopnosti po odhalení.",
+    "ruleRefs": [
+      "15.3"
+    ],
+    "seeAlso": [
+      "skryta-identita",
+      "hracova-postava",
+      "pole-zrady",
+      "schrodingerovo-odhaleni"
+    ]
+  },
+  {
+    "id": "minuty",
+    "nameCs": "Minuty (kola)",
+    "kind": "pojem",
+    "text": "Hra trvá 10–15 kol zvaných minuty (podle počtu hráčů). V každé minutě všichni hráči odehrají svůj tah, počínaje začínajícím hráčem a dále po směru hodinových ručiček. Na konci minuty se posune ukazatel minut.",
+    "ruleRefs": [
+      "15.1",
+      "15.8"
+    ],
+    "seeAlso": [
+      "vstup-do-atmosfery",
+      "pad-stanice",
+      "evakuace"
+    ]
+  },
+  {
+    "id": "dustojnik",
+    "nameCs": "Důstojník",
+    "kind": "schopnost",
+    "category": "pohybove",
+    "text": "Pokud nenastal blackout, může se postava pohybovat (nebo být tažena, pokud je vyřazená) skrz zámky, které jsou tím odstraněny. Důstojník je vyžadován pro řadu akcí na Můstku (evakuace, autodestrukce, vypuštění z Můstku, spuštění Projektu X) a pro výrobu pistole.",
+    "ruleRefs": [
+      "12.1.3"
+    ],
+    "relatedCharacterIds": [
+      "agentka",
+      "inzenyr",
+      "plukovnik",
+      "poradce",
+      "velitelka-stanice"
+    ],
+    "seeAlso": [
+      "zamky",
+      "evakuace",
+      "autodestrukce",
+      "vypusteni",
+      "blackout"
+    ]
+  },
+  {
+    "id": "tunelova-krysa",
+    "nameCs": "Tunelová krysa",
+    "kind": "schopnost",
+    "category": "pohybove",
+    "text": "Postava se může pohybovat skrz šachty.",
+    "ruleRefs": [
+      "5.4.2"
+    ],
+    "relatedCharacterIds": [
+      "astrosimpanz",
+      "cerna-pasazerka",
+      "opravarka"
+    ],
+    "seeAlso": [
+      "sachty",
+      "pohyb"
+    ]
+  },
+  {
+    "id": "narozen-ve-vesmiru",
+    "nameCs": "Narozen ve vesmíru",
+    "kind": "schopnost",
+    "category": "pohybove",
+    "text": "Namísto volné akce zvednutí nebo upuštění může postava provést volnou akci pohybu nebo přesunu přechodovou komorou do sekce s nulovou gravitací.",
+    "relatedCharacterIds": [
+      "astrosimpanz",
+      "botanik",
+      "udrzbarske-klony"
+    ],
+    "seeAlso": [
+      "gravitace",
+      "prechodova-komora",
+      "volna-akce"
+    ]
+  },
+  {
+    "id": "vedec",
+    "nameCs": "Vědec",
+    "kind": "schopnost",
+    "category": "doplnkove",
+    "text": "Namísto volné akce zvednutí nebo upuštění může postava provést volnou akci sekce.",
+    "relatedCharacterIds": [
+      "botanik",
+      "doktorka-hyde",
+      "doktorka-jekyll",
+      "mikrobiolozka"
+    ],
+    "seeAlso": [
+      "volna-akce"
+    ]
+  },
+  {
+    "id": "provizorni-oprava",
+    "nameCs": "Provizorní oprava",
+    "kind": "schopnost",
+    "category": "doplnkove",
+    "text": "Jako akci může postava opravit sekci, ve které se nachází, nebo vyřazeného robota ve stejné sekci.",
+    "ruleRefs": [
+      "5.1.4"
+    ],
+    "relatedCharacterIds": [
+      "inzenyr",
+      "opravarka",
+      "udrzbarske-klony"
+    ],
+    "seeAlso": [
+      "poskozena-sekce",
+      "oprava",
+      "vyrazena"
+    ]
+  },
+  {
+    "id": "rozmontovani",
+    "nameCs": "Rozmontování",
+    "kind": "schopnost",
+    "category": "doplnkove",
+    "text": "Jako akci se mohou Drony vyřadit a za to opravit sekci, v níž se nachází, nebo robota v ní. Přitom ignorují pud sebezáchovy.",
+    "relatedCharacterIds": [
+      "drony"
+    ],
+    "seeAlso": [
+      "poskozena-sekce",
+      "pud-sebezachovy"
+    ]
+  },
+  {
+    "id": "hacker",
+    "nameCs": "Hacker",
+    "kind": "schopnost",
+    "category": "ovladaci-panel",
+    "text": "Namísto volné akce zvednutí nebo upuštění může postava provést volnou akci ovládacího panelu. Pokud jsou vypnuté rušičky, může provádět akce ovládacího panelu v libovolné sekci.",
+    "ruleRefs": [
+      "11.6"
+    ],
+    "relatedCharacterIds": [
+      "cerna-pasazerka",
+      "vyhnanec"
+    ],
+    "seeAlso": [
+      "akce-ovladaciho-panelu",
+      "rusicky",
+      "volna-akce"
+    ]
+  },
+  {
+    "id": "ai-schopnost",
+    "nameCs": "AI",
+    "kind": "schopnost",
+    "category": "ovladaci-panel",
+    "text": "Může provádět pouze akce ovládacího panelu. Postavy, které vlastní Digitálního asistenta, se při provádění akcí sekcí považují za postavy se schopností Důstojník a k vypuštění únikových modulů nevyžadují zahájení evakuace.",
+    "ruleRefs": [
+      "11.6"
+    ],
+    "relatedCharacterIds": [
+      "digitalni-asistent"
+    ],
+    "seeAlso": [
+      "akce-ovladaciho-panelu",
+      "dustojnik"
+    ]
+  },
+  {
+    "id": "dalkove-ovladani",
+    "nameCs": "Dálkové ovládání",
+    "kind": "schopnost",
+    "category": "ovladaci-panel",
+    "text": "Drony nelze uplatit, ovlivnit ani přímo aktivovat. Libovolná postava může provést jednu akci s libovolným živým Dronem pomocí akce ovládacího panelu.",
+    "relatedCharacterIds": [
+      "drony"
+    ],
+    "seeAlso": [
+      "akce-ovladaciho-panelu"
+    ]
+  },
+  {
+    "id": "psanec",
+    "nameCs": "Psanec",
+    "kind": "schopnost",
+    "category": "doplnkove",
+    "text": "Žádná akce s touto postavou ani proti ní nezpůsobí, že se hráč stane podezřelým.",
+    "ruleRefs": [
+      "10.1.2"
+    ],
+    "relatedCharacterIds": [
+      "kyborg",
+      "piratka"
+    ],
+    "seeAlso": [
+      "podezrely"
+    ]
+  },
+  {
+    "id": "paranoia",
+    "nameCs": "Paranoia",
+    "kind": "schopnost",
+    "category": "konspiracni",
+    "text": "Aby jej aktivní hráč ovlivnil, musí mít jiného konspirátora ve stejné sekci. Nelze jej uplatit.",
+    "relatedCharacterIds": [
+      "plukovnik",
+      "telepaticka-krysa"
+    ],
+    "seeAlso": [
+      "ovlivneni",
+      "konspirator",
+      "uplatek"
+    ]
+  },
+  {
+    "id": "vernost",
+    "nameCs": "Věrnost",
+    "kind": "schopnost",
+    "category": "konspiracni",
+    "text": "K ovlivnění musíte na tuto kartu umístit alespoň o 1 kostku vlivu více, než na ní právě leží. Poté vraťte všechny cizí kostky vlivu z této karty do zásob příslušných hráčů.",
+    "relatedCharacterIds": [
+      "astrosimpanz",
+      "mikrobiolozka"
+    ],
+    "seeAlso": [
+      "ovlivneni",
+      "kostky-vlivu"
+    ]
+  },
+  {
+    "id": "uzitecnost",
+    "nameCs": "Užitečnost",
+    "kind": "schopnost",
+    "category": "konspiracni",
+    "text": "Každý hráč může mít na kartě této postavy nejvýše 1 kostku vlivu.",
+    "relatedCharacterIds": [
+      "digitalni-asistent",
+      "medik"
+    ],
+    "seeAlso": [
+      "ovlivneni",
+      "kostky-vlivu"
+    ]
+  },
+  {
+    "id": "neunavnost",
+    "nameCs": "Neúnavnost",
+    "kind": "schopnost",
+    "category": "konspiracni",
+    "text": "Tato postava je vyčerpaná, pouze pokud na její kartě leží dva nebo více aktivačních disků.",
+    "relatedCharacterIds": [
+      "cizinec",
+      "kyborg"
+    ],
+    "seeAlso": [
+      "aktivace"
+    ]
+  },
+  {
+    "id": "rozstepena-osobnost",
+    "nameCs": "Rozštěpená osobnost",
+    "kind": "schopnost",
+    "category": "konspiracni",
+    "text": "Postava má dvě karty identity (Doktorka Hyde a Doktorka Jekyll).",
+    "relatedCharacterIds": [
+      "doktorka-hyde",
+      "doktorka-jekyll"
+    ],
+    "seeAlso": [
+      "skryta-identita"
+    ]
+  },
+  {
+    "id": "hrdost",
+    "nameCs": "Hrdost",
+    "kind": "schopnost",
+    "category": "obranne",
+    "text": "Postavu nelze okrást.",
+    "relatedCharacterIds": [
+      "kaskaderka",
+      "velitelka-stanice"
+    ],
+    "seeAlso": [
+      "okradeni"
+    ]
+  },
+  {
+    "id": "ukecani",
+    "nameCs": "Ukecání",
+    "kind": "schopnost",
+    "category": "obranne",
+    "text": "V osvětlených sekcích na ni nemohou zaútočit lidé pomocí hasáku.",
+    "relatedCharacterIds": [
+      "spolecnik",
+      "vyhnanec"
+    ],
+    "seeAlso": [
+      "utok",
+      "hasak",
+      "osvetlena-sekce"
+    ]
+  },
+  {
+    "id": "pancerovani",
+    "nameCs": "Pancéřování",
+    "kind": "schopnost",
+    "category": "obranne",
+    "text": "Nelze na něj zaútočit hasákem ani jej pomocí hasáku okrást.",
+    "relatedCharacterIds": [
+      "strazce"
+    ],
+    "seeAlso": [
+      "utok",
+      "okradeni",
+      "hasak"
+    ]
+  },
+  {
+    "id": "mirotvurce",
+    "nameCs": "Mírotvůrce",
+    "kind": "schopnost",
+    "category": "obranne",
+    "text": "Může útočit pouze na postavy se schopností Psanec, nestvůry a na HP, za kterou hraje podezřelý nebo vinný hráč. Nemůže sabotovat.",
+    "relatedCharacterIds": [
+      "strazce"
+    ],
+    "seeAlso": [
+      "utok",
+      "psanec",
+      "sabotaz"
+    ]
+  },
+  {
+    "id": "prachac",
+    "nameCs": "Pracháč",
+    "kind": "schopnost",
+    "category": "obranne",
+    "text": "Postavu nelze uplatit. Po její aktivaci může hráč použít šedý úplatek místo svého. Za šedé úplatky lze získat body, pouze pokud je Miliardář zachráněn.",
+    "relatedCharacterIds": [
+      "miliardar"
+    ],
+    "seeAlso": [
+      "uplatek"
+    ]
+  },
+  {
+    "id": "live-stream",
+    "nameCs": "Live stream",
+    "kind": "schopnost",
+    "category": "obranne",
+    "text": "Pokud jsou vypnuté rušičky, sekce, v nichž se nachází Miliardář a/nebo Fufík, jsou považovány za osvětlené a se zapnutými kamerami.",
+    "relatedCharacterIds": [
+      "miliardar"
+    ],
+    "seeAlso": [
+      "rusicky",
+      "kamery",
+      "osvetlena-sekce"
+    ]
+  },
+  {
+    "id": "akce-ovladaciho-panelu",
+    "nameCs": "Akce ovládacího panelu",
+    "kind": "akce",
+    "text": "Akce v oranžových sekcích s ovládacím panelem (Hlavní počítač, Bezpečnostní stanice): Hasicí a odvětrávací systém a Zapnutí/vypnutí rušiček. Mohou je provádět jen postavy se schopností Hacker nebo AI; vyžadují nepoškozenou sekci.",
+    "ruleRefs": [
+      "11.6",
+      "14"
+    ],
+    "seeAlso": [
+      "hacker",
+      "ai-schopnost",
+      "hasici-system",
+      "rusicky"
+    ]
+  },
+  {
+    "id": "prorazeni",
+    "nameCs": "Proražení",
+    "kind": "schopnost",
+    "category": "utocne",
+    "text": "Jako akci může postava odstranit sousední zámek. Při blackoutu mají tuto schopnost všichni lidé i roboti.",
+    "ruleRefs": [
+      "7.2.2.2"
+    ],
+    "relatedCharacterIds": [
+      "piratka"
+    ],
+    "seeAlso": [
+      "zamky",
+      "blackout"
+    ]
+  },
+  {
+    "id": "ovlivneni",
+    "nameCs": "Ovlivnění",
+    "kind": "pojem",
+    "text": "Volitelná fáze tahu: umístěte libovolný počet kostek vlivu ze své zásoby na jednu kartu postavy, která není vyřazená, zachráněná, anihilovaná ani HP. Tím získáváte/posilujete konspirátorství.",
+    "ruleRefs": [
+      "15.4"
+    ],
+    "seeAlso": [
+      "kostky-vlivu",
+      "konspirator",
+      "limit-vlivu"
+    ]
+  }
+]

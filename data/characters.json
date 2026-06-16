@@ -1,0 +1,1866 @@
+[
+  {
+    "id": "agentka",
+    "nameCs": "Agentka",
+    "type": "clovek",
+    "influenceLimit": 5,
+    "address": "Ona",
+    "setup": "Vedle karty Agentky umístěte 3 žetony pastí (?). Začíná v sekci Apartmá.",
+    "startSection": "Apartmá",
+    "abilities": [
+      {
+        "name": "Důstojník",
+        "category": "pohybove",
+        "text": "Pokud nenastal blackout, může se pohybovat (nebo být tažena, pokud je vyřazená) skrz zámky, které jsou tím odstraněny.",
+        "isReveal": false
+      },
+      {
+        "name": "EMP",
+        "category": "utocne",
+        "text": "Jako akci může poškodit sekci, v níž se nachází, vyřadit v ní všechny roboty a smazat v ní všechna data.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Granáty s nervovým plynem",
+        "category": "utocne",
+        "text": "Jako akci může umístit nebezpečí udušení do sekce, v níž se nachází, nebo do sekce, kam dohodí.",
+        "isReveal": true
+      },
+      {
+        "name": "Mina",
+        "category": "utocne",
+        "text": "Při odhalení se podívejte na 3 žetony pastí (?) a pak je umístěte lícem dolů do tří různých sekcí. Pokud do dané sekce vstoupí člověk, robot nebo nestvůra, žeton pasti otočte. Pokud je to opravdová past, danou postavu nebo nestvůru vyřaďte. Pasti nemají vliv na podezření, vinu ani pud sebezáchovy.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "ZAMETENÍ DŮKAZŮ",
+    "agendas": [
+      {
+        "text": "pokud nejsou zachráněny důkazy",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud není zachráněno tajemství X",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud není zachráněna žádná HP, za kterou hraje nevinný hráč",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud není zachráněna žádná kontaminovaná postava",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud není zachráněn žádný robot",
+        "points": 1,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Nepřítel: 2 body, pokud je Agentka vaší BP a není živá ani zachráněna.",
+    "edgeCases": [
+      "EMP (elektromagnetický impuls) je vysoce intenzivní, širokopásmový, velmi krátkou dobu trvající výron elektromagnetické energie, který dokáže poškodit elektronická zařízení.",
+      "Mina nereaguje na Entropický přízrak ani Chapadlovitou nestvůrnost."
+    ],
+    "tips": [
+      "Snažte se udržet rušičky zapnuté, aby bylo obtížné zkopírovat data.",
+      "Pomocí svého EMP můžete smazat data a vyřadit roboty.",
+      "Použití kompromatu na HP ve správný okamžik vám může pomoci z hráčů udělat podezřelé.",
+      "Kontaminované postavy můžete dekontaminovat v Nádržích.",
+      "Využijte své schopnosti po odhalení k vyřazování ostatních postav."
+    ]
+  },
+  {
+    "id": "astrosimpanz",
+    "nameCs": "Astrošimpanz",
+    "type": "clovek",
+    "influenceLimit": 5,
+    "address": "On",
+    "setup": "Začíná v sekci Kuchyně.",
+    "startSection": "Kuchyně",
+    "abilities": [
+      {
+        "name": "Tunelová krysa",
+        "category": "pohybove",
+        "text": "Může se pohybovat skrz šachty.",
+        "isReveal": false
+      },
+      {
+        "name": "Věrnost",
+        "category": "konspiracni",
+        "text": "K ovlivnění musíte na tuto kartu umístit alespoň o 1 kostku vlivu více, než na ní právě leží. Poté vraťte všechny cizí kostky vlivu z této karty do zásob příslušných hráčů.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Narozen ve vesmíru",
+        "category": "pohybove",
+        "text": "Namísto volné akce zvednutí nebo upuštění může provést volnou akci pohybu nebo přesunu přechodovou komorou do sekce s nulovou gravitací.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "LESKLÉ VĚCIČKY",
+    "agendas": [
+      {
+        "text": "pokud je Astrošimpanz zachráněn",
+        "points": 3,
+        "isPlus": false
+      },
+      {
+        "text": "pokud vlastní kufřík",
+        "points": 2,
+        "isPlus": true
+      },
+      {
+        "text": "pokud vlastní artefakt",
+        "points": 2,
+        "isPlus": true
+      },
+      {
+        "text": "pokud vlastní pistoli",
+        "points": 2,
+        "isPlus": true
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Astrošimpanz vaší BP a je zachráněn.",
+    "edgeCases": [
+      "Astrošimpanz je považován za člověka (hej, je shodný z 99 %, to stačí!)."
+    ],
+    "tips": [
+      "Artefakt se nachází ve Fyzikální laboratoři, kufřík v Apartmá.",
+      "Pistoli může vyrobit postava se schopností Důstojník v 3D tiskárně nebo ji můžete získat od jiné postavy.",
+      "Po odhalení se může Astrošimpanz pohybovat velmi rychle. A pokud dostane do svých špinavých pracek pistoli a helmu, stane se z něj jedna z nejnebezpečnějších postav ve hře."
+    ]
+  },
+  {
+    "id": "botanik",
+    "nameCs": "Botanik",
+    "type": "clovek",
+    "influenceLimit": 5,
+    "address": "On",
+    "setup": "Začíná v sekci Hydroponika; Adélka začíná v sekci Hydroponika. Na herní plán vedle Hydroponiky umístěte žeton schopnosti Nakrm mě!.",
+    "startSection": "Hydroponika",
+    "abilities": [
+      {
+        "name": "Narozen ve vesmíru",
+        "category": "pohybove",
+        "text": "Namísto volné akce zvednutí nebo upuštění může provést volnou akci pohybu nebo přesunu přechodovou komorou do sekce s nulovou gravitací.",
+        "isReveal": false
+      },
+      {
+        "name": "Vědec",
+        "category": "doplnkove",
+        "text": "Namísto volné akce zvednutí nebo upuštění může provést volnou akci sekce.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Kreatropismus",
+        "category": "utocne",
+        "text": "Pokud není ve fázi aktivace hráče, jehož HP je Botanik, Adélka vlastněna živou postavou, může Adélka provést volnou akci pohybu nebo přesunu přechodovou komorou nebo anihilovat vyřazeného člověka ve stejné sekci (ten upustí vlastněné předměty a jeho figurka je umístěna na kartu Botanika).",
+        "isReveal": true
+      },
+      {
+        "name": "Nakrm mě!",
+        "category": "utocne",
+        "text": "Pokud vlastníte Adélku, můžete jako akci anihilovat vyřazeného člověka ve stejné sekci, který přitom upustí všechny jím vlastněné předměty. Jeho figurku umístěte na kartu Botanika.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "KRVAVÁ SVAČINKA",
+    "agendas": [
+      {
+        "text": "pokud je Botanik zachráněn",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud je kontaminován",
+        "points": 1,
+        "isPlus": true
+      },
+      {
+        "text": "pokud je zachráněna Adélka",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "za každého člověka, kterého Adélka anihilovala",
+        "points": 2,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Botanik vaší BP a je zachráněna Adélka. (Botanikovi jde především o přežití jeho jediné pravé lásky, jeho vlastní osud je podružný.)",
+    "edgeCases": [
+      "Adélka je předmět. Postava, která vlastní Adélku, si vezme žeton schopnosti Nakrm mě! a může provádět akci této schopnosti."
+    ],
+    "tips": [
+      "Vyhledávejte vyřazené postavy a nakrmte jimi Adélku.",
+      "Pro svou ochranu získejte helmu.",
+      "Kontaminujte se v Biolaboratoři.",
+      "Využívejte schopnost Narozen ve vesmíru k dodatečnému pohybu.",
+      "Po odhalení můžete obvykle v každém tahu při aktivaci libovolné postavy navíc provést s Adélkou její volnou akci."
+    ]
+  },
+  {
+    "id": "cizinec",
+    "nameCs": "Cizinec",
+    "type": "clovek",
+    "influenceLimit": 6,
+    "address": "Oni",
+    "setup": "Začíná v sekci Nanotovárna.",
+    "startSection": "Nanotovárna",
+    "abilities": [
+      {
+        "name": "Neúnavnost",
+        "category": "konspiracni",
+        "text": "Tato postava je vyčerpaná, pouze pokud na její kartě leží dva nebo více aktivačních disků.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Důkladná příprava",
+        "category": "doplnkove",
+        "text": "Při odhalení můžete otočit kartu své BP a provést s ní jednu akci.",
+        "isReveal": true
+      },
+      {
+        "name": "Záhada",
+        "category": "konspiracni",
+        "text": "Pokud provedete Schrödingerovo odhalení jako Cizinec, neodhazujte druhou kartu identity, ale ponechte si ji jako BP. V takovém případě přijdete o svou schopnost Neúnavnost.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "JE TO OSOBNÍ",
+    "agendas": [
+      {
+        "text": "pokud skrytá identita Cizince nebyla odhalena před pádem stanice",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "pokud vlastní tajemství X",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "pokud získá bonusové body",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud je živý a ve stejné sekci s alespoň jednou svou BP",
+        "points": 2,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Cizinec vaší BP a je zachráněn.",
+    "edgeCases": [
+      "Schopnost Důkladná příprava není standardním odhalením, tzn. z karty BP se neodhazují kostky apod. Při hře tří hráčů otočte kartu jedné své BP (a proveďte s ní jednu akci), kartu druhé BP ponechte skrytou."
+    ],
+    "tips": [
+      "Zaměřte se hlavně na získání bodů za svou BP a přitom udržujte Cizince v její blízkosti.",
+      "Pokud chcete svou BP zachránit, snažte se zahájit evakuaci co nejdříve, např. postavou se schopností Důstojník z Můstku, příp. způsobením blackoutu nebo spuštěním Projektu X.",
+      "Váš maximální dosažitelný počet bodů je nižší než u ostatních postav, proto se snažte odhadnout záměry vašich soupeřů a aktivně narušovat plnění jejich úkolů."
+    ]
+  },
+  {
+    "id": "digitalni-asistent",
+    "nameCs": "Digitální asistent",
+    "type": "data",
+    "influenceLimit": 5,
+    "address": "To",
+    "setup": "Do společné zásoby umístěte žetony Digitálního asistenta. Přes textovou bublinu sekce Hlavní počítač umístěte žeton „Hlavní počítač\". Pod ostatní akce ovládacího panelu umístěte žeton „Lockdown\".",
+    "abilities": [
+      {
+        "name": "AI",
+        "category": "ovladaci-panel",
+        "text": "Může provádět pouze akce ovládacího panelu. Postavy, které vlastní Digitálního asistenta, se při provádění akcí sekcí považují za postavy se schopností Důstojník a k vypuštění únikových modulů nevyžadují zahájení evakuace.",
+        "isReveal": false
+      },
+      {
+        "name": "Užitečnost",
+        "category": "konspiracni",
+        "text": "Každý hráč může mít na kartě této postavy nejvýše 1 kostku vlivu.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Root Access",
+        "category": "ovladaci-panel",
+        "text": "Jako akci může provést jednu akci s libovolným robotem, který vlastní Digitálního asistenta a není dosud zachráněn. Přitom ignorujte pud sebezáchovy.",
+        "isReveal": true
+      },
+      {
+        "name": "Trojský kůň",
+        "category": "konspiracni",
+        "text": "Při odhalení umístěte Digitálního asistenta do vlastnictví jedné postavy, která není zachráněna a vlastní důkazy nebo tajemství X.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "DIGITÁLNÍ REPRODUKCE",
+    "agendas": [
+      {
+        "text": "za každého zachráněného robota, který vlastní Digitálního asistenta",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "za každou instituci nebo zachráněného člověka, který vlastní Digitálního asistenta",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "pokud jsou zachráněny alespoň 2 kopie Digitálního asistenta",
+        "points": 2,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Digitální asistent vaší BP a je zachráněn.",
+    "edgeCases": [
+      "Digitální asistent je postava typu „data\" a nemůže vlastnit předměty ani data.",
+      "Digitálního asistenta lze vyrobit v Hlavním počítači.",
+      "Blackout zabraňuje provádět akce ovládacího panelu i Digitálnímu asistentovi.",
+      "Digitální asistent může provádět pouze akce ovládacího panelu, a to i v případě, že ještě nebyl vyroben žádnou postavou."
+    ],
+    "tips": [
+      "Jste data a často budete potřebovat konspirátory, aby udělali špinavou práci za vás.",
+      "Dostaňte někoho do Hlavního počítače, aby vás tam vyrobil. Snažte se udržet vypnuté rušičky, abyste se mohli zkopírovat do vlastnictví co největšího počtu postav.",
+      "Po odhalení můžete ovládat libovolného robota, který vás vlastní.",
+      "Vyhněte se Fyzikální laboratoři, kde vás lze snadno smazat.",
+      "Vhodným okamžikem pro odhalení se může být chvíle těsně předtím, než se zachrání postava s jiným typem dat."
+    ]
+  },
+  {
+    "id": "doktorka-hyde",
+    "nameCs": "Doktorka (Hyde)",
+    "type": "clovek",
+    "influenceLimit": 5,
+    "address": "Ona",
+    "setup": "Začíná v sekci Přídový uzel. Doktorka má dvě karty identity. Při přípravě hry s touto postavou je k ostatním přidejte obě. Začíná hru s tajemstvím X.",
+    "startSection": "Přídový uzel",
+    "abilities": [
+      {
+        "name": "Rozštěpená osobnost",
+        "category": "konspiracni",
+        "text": "Má dvě karty identity.",
+        "isReveal": false
+      },
+      {
+        "name": "Vědec",
+        "category": "doplnkove",
+        "text": "Namísto volné akce zvednutí nebo upuštění může provést volnou akci sekce.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Improvizovaná pistole",
+        "category": "doplnkove",
+        "text": "Při odhalení získá pistoli.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "BEZCITNOST",
+    "agendas": [
+      {
+        "text": "pokud je Doktorka zachráněna",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud vlastní kufřík",
+        "points": 3,
+        "isPlus": true
+      },
+      {
+        "text": "pokud se nachází v únikovém modulu spolu s vyřazeným člověkem",
+        "points": 4,
+        "isPlus": true
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Doktorka vaší BP a je zachráněna.",
+    "edgeCases": [
+      "Doktorka (Hyde) získá za cizí úplatky dvojnásobek bodů.",
+      "Doktorka má dvě karty identity. Každá identita má jiné úkoly.",
+      "Doktorka může být HP dvou hráčů. Pokud v takovém případě nějaký hráč použije úplatek nebo kompromat na Doktorku, určí, který z těchto dvou hráčů rozhodne, zda akci provede nebo ji odmítne. Pokud je odmítnut kompromat, podezřelými se stanou oba tito hráči.",
+      "Aktivovat Doktorku mohou oba hráči, kteří ji mají jako svou HP."
+    ],
+    "tips": [
+      "Kufřík se nachází v Apartmá.",
+      "Čím později se odhalíte, tím větší je šance, že dostanete úplatky.",
+      "Dobře načasované odhalení vám umožní vyřadit člověka právě získanou pistolí těsně před tím, než se zachráníte spolu s jeho tělem."
+    ]
+  },
+  {
+    "id": "doktorka-jekyll",
+    "nameCs": "Doktorka (Jekyll)",
+    "type": "clovek",
+    "influenceLimit": 5,
+    "address": "Ona",
+    "setup": "Doktorka má dvě karty identity. Při přípravě hry je k ostatním přidejte obě. Začíná hru s tajemstvím X.",
+    "startSection": "Přídový uzel",
+    "abilities": [
+      {
+        "name": "Rozštěpená osobnost",
+        "category": "konspiracni",
+        "text": "Má dvě karty identity.",
+        "isReveal": false
+      },
+      {
+        "name": "Vědec",
+        "category": "doplnkove",
+        "text": "Namísto volné akce zvednutí nebo upuštění může provést volnou akci sekce.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Falešný artefakt",
+        "category": "doplnkove",
+        "text": "Při odhalení se artefakt přesune k Doktorce, pokud jej nevlastní HP (a to i v případě, že byl anihilován).",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "VĚDA",
+    "agendas": [
+      {
+        "text": "pokud je Doktorka zachráněna",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "pokud je kontaminovaná",
+        "points": 3,
+        "isPlus": true
+      },
+      {
+        "text": "pokud vlastní artefakt",
+        "points": 3,
+        "isPlus": true
+      },
+      {
+        "text": "pokud média ani úřady nemají důkazy",
+        "points": 3,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Doktorka vaší BP a je zachráněna.",
+    "edgeCases": [
+      "Doktorka má dvě karty identity. Každá identita má jiné úkoly.",
+      "Doktorka může být HP dvou hráčů. Pokud v takovém případě nějaký hráč použije úplatek nebo kompromat na Doktorku, určí, který z těchto dvou hráčů rozhodne, zda akci provede nebo ji odmítne. Pokud je odmítnut kompromat, podezřelými se stanou oba tito hráči.",
+      "Aktivovat Doktorku mohou oba hráči, kteří ji mají jako svou HP.",
+      "Na rozdíl od Doktorky (Hyde) získává Doktorka (Jekyll) za úplatky od jiných hráčů běžný počet bodů."
+    ],
+    "tips": [
+      "Artefakt se nachází ve Fyzikální laboratoři, ale pokud jej nevlastní HP, můžete jej také získat při odhalení.",
+      "Kontaminujete se v Biolaboratoři.",
+      "Snažte se zabránit jak přenosu, tak poskytnutí důkazů médiím i úřadům. Třeba tím, že udržíte zapnuté rušičky."
+    ]
+  },
+  {
+    "id": "drony",
+    "nameCs": "Drony",
+    "type": "robot",
+    "influenceLimit": 0,
+    "address": "Ony",
+    "setup": "Drony nemají žádnou kartu identity. Pod ostatní akce ovládacího panelu na herním plánu umístěte žeton „Dálkové ovládání“. Každý Dron začíná s integrálním hasákem; nelze jej odstranit.",
+    "abilities": [
+      {
+        "name": "Dálkové ovládání",
+        "category": "ovladaci-panel",
+        "text": "Nelze je uplatit, ovlivnit ani přímo aktivovat. Libovolná postava může provést jednu akci s libovolným živým Dronem pomocí akce ovládacího panelu.",
+        "isReveal": false
+      },
+      {
+        "name": "Rozmontování",
+        "category": "doplnkove",
+        "text": "Jako akci se mohou vyřadit a za to opravit sekci, v níž se nachází, nebo robota v ní. Přitom ignorují pud sebezáchovy.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [],
+    "agendas": [],
+    "bonusPoints": "Drony nemohou být ničí BP.",
+    "edgeCases": [
+      "Drony nemají kartu identity.",
+      "Drony nelze nikdy aktivovat, a tudíž nikdy nedisponují volnou akcí zvednutí ani upuštění.",
+      "Drony mohou provádět akce a vlastnit předměty a data.",
+      "Hasáky Dronů jsou integrální, a tudíž je nelze odstranit.",
+      "Každý Dron má limit počtu předmětů 2.",
+      "Data jsou ve vlastnictví každého Drona zvlášť a nejsou automaticky sdílena s druhým Dronem. Vlastněná data a předměty umisťujte na vyznačená místa na kartě Dronů.",
+      "Jedinými způsoby, jak ovládat Drony, jsou akce ovládacího panelu dálkové ovládání a schopnost Root access Digitálního asistenta.",
+      "Akce prováděné Drony způsobují podezření jako obvykle.",
+      "Pokud Drony ovládá postava se schopností Psanec, hráč se nestane podezřelým.",
+      "Při vyhodnocování úkolů se každý Dron počítá samostatně.",
+      "Změny na herním plánu: Nová akce ovládacího panelu dálkové ovládání umožňuje provést jednu akci s libovolným živým Dronem."
+    ],
+    "tips": [
+      "Drony jsou užitečným nástrojem k vyřazování postav, protože vlastní integrální hasák.",
+      "Každý Dron může opravit jednu sekci nebo jednoho robota."
+    ]
+  },
+  {
+    "id": "inspektor",
+    "nameCs": "Inspektor",
+    "type": "clovek",
+    "influenceLimit": 4,
+    "address": "Oni",
+    "setup": "Otočte únikový modul Bryks na stranu Inspektorův raketoplán.",
+    "startSection": "Chemická laboratoř",
+    "abilities": [
+      {
+        "name": "Odznak",
+        "category": "utocne",
+        "text": "Může okrást ostatní postavy o předměty, jako kdyby vlastnil pistoli.",
+        "isReveal": false
+      },
+      {
+        "name": "Vyšetřovatel",
+        "category": "doplnkove",
+        "text": "Může vyrobit data v sousední sekci nebo z ní zvednout kompromat.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Bankovní podvod",
+        "category": "konspiracni",
+        "text": "Při odhalení (i v okamžiku pádu stanice) získejte zpět svůj úplatek, pokud jste jej již použili.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "PROHNILÝ AŽ DO MORKU KOSTÍ",
+    "agendas": [
+      {
+        "text": "pokud je Inspektor zachráněn",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud vlastní kufřík",
+        "points": 4,
+        "isPlus": true
+      },
+      {
+        "text": "pokud úřady mají důkazy",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "pokud média nemají důkazy",
+        "points": 2,
+        "isPlus": true
+      },
+      {
+        "text": "Inspektor získá za cizí úplatky dvojnásobek bodů.",
+        "points": 0,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Inspektor vaší BP a je zachráněn.",
+    "edgeCases": [
+      "Žádné.",
+      "Změny na herním plánu: Vypuštění Inspektorova raketoplánu vyžaduje, aby byl obsazen Inspektorem nebo živou postavou se schopností Provizorní oprava."
+    ],
+    "tips": [
+      "Kufřík se nachází v Apartmá.",
+      "Důkazy lze vyrobit v Bezpečnostní stanici. Úřady je mohou získat pomocí akce přenosu dat z Komunikační místnosti, nebo pokud se s nimi zachráníte.",
+      "Vypněte rušičky, aby šlo zkopírovat důkazy komukoliv na stanici.",
+      "Váš raketoplán lze vypustit, i když ještě nebyla zahájena evakuace.",
+      "Čím později se odhalíte, tím je větší šance, že dostanete úplatky."
+    ]
+  },
+  {
+    "id": "inzenyr",
+    "nameCs": "Inženýr",
+    "type": "clovek",
+    "influenceLimit": 5,
+    "address": "On",
+    "setup": "Přes textovou bublinu sekce Reaktor umístěte žeton „Reaktor“.",
+    "startSection": "Komunikační místnost",
+    "abilities": [
+      {
+        "name": "Důstojník",
+        "category": "pohybove",
+        "text": "Pokud nenastal blackout, může se pohybovat (nebo být tažen, pokud je vyřazený) skrz zámky, které jsou tím odstraněny.",
+        "isReveal": false
+      },
+      {
+        "name": "Provizorní oprava",
+        "category": "doplnkove",
+        "text": "Jako akci může opravit sekci, ve které se nachází, nebo vyřazeného robota ve stejné sekci.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Přetížení",
+        "category": "konspiracni",
+        "text": "Při odhalení umístěte žeton času na jednu sekci na stanici. Při vyhodnocení tohoto žetonu času danou sekci poškoďte.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "ZACHOVÁNÍ EKOSFÉRY",
+    "agendas": [
+      {
+        "text": "pokud antihmota vybuchne na stanici před pádem stanice",
+        "points": 3,
+        "isPlus": false
+      },
+      {
+        "text": "pokud není zachráněna žádná kontaminovaná postava",
+        "points": 3,
+        "isPlus": false
+      },
+      {
+        "text": "pokud není zachráněn artefakt",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud je nevinen",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "Inženýr může zvítězit, i když je vinen.",
+        "points": 0,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Nepřítel: 2 body, pokud je Inženýr vaší BP a není živý ani zachráněn.",
+    "edgeCases": [
+      "Pokud je Přetížení použito na únikový modul na stanici a ten je vypuštěn před jeho vyhodnocením, v okamžiku vyhodnocení Přetížení je tento únikový modul anihilován i se vším uvnitř něj.",
+      "Změny na herním plánu: Přidání žetonu Reaktoru mění jeho vlastnosti: Nelze jej poškodit hasákem. Pokud je poškozen jinak, vyvalí se z něj radioaktivní pára – do Reaktoru a všech sousedních sekcí propojených s Reaktorem nezamčenými chodbami umístěte žeton(y) nebezpečí udušení (pára se ale nerozšíří skrz šachty)."
+    ],
+    "tips": [
+      "Kdokoliv v Magnetické komoře může odjistit antihmotu tím, že ji odtamtud přesune jinam.",
+      "Antihmotu může odjistit také postava se schopností Důstojník z Můstku pomocí akce autodestrukce.",
+      "Kontaminované postavy můžete dekontaminovat v Nádržích nebo je prostě vyřaďte – můžete vyhrát i jako vinný."
+    ]
+  },
+  {
+    "id": "kaskaderka",
+    "nameCs": "Kaskadérka",
+    "type": "clovek",
+    "influenceLimit": 5,
+    "address": "Ona",
+    "setup": "Do Fyzikální laboratoře umístěte raketová křídla a pod textovou bublinu sekce Okolní vesmír umístěte žeton „Odlet na raketových křídlech“.",
+    "startSection": "Šatna",
+    "abilities": [
+      {
+        "name": "Adrenalin",
+        "category": "pohybove",
+        "text": "Nevyřadí ji nebezpečí. Akce pohybu i přesunu přechodovou komorou do sekce s nebezpečím jsou pro ni vždy volnými akcemi.",
+        "isReveal": false
+      },
+      {
+        "name": "Hrdost",
+        "category": "obranne",
+        "text": "Nelze ji okrást.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Bod zlomu",
+        "category": "obranne",
+        "text": "Pokud je při pádu stanice živá, nachází se ve stejné sekci jako raketová křídla a vlastní helmu, je zachráněna.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "HONBA ZA VZRUŠENÍM",
+    "agendas": [
+      {
+        "text": "pokud je Kaskadérka zachráněna",
+        "points": 3,
+        "isPlus": false
+      },
+      {
+        "text": "pokud je jediným člověkem, který se zachrání",
+        "points": 2,
+        "isPlus": true
+      },
+      {
+        "text": "pokud vlastní artefakt nebo je kontaminovaná",
+        "points": 2,
+        "isPlus": true
+      },
+      {
+        "text": "pokud byl spuštěn Projekt X",
+        "points": 1,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Kaskadérka vaší BP a je zachráněna.",
+    "edgeCases": [
+      "Schopnost Bod zlomu umožňuje Kaskadérce zachránit se při pádu stanice, pokud vlastní helmu a v její sekci se nacházejí raketová křídla. Nemusí při tom raketová křídla vlastnit.",
+      "I když Kaskadérka přežije v Okolním vesmíru bez helmy, stále potřebuje pro provedení akce odletu na raketových křídlech helmu.",
+      "Změny na herním plánu: Přidání raketových křídel otevírá další možnost, jak se zachránit. V sekci Okolní vesmír je možné provést novou akci sekce – odlet na raketových křídlech. Odlet na raketových křídlech: Pokud vlastníte raketová křídla, zachráníte se. Lidé navíc potřebují vlastnit helmu."
+    ],
+    "tips": [
+      "Artefakt se nachází ve Fyzikální laboratoři.",
+      "Kontaminujete se v Biolaboratoři.",
+      "Kaskadérka se umí rychle pohybovat skrz nebezpečí a přežije v něm bez helmy.",
+      "Zabraňte ostatním lidem zachránit se, a to tím, že je vyřadíte, spustíte Projekt X, poškodíte únikové moduly nebo zamezíte zahájení evakuace.",
+      "Volnou akci pohybu ze schopnosti Adrenalin lze využít v jednom tahu i opakovaně."
+    ]
+  },
+  {
+    "id": "kryospacka",
+    "nameCs": "Kryospáčka",
+    "type": "clovek",
+    "influenceLimit": 5,
+    "address": "Ona",
+    "setup": "Kryospáčka začíná hru vyřazená a s integrální helmou; nelze ji odstranit.",
+    "startSection": "Kryolaboratoř",
+    "abilities": [
+      {
+        "name": "Na prahu smrti",
+        "category": "konspiracni",
+        "text": "Nelze ji aktivovat, pokud je vyčerpaná. Při aktivaci nemůže provést volnou akci zvednutí ani upuštění.",
+        "isReveal": false
+      },
+      {
+        "name": "Pomstychtivost",
+        "category": "utocne",
+        "text": "Její kompromat lze použít, i když je vyřazená, v takovém případě je navíc okamžitě oživena. Použití jejího kompromatu jí kromě jedné akce dá navíc hasák.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "S posledním nádechem",
+        "category": "konspiracni",
+        "text": "Pokud je při odhalení vyřazená, oživte ji, nebo s ní proveďte akci.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "ZÁZRAČNÉ UZDRAVENÍ",
+    "agendas": [
+      {
+        "text": "pokud je Kryospáčka zachráněna",
+        "points": 3,
+        "isPlus": false
+      },
+      {
+        "text": "pokud vlastní nanogel",
+        "points": 2,
+        "isPlus": true
+      },
+      {
+        "text": "pokud je zachráněno tajemství X",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud nebyl spuštěn Projekt X",
+        "points": 2,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 3 body, pokud je Kryospáčka vaší BP a je zachráněna.",
+    "edgeCases": [
+      "Začíná hru vyřazená.",
+      "Její helma je integrální, a tudíž ji nelze normálně odstranit. Helmu však může anihilovat Šedivý sajrajt (Projekt X).",
+      "Použití kompromatu Kryospáčky jí navíc dá hasák a oživí ji, pokud byla vyřazená."
+    ],
+    "tips": [
+      "Sama o sobě se Kryospáčka pohybuje velmi pomalu, ale úplatky nebo kompromat jí mohou poskytnout nezbytný dodatečný pohyb.",
+      "Nanogel lze vyrobit v Nanotovárně, tajemství X v Biolaboratoři.",
+      "Zabraňte spuštění Projektu X tím, že zabráníte postavám se schopností Důstojník dostat se na Můstek a do Kryolaboratoře.",
+      "Pokud je ve hře Lékařský únikový modul, může pro vás být tou nejjednodušší cestou, jak se zachránit."
+    ]
+  },
+  {
+    "id": "kyborg",
+    "nameCs": "Kyborg",
+    "type": "clovek",
+    "influenceLimit": 4,
+    "address": "On",
+    "setup": "Začíná v sekci Kryolaboratoř.",
+    "startSection": "Kryolaboratoř",
+    "abilities": [
+      {
+        "name": "Neúnavnost",
+        "category": "konspiracni",
+        "text": "Tato postava je vyčerpaná, pouze pokud na její kartě leží dva nebo více aktivačních disků.",
+        "isReveal": false
+      },
+      {
+        "name": "Psanec",
+        "category": "doplnkove",
+        "text": "Žádná akce s touto postavou ani proti ní nezpůsobí, že se hráč stane podezřelým.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Brutalita",
+        "category": "utocne",
+        "text": "Při útoku hasákem může vyřadit i člověka s helmou. V tom případě jsou hasák i helma anihilovány.",
+        "isReveal": true
+      },
+      {
+        "name": "Sebeoprava",
+        "category": "doplnkove",
+        "text": "Můžete aktivovat Kyborga, i když je vyřazený – v takovém případě jej svou první akcí oživíte.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "POMSTA",
+    "agendas": [
+      {
+        "text": "1 bod za každou vyřazenou postavu se schopností Důstojník",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "pokud není zachráněna žádná lidská HP",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud není zachráněna žádná kontaminovaná postava",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud byl spuštěn Projekt X",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "Kyborg může zvítězit, i když je vinen.",
+        "points": 0,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Nepřítel: 2 body, pokud je Kyborg vaší BP a není živý ani zachráněn.",
+    "edgeCases": [
+      "Kyborg je člověk a zároveň robot. Pro účely útoků, okradení a nebezpečí je považován za člověka."
+    ],
+    "tips": [
+      "Můžete bez postihu vyřadit ostatní postavy, naopak ostatní mohou bez postihu vyřadit vás. Vaší prioritou je vyřazovat lidi a kontaminované postavy.",
+      "Po odhalení už nikdy nebudete vyčerpaný, protože vás ostatní hráči nemohou aktivovat.",
+      "Projekt X může spustit postava se schopností Důstojník, a to z Můstku nebo Kryolaboratoře. Případně jej lze spustit poškozením Krypty X nebo způsobením blackoutu.",
+      "Pokud je ve hře Strážce, vyhýbejte se mu – může vás snadno vyřadit."
+    ]
+  },
+  {
+    "id": "medik",
+    "nameCs": "Medik",
+    "type": "robot",
+    "influenceLimit": 4,
+    "address": "On",
+    "setup": "Umístěte Medikův ukazatel vedle jeho karty postavy. Začíná v sekci Zádový uzel.",
+    "startSection": "Zádový uzel",
+    "abilities": [
+      {
+        "name": "Pohotová záchrana",
+        "category": "doplnkove",
+        "text": "Jako akci může oživit člověka. Akce pohybu i přesunu přechodovou komorou do sekce s vyřazeným člověkem jsou pro něj vždy volnými akcemi.",
+        "isReveal": false
+      },
+      {
+        "name": "Užitečnost",
+        "category": "konspiracni",
+        "text": "Každý hráč může mít na kartě této postavy nejvýše 1 kostku vlivu.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Zkrat",
+        "category": "utocne",
+        "text": "Při odhalení získá hasák.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "NEPOSTRADATELNÝ ČLEN POSÁDKY",
+    "agendas": [
+      {
+        "text": "pokud se nenacházejí na stanici žádní vyřazení lidé",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "1 bod za každou dosaženou hvězdu na stupnici na kartě postavy; posuňte ukazatel o jedna za: každé oživení člověka, které Medik provede; každou kostku vlivu přesunutou na pole zrady při Medikově odhalení",
+        "points": 1,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Nepřítel: 1 bod, pokud je Medik vaší BP a není živý ani zachráněn.",
+    "edgeCases": [
+      "Medikův ukazatel začíná hru mimo jeho kartu postavy (to odpovídá hodnotě 0).",
+      "Pomocí Medikova ukazatele zaznamenávejte počet oživení a počet kostek přesunutých na pole zrady. Medik za obojí získá body.",
+      "Medik nemůže oživit člověka, pokud by byl tento člověk okamžitě vyřazen znovu (např. když se nachází bez helmy v sekci s nebezpečím).",
+      "Volnou akci pohybu ze schopnosti Pohotová záchrana lze využít v jednom tahu opakovaně.",
+      "Schopnost Pohotová záchrana nevyžaduje nanogel, ale lze jí oživit jen lidi."
+    ],
+    "tips": [
+      "Čím více postav je vyřazeno, tím je větší šance, že získáte body a že se budete po stanici pohybovat rychleji.",
+      "Čím později se odhalíte, tím je větší šance, že při odhalení získáte body za kostky vlivu jiných hráčů.",
+      "Volný pohyb můžete využít, aniž byste někoho oživili."
+    ]
+  },
+  {
+    "id": "mikrobiolozka",
+    "nameCs": "Mikrobioložka",
+    "type": "clovek",
+    "influenceLimit": 5,
+    "address": "Ona",
+    "setup": "Začíná hru kontaminovaná. Začíná v sekci Fyzikální laboratoř.",
+    "startSection": "Fyzikální laboratoř",
+    "abilities": [
+      {
+        "name": "Vědec",
+        "category": "doplnkove",
+        "text": "Namísto volné akce zvednutí nebo upuštění může provést volnou akci sekce.",
+        "isReveal": false
+      },
+      {
+        "name": "Věrnost",
+        "category": "konspiracni",
+        "text": "K ovlivnění musíte na tuto kartu umístit alespoň o 1 kostku vlivu více, než na ní právě leží. Poté vraťte všechny cizí kostky vlivu z této karty do zásob příslušných hráčů.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Infikování",
+        "category": "utocne",
+        "text": "Jako akci může kontaminovat jiného člověka nebo robota ve stejné sekci. Pokud cílová postava nemá žádnou volnou pozici pro předmět, musí jeden předmět upustit (to se nepočítá jako akce). Každý člověk i robot může mít nejvýše 1 žeton kontaminace.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "VNÍMAJÍCÍ PATOGEN",
+    "agendas": [
+      {
+        "text": "pokud je Mikrobioložka zachráněna",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "1 bod za každou zachráněnou kontaminovanou postavu",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "pokud je zachráněno tajemství X",
+        "points": 2,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Mikrobioložka vaší BP a je zachráněna.",
+    "edgeCases": [],
+    "tips": [
+      "Ke kontaminování ostatních použijte Biolaboratoř nebo svou schopnost po odhalení.",
+      "Tajemství X lze vyrobit v Biolaboratoři, poté jej můžete zkopírovat dalším postavám.",
+      "Zahájit evakuaci může postava se schopností Důstojník z Můstku nebo pro její zahájení můžete způsobit blackout nebo spustit Projekt X.",
+      "Postava se schopností Důstojník může z Můstku vypustit všechny obsazené únikové moduly."
+    ]
+  },
+  {
+    "id": "miliardar",
+    "nameCs": "Miliardář",
+    "type": "clovek",
+    "influenceLimit": 3,
+    "address": "On",
+    "setup": "Miliardář začíná hru s 3 šedými žetony úplatků na své kartě. Začíná v sekci Apartmá nebo Bezpečnostní stanice.",
+    "abilities": [
+      {
+        "name": "Live stream",
+        "category": "obranne",
+        "text": "Pokud jsou vypnuté rušičky, sekce, v nichž se nachází Miliardář a/nebo Fufík, jsou považovány za osvětlené a se zapnutými kamerami.",
+        "isReveal": false
+      },
+      {
+        "name": "Pracháč",
+        "category": "obranne",
+        "text": "Nelze jej uplatit. Po jeho aktivaci můžete použít šedý úplatek namísto svého. Za šedé úplatky lze získat body, pouze pokud je Miliardář zachráněn.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Prázdné sliby",
+        "category": "konspiracni",
+        "text": "Při odhalení (i v okamžiku pádu stanice) si vezměte do své zásoby všechny 3 šedé žetony úplatků.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "PŘEŽÍT",
+    "agendas": [
+      {
+        "text": "pokud je Miliardář zachráněn",
+        "points": 4,
+        "isPlus": false
+      },
+      {
+        "text": "pokud není ve stejné sekci s jiným živým člověkem ani robotem",
+        "points": 1,
+        "isPlus": true
+      },
+      {
+        "text": "pokud je zachráněn Fufík",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud se Fufík nachází ve stejné sekci jako Miliardář",
+        "points": 1,
+        "isPlus": true
+      },
+      {
+        "text": "Miliardář nezíská žádné body za získané ani nepoužité úplatky.",
+        "points": 0,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Miliardář vaší BP a je zachráněn Fufík. (Miliardář nikoho nezajímá – na rozdíl od jeho roztomilého vesmírného štěňátka!)",
+    "edgeCases": [
+      "Miliardář nezíská žádné body za úplatky.",
+      "Fufík je předmět, který lze zvednout, upustit, hodit apod. Na Fufíka nelze zaútočit ani jej vyřadit (má vysunovací vesmírnou psí helmu!), ale může být anihilován stejně jako jiné předměty.",
+      "Šedé úplatky lze použít, pouze pokud leží na kartě Miliardáře nebo je má odhalený Miliardář ve své zásobě. V tahu hráče lze použít pouze jeden úplatek (šedý či normální).",
+      "Při počítání bodů se Miliardář a Fufík považují za nacházející se ve stejné sekci, pouze pokud se oba zachránili pomocí stejné komponenty (např. pomocí raketových křídel) nebo schopnosti."
+    ],
+    "tips": [
+      "Pro svou ochranu získejte helmu a snažte se vypnout rušičky, aby fungovala vaše schopnost Live stream.",
+      "Po odhalení můžete použít své šedé úplatky pro další akce s jinými postavami."
+    ]
+  },
+  {
+    "id": "opravarka",
+    "nameCs": "Opravářka",
+    "type": "clovek",
+    "influenceLimit": 6,
+    "address": "Ona",
+    "setup": "Vedle Přídových přechodových komor umístěte Robotické rameno. Opravářka začíná hru s hasákem. Začíná v sekci 3D tiskárna.",
+    "startSection": "3D tiskárna",
+    "abilities": [
+      {
+        "name": "Provizorní oprava",
+        "category": "doplnkove",
+        "text": "Jako akci může opravit sekci, ve které se nachází, nebo vyřazeného robota ve stejné sekci.",
+        "isReveal": false
+      },
+      {
+        "name": "Tunelová krysa",
+        "category": "pohybove",
+        "text": "Může se pohybovat skrz šachty.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Přítel na telefonu",
+        "category": "doplnkove",
+        "text": "Pokud je Opravářka v průběhu vašeho tahu nezachráněná a živá, všichni vaši konspirátoři se pohybují a jednají, jako by měli schopnosti Tunelová krysa a Provizorní oprava.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "V PERFEKTNÍM STAVU AŽ DO KONCE",
+    "agendas": [
+      {
+        "text": "pokud nebyla odjištěna antihmota",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud nebyl spuštěn Projekt X",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud jsou všechny sekce nepoškozené",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "1 bod za každého živého robota",
+        "points": 1,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Opravářka vaší BP a je zachráněna.",
+    "edgeCases": [
+      "Opravářce stačí, když jsou roboti při pádu stanice funkční (tedy nejsou vyřazeni), nemusí být zachráněni."
+    ],
+    "tips": [
+      "Vaše schopnost po odhalení umožňuje vašim konspirátorům opravovat poškozené sekce daleko od vás.",
+      "Snažte se zabránit ostatním postavám (a hlavně těm se schopností Důstojník) dostat se na Můstek, do Kryolaboratoře a Magnetické komory, aby nemohli spustit Projekt X ani odjistit antihmotu."
+    ]
+  },
+  {
+    "id": "piratka",
+    "nameCs": "Pirátka",
+    "type": "clovek",
+    "influenceLimit": 4,
+    "address": "Ona",
+    "setup": "Na příslušné pole vedle Okolního vesmíru umístěte žeton „Záchranná loď“. Pirátka začíná hru s helmou, pistolí a hasákem. Začíná v sekci Okolní vesmír.",
+    "startSection": "Okolní vesmír",
+    "abilities": [
+      {
+        "name": "Proražení",
+        "category": "utocne",
+        "text": "Jako akci může odstranit sousední zámek.",
+        "isReveal": false
+      },
+      {
+        "name": "Psanec",
+        "category": "doplnkove",
+        "text": "Žádná akce s touto postavou ani proti ní nezpůsobí, že se hráč stane podezřelým.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Naváděná raketa",
+        "category": "utocne",
+        "text": "Pokud jsou vypnuté rušičky, jako akci může umístit žeton času na jednu sekci (s výjimkou již vypuštěných únikových modulů). Při vyhodnocení tohoto žetonu času tuto sekci poškoďte a všechny postavy uvnitř ní vyřaďte. Ve hře může být v jednom okamžiku pouze jedna naváděná raketa.",
+        "isReveal": true
+      },
+      {
+        "name": "Vyzvednutí",
+        "category": "konspiracni",
+        "text": "Při odhalení (i v okamžiku pádu stanice) otočte Záchrannou loď na Pirátskou loď. Pirátská loď zachrání pouze postavu vlastnící kufřík (i vyřazenou).",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "KOŘIST",
+    "agendas": [
+      {
+        "text": "pokud je Pirátka zachráněna",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud Pirátka vlastní kufřík nebo pokud se kufřík nachází v Okolním vesmíru",
+        "points": 4,
+        "isPlus": true
+      },
+      {
+        "text": "1 bod za každého živého člověka nacházejícího se v Okolním vesmíru",
+        "points": 1,
+        "isPlus": true
+      },
+      {
+        "text": "Pirátka získá za cizí úplatky dvojnásobek bodů.",
+        "points": 0,
+        "isPlus": false
+      },
+      {
+        "text": "Pirátka může zvítězit, i když je vinna.",
+        "points": 0,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 1 bod, pokud je Pirátka vaší BP a je zachráněna.",
+    "edgeCases": [
+      "Pokud je naváděná raketa zaměřena na dosud nevypuštěný únikový modul a ten je vypuštěn před jejím vyhodnocením, v okamžiku vyhodnocení naváděné rakety je tento únikový modul anihilován i se vším uvnitř něj.",
+      "Pokud byla Záchranná/Pirátská loď v Okolním vesmíru anihilována Paprskem smrti nebo výbuchem antihmoty, Pirátka nezíská body ani za živé lidi ani kufřík v Okolním vesmíru."
+    ],
+    "tips": [
+      "Kufřík se nachází v Apartmá.",
+      "Vaše počáteční předměty a ignorování viny vám umožňují snadno vyřazovat jiné postavy.",
+      "Pokud se odhalíte dříve, můžete napáchat spoustu škody svými naváděnými raketami.",
+      "Pokud se odhalíte později, ostatní hráči se také později dozví, že nemohou být zachráněni v Okolním vesmíru. Také díky tomu můžete získat nějaké úplatky.",
+      "Pokud je ve hře Strážce, vyhýbejte se mu – může vás snadno vyřadit."
+    ]
+  },
+  {
+    "id": "plukovnik",
+    "nameCs": "Plukovník",
+    "type": "clovek",
+    "influenceLimit": 4,
+    "address": "On",
+    "setup": "Vedle Ubikací umístěte Nouzový únikový modul, do něj umístěte pistoli a na chodbu vedoucí k němu zámek. Plukovník začíná hru s pistolí.",
+    "abilities": [
+      {
+        "name": "Důstojník",
+        "category": "pohybove",
+        "text": "Pokud nenastal blackout, může se pohybovat (nebo být tažen, pokud je vyřazený) skrz zámky, které jsou tím odstraněny.",
+        "isReveal": false
+      },
+      {
+        "name": "Paranoia",
+        "category": "konspiracni",
+        "text": "Aby jej aktivní hráč ovlivnil, musí mít jiného konspirátora ve stejné sekci. Nelze jej uplatit.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Mise má přednost",
+        "category": "konspiracni",
+        "text": "Při odhalení (i v okamžiku pádu stanice) vraťte všechny své kostky vlivu z pole zrady do své zásoby.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "TEST ZBRANÍ",
+    "agendas": [
+      {
+        "text": "pokud je Plukovník zachráněn",
+        "points": 3,
+        "isPlus": false
+      },
+      {
+        "text": "pokud je zachráněna alespoň jedna kontaminovaná CP",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud byl spuštěn Projekt X",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud je zachráněno tajemství X",
+        "points": 2,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Plukovník vaší BP a je zachráněn.",
+    "edgeCases": [
+      "Plukovníkova schopnost Paranoia způsobuje, že je složitější ho ovlivnit.",
+      "Nezapomeňte, že konspirátorem může být jen živá postava.",
+      "Plukovníka nelze uplatit.",
+      "Přidání Nouzového únikového modulu zvyšuje počet únikových modulů na stanici. Na začátku hry je tento únikový modul zamčený a uvnitř něj se nachází pistole. V tomto únikovém modulu jsou ale jen dvě místa.",
+      "Postava uvnitř Nouzového únikového modulu může provést akci vypuštění s odpočtem. Všimněte si, že stejně jako u všech čtyř standardních únikových modulů vyžaduje vypuštění Nouzového únikového modulu zahájení evakuace."
+    ],
+    "tips": [
+      "Postavy můžete kontaminovat v Biolaboratoři. Tam je také možné vyrobit tajemství X.",
+      "Projekt X může spustit postava se schopností Důstojník, a to z Můstku nebo Kryolaboratoře. Případně jej lze spustit poškozením Krypty X nebo způsobením blackoutu."
+    ]
+  },
+  {
+    "id": "poradce",
+    "nameCs": "Poradce",
+    "type": "clovek",
+    "influenceLimit": 6,
+    "address": "On",
+    "setup": "Vedle Terapeutické zahrady umístěte Archiv a na chodbu vedoucí k němu umístěte zámek.",
+    "startSection": "Terapeutická zahrada",
+    "abilities": [
+      {
+        "name": "Důstojník",
+        "category": "pohybove",
+        "text": "Pokud nenastal blackout, může se pohybovat (nebo být tažen, pokud je vyřazený) skrz zámky, které jsou tím odstraněny.",
+        "isReveal": false
+      },
+      {
+        "name": "Manipulátor",
+        "category": "konspiracni",
+        "text": "Jako akci může přesunout jednu kostku vlivu z karty jiného živého člověka ve stejné sekci na pole zrady.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Nahrávka s přiznáním",
+        "category": "konspiracni",
+        "text": "Pokud jste při odhalení živý a nejste zachráněný, vyberte jiného člověka ve stejné sekci. Všichni ostatní nevinní hráči, jejichž konspirátorem je tento člověk, se stanou podezřelými.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "PLÁŠŤ A DÝKA",
+    "agendas": [
+      {
+        "text": "pokud je Poradce zachráněn",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud je zachráněn artefakt",
+        "points": 4,
+        "isPlus": false
+      },
+      {
+        "text": "pokud nemá žádný hráč více kompromatů než vy",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud nemá žádný hráč méně kostek vlivu než vy na poli zrady",
+        "points": 1,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Poradce vaší BP a je zachráněn.",
+    "edgeCases": [
+      "Přidání Archivu zvyšuje počet temných sekcí na stanici. Na začátku hry je Archiv zamčený.",
+      "Postava uvnitř Archivu může provést akci sběr dat.",
+      "Sběr dat: Zvedněte kompromat z libovolné sekce na stanici."
+    ],
+    "tips": [
+      "Artefakt se nachází ve Fyzikální laboratoři.",
+      "Dobře načasované použití vaší schopnosti po odhalení může rychle změnit ostatní nevinné hráče na vinné, pokud dokážete přenést důkazy úřadům ze sekce Komunikační místnost.",
+      "Sbírejte kompromaty."
+    ]
+  },
+  {
+    "id": "pravnik",
+    "nameCs": "Právník",
+    "type": "robot",
+    "influenceLimit": 4,
+    "address": "On",
+    "setup": "Otočte únikové moduly Alcatraz, Houdini a McQueen tak, aby strana se šipkou byla vespod. Do společné zásoby umístěte žetony NDA.",
+    "startSection": "Záďový uzel",
+    "abilities": [
+      {
+        "name": "Námitka",
+        "category": "utocne",
+        "text": "Jako akci může změnit stav jiného nevinného nebo vinného hráče, jehož HP se nachází v sekci s Právníkem, na podezřelého.",
+        "isReveal": false
+      },
+      {
+        "name": "Obsílka",
+        "category": "doplnkove",
+        "text": "Jako akci může umístit NDA do vlastnictví všech ostatních robotů a lidí ve stejné sekci.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Poznámky pod čarou",
+        "category": "konspiracni",
+        "text": "Můžete aktivovat CP, která vlastní NDA.",
+        "isReveal": true
+      },
+      {
+        "name": "Vytištění smlouvy",
+        "category": "doplnkove",
+        "text": "Jako akci si jiná postava v sekci s Právníkem může vyrobit NDA.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "SNÍŽENÍ KORPORÁTNÍ ODPOVĚDNOSTI",
+    "agendas": [
+      {
+        "text": "za každého zachráněného člověka, který vlastní NDA",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "pokud není zachráněn žádný člověk, nebo pokud všichni zachránění lidé vlastní NDA",
+        "points": 4,
+        "isPlus": false
+      },
+      {
+        "text": "pokud nejsou zachráněny důkazy",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "za každého podezřelého (ale nikoliv vinného) hráče",
+        "points": 1,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Nepřítel: 1 bod, pokud je Právník vaše BP a není živý ani zachráněn.",
+    "edgeCases": [
+      "NDA (Non-Disclosure Agreement) znamená, že postava podepsala dohodu o mlčenlivosti.",
+      "NDA jsou data. Právník nevlastní NDA, ale může je vyrobit do vlastnictví všech ostatních postav ve stejné sekci.",
+      "Postava, která vlastní NDA, nesmí kopírovat, smazat, přenést ani poskytnout data (a to ani NDA), ani o ně být okradena.",
+      "Všechna data postavy, která vlastní NDA, mohou být stále smazána ve Fyzikální laboratoři, pomocí Agentčiny schopnosti EMP nebo při pohybu Entropického přízraku.",
+      "Právník může vyrobit data i do vlastnictví vyřazených postav. (Představte si, že Právník dlouze vysvětluje všechny podmínky a povinnosti nemohoucí oběti a pak otiskem palce bezvládné ruky potvrdí závaznou korporátní smlouvu.)",
+      "Schopnost Vytištění smlouvy funguje, i když je Právník vyřazený."
+    ],
+    "tips": [
+      "Získání a použití kompromatů je dobrým způsobem, jak z hráčů udělat podezřelé.",
+      "Váš limit vlivu je nízký, ale po odhalení můžete aktivovat libovolnou CP, která vlastní NDA.",
+      "Poškoďte Bezpečnostní stanici, protože v ní lze vyrobit důkazy.",
+      "Zabraňte všem snahám o záchranu postav bez NDA.",
+      "NDA lze vyrobit, pouze pokud jsou jiné postavy ve stejné sekci jako Právník, proto se ho snažte udržet naživu."
+    ]
+  },
+  {
+    "id": "spolecnik",
+    "nameCs": "Společník",
+    "type": "robot",
+    "influenceLimit": 6,
+    "address": "Oni",
+    "setup": "",
+    "startSection": "Společenská místnost",
+    "abilities": [
+      {
+        "name": "Falešné obvinění",
+        "category": "konspiracni",
+        "text": "Pokud vyřadí člověka v osvětlené sekci, když jsou kamery zapnuté, může aktivní hráč vybrat jiného hráče, který má jiného svého konspirátora ve stejné sekci, aby se stal podezřelým namísto něj.",
+        "isReveal": false
+      },
+      {
+        "name": "Ukecání",
+        "category": "obranne",
+        "text": "V osvětlených sekcích na něj nemohou zaútočit lidé pomocí hasáku.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Prohození tváří",
+        "category": "pohybove",
+        "text": "Pokud jste při odhalení živý, můžete si vyměnit pozici s libovolnou lidskou nebo robotí CP, která není zachráněná ani anihilovaná. Obě postavy si také vymění veškeré neintegrální vlastnictví. (Pokud je překročen limit počtu předmětů, aktivní hráč určí, které předměty postava jako volnou akci upustí.)",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "NOVÝ ŽIVOT",
+    "agendas": [
+      {
+        "text": "pokud je Společník zachráněn",
+        "points": 0,
+        "isPlus": false
+      },
+      {
+        "text": "pokud vlastní kufřík",
+        "points": 3,
+        "isPlus": true
+      },
+      {
+        "text": "pokud s ním není ve stejné sekci žádný jiný živý člověk ani robot",
+        "points": 3,
+        "isPlus": true
+      },
+      {
+        "text": "pokud jeho skrytá identita nebyla odhalena před pádem stanice",
+        "points": 1,
+        "isPlus": true
+      },
+      {
+        "text": "Společník získá za cizí úplatky dvojnásobek bodů.",
+        "points": 0,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Společník vaší BP a je zachráněn.",
+    "edgeCases": [
+      "I když to tak nevypadá, Společník je robot.",
+      "Schopnost Falešné obvinění vyžaduje, aby se v sekci před provedením útoku nacházely alespoň 3 živé postavy (roboti a/nebo lidé).",
+      "Pomocí schopnosti Falešné obvinění nelze obvinit postavu se schopností Psanec (tedy Kyborga ani Pirátku).",
+      "Pomocí schopnosti Prohození tváří se Společník může vyměnit s vyřazenou CP. V takovém případě se Společník stane vyřazeným a CP naopak obživne.",
+      "Schopnost Prohození tváří nelze použít na HP."
+    ],
+    "tips": [
+      "Kufřík se nachází v Apartmá.",
+      "Nezapomeňte, že vaše schopnost po odhalení vymění všechny předměty a úplatky i vaši pozici.",
+      "Dobře načasované odhalení vás může přenést na správné místo ve správný čas.",
+      "Čím později se odhalíte, tím větší je šance, že dostanete úplatky, nebo se vyměníte s někým, kdo je dostal.",
+      "Zvažte využití CP, se kterou získáte kufřík a zamíříte k záchraně – na poslední chvíli se s ní pak vyměníte."
+    ]
+  },
+  {
+    "id": "strazce",
+    "nameCs": "Strážce",
+    "type": "robot",
+    "influenceLimit": 4,
+    "address": "On",
+    "setup": "Strážce začíná hru s integrální pistolí (nelze ji odstranit).",
+    "startSection": "3D tiskárna",
+    "abilities": [
+      {
+        "name": "Mírotvůrce",
+        "category": "obranne",
+        "text": "Může útočit pouze na postavy se schopností Psanec, nestvůry a na HP, za kterou hraje podezřelý nebo vinný hráč. Nemůže sabotovat.",
+        "isReveal": false
+      },
+      {
+        "name": "Pancéřování",
+        "category": "obranne",
+        "text": "Nelze na něj zaútočit hasákem ani jej pomocí hasáku okrást.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Autorizovaná síla",
+        "category": "utocne",
+        "text": "Ztrácí schopnost Mírotvůrce.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "MÍR VYNUCENÝ VĚTŠÍ PALEBNOU SILOU",
+    "agendas": [
+      {
+        "text": "za každou vyřazenou postavu se schopností Psanec, nestvůru a HP, za kterou hraje podezřelý nebo vinný hráč, na stanici",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "za každého vyřazeného člověka s hasákem nebo pistolí na stanici",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "pokud není zachráněn kufřík",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "pokud není zachráněn artefakt",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "pokud není zachráněn kufřík ani artefakt",
+        "points": 1,
+        "isPlus": true
+      }
+    ],
+    "bonusPoints": "Nepřítel: 3 body, pokud je Strážce vaší BP a není živý ani zachráněn.",
+    "edgeCases": [
+      "Strážce (i se schopností Mírotvůrce) může útočit na jiné postavy nebo sabotovat sekce pomocí akce dálkového ovládání (Dronů) nebo ovládání Bojového hejna.",
+      "Před odhalením vám schopnost Mírotvůrce zabraňuje útočit a sabotovat, ale stále můžete krást věci (tedy je „zkonfiskovat\")."
+    ],
+    "tips": [
+      "Je obtížné vás okrást, proto je nejbezpečnější nosit kufřík i artefakt u sebe.",
+      "Po odhalení můžete vyřadit kohokoliv a pak mu strčit do ruky hasák.",
+      "Použitím kompromatu na HP ve správnou chvíli z ní můžete udělat podezřelou.",
+      "Postavou se schopností Důstojník můžete z Můstku nebo Kryolaboratoře spustit Projekt X. Případně jej lze spustit poškozením Krypty X nebo způsobením blackoutu.",
+      "Status Psance mají Pirátka a Kyborg.",
+      "Pistole vám umožňuje okrádat ostatní po celou dobu hry."
+    ]
+  },
+  {
+    "id": "telepaticka-krysa",
+    "nameCs": "Telepatická krysa",
+    "type": "predmet",
+    "influenceLimit": 8,
+    "address": "Ona",
+    "setup": "Telepatická krysa začíná hru kontaminovaná.",
+    "startSection": "Biolaboratoř",
+    "abilities": [
+      {
+        "name": "Paranoia",
+        "category": "konspiracni",
+        "text": "Aby ji aktivní hráč ovlivnil, musí mít jiného konspirátora ve stejné sekci. Nelze ji uplatit.",
+        "isReveal": false
+      },
+      {
+        "name": "Telepatie",
+        "category": "utocne",
+        "text": "Jako akci může provést jednu akci s libovolným živým člověkem bez helmy ve stejné sekci. Přitom ignorujte pud sebezáchovy. Akce může provádět pouze pomocí této schopnosti.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Můj milášku",
+        "category": "obranne",
+        "text": "V tazích jiných hráčů nemůžete být cílem akcí upuštění, hození ani přechodová komora. Je vás však možné předat jiné postavě ve stejné sekci.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "POKÁNÍ",
+    "agendas": [
+      {
+        "text": "za každého člověka nebo robota, který se nachází ve stejné sekci jako Krysa a je vyřazený",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "za každý kompromat ve vaší zásobě na vyřazené postavy nacházející se v sekci s Krysou",
+        "points": 2,
+        "isPlus": true
+      },
+      {
+        "text": "pokud se v sekci s Krysou nachází artefakt",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud se v sekci s Krysou nachází kufřík",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "Krysa může zvítězit, i když je vinna.",
+        "points": 0,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Telepatická krysa vaší BP a je zachráněna.",
+    "edgeCases": [
+      "Telepatická krysa je předmět, který lze zvednout, upustit, hodit apod.",
+      "Krysa nemůže vlastnit předměty ani data.",
+      "Na Krysu nelze zaútočit ani ji vyřadit.",
+      "Kvůli její schopnosti Paranoia je těžké ji ovlivnit (nezapomeňte, že konspirátorem může být jen živá postava).",
+      "Krysu nelze uplatit.",
+      "Krysa je na začátku hry kontaminovaná, ale lze ji dekontaminovat (a znovu kontaminovat)."
+    ],
+    "tips": [
+      "Artefakt se nachází ve Fyzikální laboratoři, kufřík v Apartmá.",
+      "Dejte si pozor, ať vás nikdo neanihiluje a ať vás nevlastní někdo, kdo se snaží o vlastní záchranu.",
+      "Nelze vás obvinit, proto můžete vyřazovat ostatní postavy bez omezení.",
+      "Snažte se být při pádu stanice v sekci, v níž se nachází co nejvíce vyřazených postav.",
+      "Vaše schopnost po odhalení zabraňuje tomu, abyste zůstali sami v prázdné sekci nebo Okolním vesmíru.",
+      "Vašimi největšími nepřáteli jsou helmy – vymyslete, jak se jich zbavit."
+    ]
+  },
+  {
+    "id": "velitelka-stanice",
+    "nameCs": "Velitelka stanice",
+    "type": "clovek",
+    "influenceLimit": 5,
+    "address": "Ona",
+    "setup": "Začíná v sekci Terapeutická zahrada. Vedle Přídových přechodových komor umístěte Lékařský únikový modul.",
+    "startSection": "Terapeutická zahrada",
+    "abilities": [
+      {
+        "name": "Důstojník",
+        "category": "pohybove",
+        "text": "Pokud nenastal blackout, může se pohybovat (nebo být tažena, pokud je vyřazená) skrz zámky, které jsou tím odstraněny.",
+        "isReveal": false
+      },
+      {
+        "name": "Hrdost",
+        "category": "obranne",
+        "text": "Nelze ji okrást.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Přirozená autorita",
+        "category": "doplnkove",
+        "text": "Na začátku fáze aktivace Velitelky stanice můžete provést volnou základní akci nebo akci přesunu přechodovou komorou s CP ve stejné sekci nebo s CP se schopností Důstojník kdekoliv.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "POSLEDNÍ NA PALUBĚ",
+    "agendas": [
+      {
+        "text": "za každého jiného zachráněného člověka",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "za každou zachráněnou CP se schopností Důstojník",
+        "points": 1,
+        "isPlus": true
+      },
+      {
+        "text": "pokud je Velitelka stanice živá a na stanici",
+        "points": 2,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Nepřítel: 2 body, pokud je Velitelka stanice vaší BP a není živá ani zachráněna.",
+    "edgeCases": [
+      "Schopnost Přirozená autorita nelze využít při aktivaci jiných postav.",
+      "ZMĚNY NA HERNÍM PLÁNU: Přidání Lékařského únikového modulu zvyšuje počet únikových modulů na stanici. Podmínkou jeho vypuštění je, aby byl obsazen vyřazeným člověkem. K jeho vypuštění však není nutné, aby byla zahájena evakuace."
+    ],
+    "tips": [
+      "Snažte se zahájit evakuaci co nejdříve. Evakuaci může zahájit z Můstku postava se schopností Důstojník nebo pro její zahájení můžete způsobit blackout, příp. spustit Projekt X.",
+      "Postava se schopností Důstojník může z Můstku vypustit všechny obsazené únikové moduly.",
+      "Pokud dotáhnete vyřazeného člověka do Lékařského únikového modulu, můžete tento modul vypustit i bez zahájení evakuace."
+    ]
+  },
+  {
+    "id": "vyhnanec",
+    "nameCs": "Vyhnanec",
+    "type": "clovek",
+    "influenceLimit": 6,
+    "address": "On",
+    "setup": "Začíná v sekci Komunikační místnost.",
+    "startSection": "Komunikační místnost",
+    "abilities": [
+      {
+        "name": "Hacker",
+        "category": "ovladaci-panel",
+        "text": "Namísto volné akce zvednutí nebo upuštění může provést volnou akci ovládacího panelu. Pokud jsou vypnuté rušičky, může provádět akce ovládacího panelu v libovolné sekci.",
+        "isReveal": false
+      },
+      {
+        "name": "Ukecání",
+        "category": "obranne",
+        "text": "V osvětlených sekcích na něj nemohou zaútočit lidé pomocí hasáku.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Špionáž",
+        "category": "konspiracni",
+        "text": "Jako akci s Vyhnancem odhoďte dva kompromaty ze své zásoby a vezměte si do ní jeden kompromat, dříve použitý na CP.",
+        "isReveal": true
+      },
+      {
+        "name": "Zmáčknout pod krkem",
+        "category": "konspiracni",
+        "text": "Po použití kompromatu na CP jej vraťte do své zásoby.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "ZPÁTKY VE HŘE",
+    "agendas": [
+      {
+        "text": "pokud je Vyhnanec zachráněn",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "za každý kompromat ve vaší zásobě na postavu, která je zachráněna",
+        "points": 2,
+        "isPlus": true
+      },
+      {
+        "text": "pokud Vyhnanec vlastní důkazy a média je nemají",
+        "points": 3,
+        "isPlus": true
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Vyhnanec vaší BP a je zachráněn.",
+    "edgeCases": [
+      "Schopnost Zmáčknout pod krkem lze použít při aktivaci libovolné postavy, zatímco Špionáž pouze při aktivaci Vyhnance.",
+      "Standardně lze schopnost Hacker použít v Bezpečnostní stanici nebo Hlavním počítači. Pokud jsou vypnuté rušičky, může Vyhnanec provést (volnou i normální) akci ovládacího panelu v libovolné sekci (i poškozené), a to i v případě, že je poškozena jak Bezpečnostní stanice, tak Hlavní počítač.",
+      "Schopnost Hacker nelze použít při blackoutu."
+    ],
+    "tips": [
+      "Snažte se sesbírat co nejvíce kompromatů.",
+      "Po odhalení můžete opakovaně používat stejný kompromat na CP.",
+      "Pomozte se záchranou postavám, na které máte kompromaty.",
+      "Důkazy lze vyrobit v Bezpečnostní stanici a smazat je lze ve Fyzikální laboratoři.",
+      "Snažte se udržet rušičky zapnuté, aby bylo obtížnější jak přenést, tak poskytnout důkazy médiím."
+    ]
+  },
+  {
+    "id": "udrzbarske-klony",
+    "nameCs": "Údržbářské klony",
+    "type": "clovek",
+    "influenceLimit": 5,
+    "address": "Oni",
+    "setup": "Začínají na třech různých místech: jeden Klon v sekci Palivové články (α), jeden v sekci Kuchyně (β) a jeden v sekci Ubikace (γ).",
+    "abilities": [
+      {
+        "name": "Provizorní oprava",
+        "category": "doplnkove",
+        "text": "Jako akci může opravit sekci, ve které se nachází, nebo vyřazeného robota ve stejné sekci.",
+        "isReveal": false
+      },
+      {
+        "name": "Narozen ve vesmíru",
+        "category": "pohybove",
+        "text": "Namísto volné akce zvednutí nebo upuštění může provést volnou akci pohybu nebo přesunu přechodovou komorou do sekce s nulovou gravitací.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Běž, běž, běž!",
+        "category": "doplnkove",
+        "text": "Při odhalení můžete okamžitě provést jednu akci s každým živým nezachráněným Klonem.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "DOKAŽ, ŽE KLONY EXISTUJÍ",
+    "agendas": [
+      {
+        "text": "pokud je zachráněn alespoň 1 Klon",
+        "points": 1,
+        "isPlus": false
+      },
+      {
+        "text": "pokud jsou zachráněny alespoň 2 Klony",
+        "points": 4,
+        "isPlus": true
+      },
+      {
+        "text": "pokud média mají důkazy",
+        "points": 2,
+        "isPlus": true
+      }
+    ],
+    "bonusPoints": "Přítel: 1 bod za každý zachráněný Klon. +1 bod, pokud jsou zachráněny všechny 3 Klony.",
+    "edgeCases": [
+      "Při aktivaci Údržbářských klonů můžete v jednom tahu provádět akce pouze s jedním Klonem.",
+      "Každý Klon má limit počtu předmětů roven 2 (oba předměty se umisťují na stejnou pozici).",
+      "Data jsou vlastněna jednotlivými Klony a nejsou automaticky sdílena s ostatními Klony. Vlastněná data a předměty umisťujte na vyznačené pozice pro jednotlivé Klony na jejich kartě postavy.",
+      "Klony je možné aktivovat nebo s nimi vyjednávat, dokud nejsou všichni tři zachráněni a/nebo anihilováni."
+    ],
+    "tips": [
+      "Údržbářské klony se mohou pohybovat velmi rychle.",
+      "Využijte toho, že se nalézáte na třech různých místech současně.",
+      "Důkazy lze vyrobit v Bezpečnostní stanici, médiím je lze přenést pomocí akce přenosu dat v Komunikační místnosti, nebo tím, že se s nimi zachráníte.",
+      "Vypněte rušičky, aby šlo důkazy zkopírovat komukoliv na stanici."
+    ]
+  },
+  {
+    "id": "cerna-pasazerka",
+    "nameCs": "Černá pasažérka",
+    "type": "clovek",
+    "influenceLimit": 4,
+    "address": "Ona",
+    "setup": "Černá pasažérka začíná hru mimo herní plán na své kartě postavy.",
+    "abilities": [
+      {
+        "name": "Hacker",
+        "category": "ovladaci-panel",
+        "text": "Namísto volné akce zvednutí nebo upuštění může provést volnou akci ovládacího panelu. Pokud jsou vypnuté rušičky, může provádět akce ovládacího panelu v libovolné sekci.",
+        "isReveal": false
+      },
+      {
+        "name": "Tunelová krysa",
+        "category": "pohybove",
+        "text": "Může se pohybovat skrz šachty.",
+        "isReveal": false
+      }
+    ],
+    "revealAbilities": [
+      {
+        "name": "Tajná skrýš",
+        "category": "doplnkove",
+        "text": "Při odhalení získá Černá pasažérka nebo jeden z vašich konspirátorů helmu.",
+        "isReveal": true
+      }
+    ],
+    "agendaTitle": "SÓLOKAPR",
+    "agendas": [
+      {
+        "text": "pokud je Černá pasažérka zachráněna",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud vlastní důkazy a žádná jiná zachráněná postava je nevlastní",
+        "points": 3,
+        "isPlus": true
+      },
+      {
+        "text": "pokud média mají tajemství X",
+        "points": 2,
+        "isPlus": false
+      },
+      {
+        "text": "pokud média mají důkazy",
+        "points": 2,
+        "isPlus": false
+      }
+    ],
+    "bonusPoints": "Přítel: 2 body, pokud je Černá pasažérka vaší BP a je zachráněna.",
+    "edgeCases": [
+      "Figurka Černé pasažérky začíná hru na kartě své postavy.",
+      "Vůbec první akcí Černé pasažérky ve hře musí být pohyb do některé temné sekce na stanici. Do té doby s ní nelze nijak interagovat (to zahrnuje i kopírování dat Černé pasažérce a použití kompromatu nebo úplatku na ni).",
+      "Černá pasažérka se může odhalit před provedením své první akce. Do provedení své první akce je nedotknutelná.",
+      "Standardně lze schopnost Hacker použít v Bezpečnostní stanici nebo Hlavním počítači. Pokud jsou vypnuté rušičky, může Černá pasažérka provést (volnou i normální) akci ovládacího panelu v libovolné sekci (i poškozené), a to i v případě, že je poškozena Bezpečnostní stanice nebo Hlavní počítač.",
+      "Schopnost Hacker nelze použít při blackoutu."
+    ],
+    "tips": [
+      "Důkazy lze vyrobit v Bezpečnostní stanici, tajemství X lze vyrobit v Biolaboratoři.",
+      "Média mohou obojí získat pomocí akce přenosu dat v Komunikační místnosti, nebo tím, že se s nimi zachráníte.",
+      "Vypněte rušičky, aby bylo možné data zkopírovat komukoliv na stanici a mohli jste využívat svou schopnost Hacker.",
+      "Zabraňte ostatním zachránit se s důkazy tím, že je vyřadíte nebo je přesunete do Fyzikální laboratoře."
+    ]
+  }
+]
