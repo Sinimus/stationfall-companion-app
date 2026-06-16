@@ -115,9 +115,28 @@ export interface ProjectX {
   trigger?: string;
 }
 
+/**
+ * Kurátorovaná otázka & odpověď pro pilíř "Otázky & kauzality".
+ * Odpovídá na bodové kauzální/how-to dotazy (typu "Vyžaduje Oživení kolokaci?",
+ * "Jak anihilovat antihmotu?"), které procedurální flow nepokrývají.
+ */
+export interface FaqEntry {
+  id: string;
+  /** Kanonické znění otázky (CZ). */
+  question: string;
+  /** Stručná odpověď (CZ), věrná pravidlům. */
+  answer: string;
+  /** Štítky pro facety a vyhledávání (synonyma, klíčová slova). */
+  tags?: string[];
+  ruleRefs?: string[];
+  /** Odkazy na pojmy v glosáři, flow nebo postavy (jejich id). */
+  seeAlso?: string[];
+}
+
 export interface StationfallData {
   characters: Character[];
   glossary: GlossaryTerm[];
   flows: CausalFlow[];
   projectsX: ProjectX[];
+  faq: FaqEntry[];
 }

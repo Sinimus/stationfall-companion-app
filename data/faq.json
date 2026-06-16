@@ -1,0 +1,82 @@
+[
+  {
+    "id": "revive-vyzaduje-kolokaci",
+    "question": "Vyžaduje akce Oživení kolokaci (stejnou sekci)?",
+    "answer": "Ano. Postava s nanogelem může oživit vyřazeného člověka, robota nebo nestvůru pouze ve stejné sekci, v níž se sama nachází. Člověka nelze oživit, pokud by byl okamžitě vyřazen znovu (např. bez helmy v sekci s nebezpečím udušení). Pozn.: Medik se schopností Pohotová záchrana má pohyb do sekcí s vyřazeným člověkem zdarma.",
+    "tags": ["oživení", "revive", "nanogel", "kolokace", "stejná sekce", "vyřazená postava"],
+    "ruleRefs": ["12.11"],
+    "seeAlso": ["oziveni", "nanogel", "uduseni", "helma"]
+  },
+  {
+    "id": "jak-anihilovat-antihmotu",
+    "question": "Jak anihilovat antihmotu?",
+    "answer": "Antihmotu nelze anihilovat — pokud by měla být anihilována, namísto toho okamžitě exploduje. Bezpečně ji lze zneškodnit jen tak, že ji odjistíte a necháte explodovat v Okolním vesmíru (kde anihiluje vše uvnitř a poškodí sousední sekce), místo na stanici nebo v mezosféře.",
+    "tags": ["antihmota", "antimatter", "anihilace", "exploze", "detonace", "okolní vesmír"],
+    "ruleRefs": ["7.3.3", "7.3.2"],
+    "seeAlso": ["antihmota", "detonace-antihmoty", "okolni-vesmir"]
+  },
+  {
+    "id": "chrani-helma-robota",
+    "question": "Chrání helma robota?",
+    "answer": "Ne. Robot je vždy považován za postavu bez helmy, a to i kdyby helmu vlastnil. Helma chrání před nebezpečím, okradením a útoky hasákem pouze lidi.",
+    "tags": ["helma", "robot", "ochrana", "bez helmy"],
+    "ruleRefs": ["8.1.1"],
+    "seeAlso": ["helma", "okradeni"]
+  },
+  {
+    "id": "co-vyradi-cloveka-bez-helmy",
+    "question": "Co vyřadí člověka bez helmy?",
+    "answer": "Člověka bez helmy vyřadí nebezpečí (oheň i udušení) v jeho sekci, útok hasákem nebo pistolí, a vyhození do Okolního vesmíru. Helma chrání před nebezpečím i před útokem hasákem (nikoli před pistolí).",
+    "tags": ["vyřazení", "downed", "člověk", "nebezpečí", "útok", "helma"],
+    "ruleRefs": ["6.2", "12.8"],
+    "seeAlso": ["vyrazena", "uduseni", "ohen", "utok", "helma", "okolni-vesmir"]
+  },
+  {
+    "id": "kdy-se-stanu-podezrelym",
+    "question": "Kdy se hráč stane podezřelým?",
+    "answer": "Aktivní hráč se stane podezřelým, pokud během své fáze aktivace provede akci, která vyřadí živého člověka v osvětlené sekci se zapnutými kamerami. Také pokud odmítne požadovanou akci při použití kompromatu na svou nevinnou HP. Postavy se schopností Psanec podezření nespouštějí.",
+    "tags": ["podezřelý", "suspect", "kamery", "osvětlená sekce", "vina"],
+    "ruleRefs": ["10.1"],
+    "seeAlso": ["podezrely", "kamery", "osvetlena-sekce", "psanec", "kompromat"]
+  },
+  {
+    "id": "jak-udelat-z-hrace-vinneho",
+    "question": "Jak udělat z hráče vinného?",
+    "answer": "Přenosem důkazů úřadům (akce Přenos dat v Komunikační místnosti) se všichni ostatní podezřelí hráči stanou vinnými. Vinný hráč nemůže zvítězit, dokud se viny nezbaví.",
+    "tags": ["vinný", "guilty", "důkazy", "úřady", "přenos dat"],
+    "ruleRefs": ["10.2.1"],
+    "seeAlso": ["vinny", "dukazy", "prenos-dat", "podezrely"]
+  },
+  {
+    "id": "komu-lze-kopirovat-data",
+    "question": "Komu lze kopírovat data — jen ve stejné sekci?",
+    "answer": "Při zapnutých rušičkách lze kopírovat data jen postavě ve stejné sekci. Při vypnutých rušičkách lze data zkopírovat libovolné postavě ve hře, která není zachráněná ani anihilovaná. Akce Přenos dat institucím rušičky neovlivňují.",
+    "tags": ["kopírování dat", "rušičky", "jammers", "stejná sekce", "data"],
+    "ruleRefs": ["12.6", "13.2.2"],
+    "seeAlso": ["kopirovani", "rusicky", "data-pojem", "prenos-dat"]
+  },
+  {
+    "id": "co-spusti-projekt-x",
+    "question": "Co spustí Projekt X?",
+    "answer": "Projekt X se spustí blackoutem, akcí Spuštění Projektu X (z Můstku nebo Kryolaboratoře, jen postavou se schopností Důstojník — ta zároveň zahájí evakuaci), nebo poškozením sekce Krypta X.",
+    "tags": ["projekt x", "spuštění", "nestvůra", "blackout", "krypta x"],
+    "ruleRefs": ["7.6.1", "13.3"],
+    "seeAlso": ["projekt-x", "spusteni-projektu-x-flow", "blackout", "dustojnik"]
+  },
+  {
+    "id": "lze-hazet-predmety-skrz-sachty",
+    "question": "Lze házet předměty skrz šachty?",
+    "answer": "Ne. Skrz šachty nelze házet předměty. Pohybovat se šachtami může jen postava se schopností Tunelová krysa. Házet lze jen skrz chodby bez zámku; do Okolního vesmíru pouze akcí přechodové komory.",
+    "tags": ["házení", "throw", "šachty", "předměty", "tunelová krysa"],
+    "ruleRefs": ["5.4.1", "12.5"],
+    "seeAlso": ["hozeni", "sachty", "tunelova-krysa", "prechodova-komora"]
+  },
+  {
+    "id": "kdo-projde-zamkem",
+    "question": "Kdo může projít zámkem?",
+    "answer": "Postava se schopností Důstojník projde zámkem (mimo blackout), čímž se zámek odstraní — a to i při tažení vyřazené postavy. Kdokoli může odstranit sousední zámek akcí Proražení. Při blackoutu mají Proražení všichni lidé i roboti, ale Důstojníci zámky procházet nemohou.",
+    "tags": ["zámky", "locks", "důstojník", "proražení", "pohyb", "blackout"],
+    "ruleRefs": ["12.1.3", "7.2.2"],
+    "seeAlso": ["zamky", "dustojnik", "prorazeni", "blackout", "pohyb"]
+  }
+]

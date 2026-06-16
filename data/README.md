@@ -12,7 +12,8 @@ Glosář, Interaktivní průvodci).
 | `schema.ts` | TypeScript typy (zdroj pravdy pro tvary dat) | — |
 | `characters.json` | Postavy: schopnosti, reveal, úkoly s body, zvláštnosti, tipy | 28 |
 | `glossary.json` | Pojmy, stavy, předměty, data, nebezpečí, systémy, sekce, akce, sdílené schopnosti | 109 |
-| `flows.json` | Interaktivní kauzální průvodci | 4 |
+| `flows.json` | Procedurální kauzální průvodci (krokové) | 4 |
+| `faq.json` | Kurátorované Otázky & kauzality (how/can/does) | 10 |
 | `projectsX.json` | Karty Projektů X | 8 |
 
 ### Flows (průvodci)
