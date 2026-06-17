@@ -126,11 +126,13 @@ export interface FaqEntry {
   question: string;
   /** Stručná odpověď (CZ), věrná pravidlům. */
   answer: string;
-  /** Štítky pro facety a vyhledávání (synonyma, klíčová slova). */
+  /** Štítky pro facety a vyhledávání (synonyma, klíčová slova, i EN termíny). */
   tags?: string[];
   ruleRefs?: string[];
   /** Odkazy na pojmy v glosáři, flow nebo postavy (jejich id). */
   seeAlso?: string[];
+  /** Provenance/autorita odpovědi (např. "Ref. 7.3.3", "BGG Massive FAQ", "Dev Andy Mesa"). */
+  source?: string;
 }
 
 export interface StationfallData {

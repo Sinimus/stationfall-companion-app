@@ -13,7 +13,7 @@ Glosář, Interaktivní průvodci).
 | `characters.json` | Postavy: schopnosti, reveal, úkoly s body, zvláštnosti, tipy | 28 |
 | `glossary.json` | Pojmy, stavy, předměty, data, nebezpečí, systémy, sekce, akce, sdílené schopnosti | 109 |
 | `flows.json` | Procedurální kauzální průvodci (krokové) | 4 |
-| `faq.json` | Kurátorované Otázky & kauzality (how/can/does) | 10 |
+| `faq.json` | Kurátorované Otázky & kauzality (how/can/does) | 31 |
 | `projectsX.json` | Karty Projektů X | 8 |
 
 ### Flows (průvodci)
@@ -33,6 +33,8 @@ Glosář, Interaktivní průvodci).
 - **Přehled postav a schopností** (`Stationfall_CZ-characters-sheet.pdf`) — křížová kontrola
   barev základních schopností.
 - **Cheatsheet** + **Player Aid** — glosář (stavy, předměty, akce, systémy).
+- **BGG rules fórum** — `faq.json`: zejm. vlákno „Massive FAQ" (Petr Pospíšil, autor CZ překladu)
+  + designerova upřesnění (Andy Mesa). Každá Q&A má pole `source` a křížově ověřena proti příručce.
 
 ## Konvence
 
