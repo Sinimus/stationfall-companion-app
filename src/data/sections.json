@@ -10,7 +10,8 @@
       "autodestrukce",
       "vypusteni"
     ],
-    "notes": "Akce Můstku vyžadují postavu se schopností Důstojník."
+    "notes": "Akce Můstku vyžadují postavu se schopností Důstojník.",
+    "lit": true
   },
   {
     "id": "hlavni-pocitac",
@@ -23,7 +24,8 @@
       "rusicky",
       "hasici-system"
     ],
-    "notes": "Napájecí sekce — poškození snižuje úroveň energie. Má ovládací panel."
+    "notes": "Napájecí sekce — poškození snižuje úroveň energie. Má ovládací panel.",
+    "lit": true
   },
   {
     "id": "bezpecnostni-stanice",
@@ -37,7 +39,8 @@
       "rusicky",
       "hasici-system"
     ],
-    "notes": "Jediná sekce s akcí zapnutí/vypnutí kamer. Má ovládací panel."
+    "notes": "Jediná sekce s akcí zapnutí/vypnutí kamer. Má ovládací panel.",
+    "lit": true
   },
   {
     "id": "reaktor",
@@ -46,7 +49,8 @@
     "gravity": "nulova",
     "powered": true,
     "actions": [],
-    "notes": "Napájecí sekce — poškození snižuje úroveň energie a navíc přidá poškození energie i do propojených sekcí."
+    "notes": "Napájecí sekce — poškození snižuje úroveň energie a navíc přidá poškození energie i do propojených sekcí.",
+    "lit": true
   },
   {
     "id": "palivove-clanky",
@@ -55,7 +59,8 @@
     "gravity": "nulova",
     "powered": true,
     "actions": [],
-    "notes": "Napájecí sekce — poškození snižuje úroveň energie a navíc založí oheň v této sekci i v Nádržích."
+    "notes": "Napájecí sekce — poškození snižuje úroveň energie a navíc založí oheň v této sekci i v Nádržích.",
+    "lit": true
   },
   {
     "id": "komunikacni-mistnost",
@@ -65,7 +70,8 @@
     "actions": [
       "prenos-dat"
     ],
-    "notes": "Jediná sekce pro přenos dat institucím (úřady/média)."
+    "notes": "Jediná sekce pro přenos dat institucím (úřady/média).",
+    "lit": true
   },
   {
     "id": "kryolaborator",
@@ -75,7 +81,8 @@
     "actions": [
       "spusteni-projektu-x"
     ],
-    "notes": "Spuštění Projektu X (jako Můstek), jen Důstojník."
+    "notes": "Spuštění Projektu X (jako Můstek), jen Důstojník.",
+    "lit": true
   },
   {
     "id": "krypta-x",
@@ -83,7 +90,8 @@
     "zone": "dolni-prstenec",
     "gravity": "gravitace",
     "actions": [],
-    "notes": "Poškození této sekce uvolní Projekt X a spustí evakuaci (Abandon Ship)."
+    "notes": "Poškození této sekce uvolní Projekt X a spustí evakuaci (Abandon Ship).",
+    "lit": true
   },
   {
     "id": "nadrze",
@@ -104,7 +112,8 @@
     "actions": [
       "odhozeni-antihmoty"
     ],
-    "notes": "Drží antihmotu; mimo ni se antihmota odjistí."
+    "notes": "Drží antihmotu; mimo ni se antihmota odjistí.",
+    "lit": true
   },
   {
     "id": "biolaborator",
@@ -114,7 +123,8 @@
     "actions": [
       "vyroba"
     ],
-    "notes": "Vstup do sekce postavu kontaminuje — s výjimkou případu, kdy v Biolaboratoři hoří oheň. Výroba: Tajemství X."
+    "notes": "Vstup do sekce postavu kontaminuje — s výjimkou případu, kdy v Biolaboratoři hoří oheň. Výroba: Tajemství X.",
+    "lit": true
   },
   {
     "id": "chemicka-laborator",
@@ -123,7 +133,8 @@
     "gravity": "gravitace",
     "actions": [
       "vyroba"
-    ]
+    ],
+    "lit": true
   },
   {
     "id": "nanotovarna",
@@ -132,7 +143,8 @@
     "gravity": "gravitace",
     "actions": [
       "vyroba"
-    ]
+    ],
+    "lit": true
   },
   {
     "id": "3d-tiskarna",
@@ -141,7 +153,8 @@
     "gravity": "gravitace",
     "actions": [
       "vyroba"
-    ]
+    ],
+    "lit": true
   },
   {
     "id": "terapeuticka-zahrada",
@@ -151,7 +164,8 @@
     "actions": [
       "meditace"
     ],
-    "notes": "Meditace (vrácení kostek z pole zrady) — jen HP."
+    "notes": "Meditace (vrácení kostek z pole zrady) — jen HP.",
+    "lit": true
   },
   {
     "id": "strojovna",
@@ -161,7 +175,8 @@
     "actions": [
       "oprava"
     ],
-    "notes": "Oprava vyřazeného robota (v příručce též „Dílna“)."
+    "notes": "Oprava vyřazeného robota (v příručce též „Dílna“).",
+    "lit": true
   },
   {
     "id": "pridove-prechodove-komory",
@@ -172,7 +187,8 @@
       "prechodova-komora",
       "vypusteni"
     ],
-    "notes": "Přídové airlock — Airlock + vypuštění ze sekce sousedního obsazeného modulu."
+    "notes": "Přídové airlock — Airlock + vypuštění ze sekce sousedního obsazeného modulu.",
+    "lit": true
   },
   {
     "id": "zadove-prechodove-komory",
@@ -225,7 +241,8 @@
     "zone": "centralni-osa",
     "gravity": "nulova",
     "actions": [],
-    "notes": "Cargo Claw (Sevření): zvedni předmět nebo vyřaď postavu nacházející se v Okolním vesmíru."
+    "notes": "Cargo Claw (Sevření): zvedni předmět nebo vyřaď postavu nacházející se v Okolním vesmíru.",
+    "lit": true
   },
   {
     "id": "alcatraz",
@@ -236,7 +253,8 @@
     "actions": [
       "vypusteni"
     ],
-    "notes": "Únikový modul — vypuštění vyžaduje zahájení evakuace (Abandon Ship)."
+    "notes": "Únikový modul — vypuštění vyžaduje zahájení evakuace (Abandon Ship).",
+    "lit": true
   },
   {
     "id": "bryks",
@@ -247,7 +265,8 @@
     "actions": [
       "vypusteni"
     ],
-    "notes": "Hail Mary (EN). Únikový modul — vypuštění vyžaduje zahájení evakuace (Abandon Ship)."
+    "notes": "Hail Mary (EN). Únikový modul — vypuštění vyžaduje zahájení evakuace (Abandon Ship).",
+    "lit": true
   },
   {
     "id": "houdini",
@@ -258,7 +277,8 @@
     "actions": [
       "vypusteni"
     ],
-    "notes": "Únikový modul — vypuštění vyžaduje zahájení evakuace (Abandon Ship)."
+    "notes": "Únikový modul — vypuštění vyžaduje zahájení evakuace (Abandon Ship).",
+    "lit": true
   },
   {
     "id": "mcqueen",
@@ -269,7 +289,8 @@
     "actions": [
       "vypusteni"
     ],
-    "notes": "Únikový modul — vypuštění vyžaduje zahájení evakuace (Abandon Ship)."
+    "notes": "Únikový modul — vypuštění vyžaduje zahájení evakuace (Abandon Ship).",
+    "lit": true
   },
   {
     "id": "nouzovy-unikovy-modul",
@@ -280,7 +301,8 @@
     "actions": [
       "vypusteni"
     ],
-    "notes": "Únikový modul; vypuštění vyžaduje zahájení evakuace."
+    "notes": "Únikový modul; vypuštění vyžaduje zahájení evakuace.",
+    "lit": true
   },
   {
     "id": "lekarsky-unikovy-modul",
@@ -291,7 +313,8 @@
     "actions": [
       "vypusteni"
     ],
-    "notes": "Medevac — vypuštění vyžaduje vyřazenou postavu na palubě; NEvyžaduje zahájení evakuace."
+    "notes": "Medevac — vypuštění vyžaduje vyřazenou postavu na palubě; NEvyžaduje zahájení evakuace.",
+    "lit": true
   },
   {
     "id": "piratska-zachranna-lod",
@@ -299,14 +322,16 @@
     "zone": "specialni",
     "gravity": "nulova",
     "actions": [],
-    "notes": "Speciální sekce; souvisí se schopnostmi Pirátky."
+    "notes": "Speciální sekce; souvisí se schopnostmi Pirátky.",
+    "lit": true
   },
   {
     "id": "apartma",
     "nameCs": "Apartmá",
     "zone": "horni-prstenec",
     "gravity": "gravitace",
-    "actions": []
+    "actions": [],
+    "lit": true
   },
   {
     "id": "archiv",
@@ -322,21 +347,24 @@
     "nameCs": "Hydroponika",
     "zone": "centralni-osa",
     "gravity": "nulova",
-    "actions": []
+    "actions": [],
+    "lit": true
   },
   {
     "id": "kuchyne",
     "nameCs": "Kuchyně",
     "zone": "horni-prstenec",
     "gravity": "gravitace",
-    "actions": []
+    "actions": [],
+    "lit": true
   },
   {
     "id": "skladiste",
     "nameCs": "Skladiště",
     "zone": "horni-prstenec",
     "gravity": "gravitace",
-    "actions": []
+    "actions": [],
+    "lit": true
   },
   {
     "id": "satny",
@@ -352,7 +380,8 @@
     "nameCs": "Společenská místnost",
     "zone": "horni-prstenec",
     "gravity": "gravitace",
-    "actions": []
+    "actions": [],
+    "lit": true
   },
   {
     "id": "solarni-bunkr",
@@ -360,14 +389,16 @@
     "zone": "centralni-osa",
     "gravity": "nulova",
     "actions": [],
-    "notes": "Storm Shelter (EN)."
+    "notes": "Storm Shelter (EN).",
+    "lit": true
   },
   {
     "id": "ubikace",
     "nameCs": "Ubikace",
     "zone": "horni-prstenec",
     "gravity": "gravitace",
-    "actions": []
+    "actions": [],
+    "lit": true
   },
   {
     "id": "fyzikalni-laborator",
@@ -375,20 +406,23 @@
     "zone": "dolni-prstenec",
     "gravity": "gravitace",
     "actions": [],
-    "notes": "Ve fázi vyhodnocení se zde smažou všechna data."
+    "notes": "Ve fázi vyhodnocení se zde smažou všechna data.",
+    "lit": true
   },
   {
     "id": "pridovy-uzel",
     "nameCs": "Přídový uzel",
     "zone": "centralni-osa",
     "gravity": "nulova",
-    "actions": []
+    "actions": [],
+    "lit": true
   },
   {
     "id": "zadovy-uzel",
     "nameCs": "Záďový uzel",
     "zone": "centralni-osa",
     "gravity": "nulova",
-    "actions": []
+    "actions": [],
+    "lit": true
   }
 ]
