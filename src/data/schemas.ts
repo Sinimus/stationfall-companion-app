@@ -110,8 +110,34 @@ export const faqEntrySchema = z
   })
   .strict();
 
+export const sectionZone = z.enum([
+  "horni-prstenec",
+  "dolni-prstenec",
+  "centralni-osa",
+  "unikovy-modul",
+  "specialni",
+]);
+
+export const sectionGravity = z.enum(["gravitace", "nulova"]);
+
+export const sectionSchema = z
+  .object({
+    id: z.string().min(1),
+    nameCs: z.string().min(1),
+    zone: sectionZone,
+    gravity: sectionGravity,
+    lit: z.boolean().optional(),
+    powered: z.boolean().optional(),
+    consolePanel: z.boolean().optional(),
+    escapePod: z.boolean().optional(),
+    actions: z.array(z.string()),
+    notes: z.string().optional(),
+  })
+  .strict();
+
 export type Character = z.infer<typeof characterSchema>;
 export type GlossaryTerm = z.infer<typeof glossaryTermSchema>;
 export type CausalFlow = z.infer<typeof causalFlowSchema>;
 export type ProjectX = z.infer<typeof projectXSchema>;
 export type FaqEntry = z.infer<typeof faqEntrySchema>;
+export type Section = z.infer<typeof sectionSchema>;

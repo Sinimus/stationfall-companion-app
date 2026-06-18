@@ -5,6 +5,7 @@ import {
   flows,
   projectsX,
   faq,
+  sections,
   characterIds,
   glossaryIds,
   flowIds,
@@ -62,6 +63,19 @@ describe("data integrity", () => {
     for (const q of faq)
       for (const s of q.seeAlso ?? [])
         if (!linkTargets.has(s)) bad.push(`faq ${q.id} -> ${s}`);
+    expect(bad).toEqual([]);
+  });
+
+  it("sections: unique ids and 41 entries", () => {
+    expect(sections).toHaveLength(41);
+    expect(uniq(sections.map((s) => s.id))).toEqual([]);
+  });
+
+  it("every section action resolves to a glossary id", () => {
+    const bad: string[] = [];
+    for (const s of sections)
+      for (const a of s.actions)
+        if (!glossaryIds.has(a)) bad.push(`${s.id} -> ${a}`);
     expect(bad).toEqual([]);
   });
 });

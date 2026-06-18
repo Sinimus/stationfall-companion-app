@@ -4,6 +4,7 @@ import glossary from "@/data/glossary.json";
 import flows from "@/data/flows.json";
 import projectsX from "@/data/projectsX.json";
 import faq from "@/data/faq.json";
+import sections from "@/data/sections.json";
 
 describe("data package loads", () => {
   it("has the expected record counts", () => {
@@ -12,6 +13,7 @@ describe("data package loads", () => {
     expect(flows).toHaveLength(4);
     expect(projectsX).toHaveLength(8);
     expect(faq).toHaveLength(31);
+    expect(sections).toHaveLength(41);
   });
 
   it("every character has a non-empty id and nameCs", () => {

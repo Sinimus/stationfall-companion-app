@@ -137,10 +137,35 @@ export interface FaqEntry {
   source?: string;
 }
 
+export type SectionZone =
+  | "horni-prstenec"
+  | "dolni-prstenec"
+  | "centralni-osa"
+  | "unikovy-modul"
+  | "specialni";
+
+export type SectionGravity = "gravitace" | "nulova";
+
+export interface Section {
+  id: string;
+  nameCs: string;
+  zone: SectionZone;
+  gravity: SectionGravity;
+  /** Nepřítomné nebo true = osvětlená; false = temná sekce (bez kamer). */
+  lit?: boolean;
+  powered?: boolean;
+  consolePanel?: boolean;
+  escapePod?: boolean;
+  /** Akce dostupné v sekci — id glosářových pojmů (kind="akce"/"system"). */
+  actions: string[];
+  notes?: string;
+}
+
 export interface StationfallData {
   characters: Character[];
   glossary: GlossaryTerm[];
   flows: CausalFlow[];
   projectsX: ProjectX[];
   faq: FaqEntry[];
+  sections: Section[];
 }
