@@ -5,23 +5,89 @@
     "bggId": 316624,
     "rulesForumUrl": "https://boardgamegeek.com/boardgame/316624/stationfall/forums/66",
     "totalThreadsAtLastScan": 492,
-    "lastScan": "2026-06-17"
+    "lastScan": "2026-06-18"
   },
   "mined": [
-    { "threadId": 3021145, "title": "Massive FAQ", "url": "https://boardgamegeek.com/thread/3021145/massive-faq", "dateMined": "2026-06-17", "entriesYielded": 22, "note": "Hlavní zdroj. Autor Petr Pospíšil (CZ překladatel). Obsahuje oficiální upřesnění + dev potvrzení." },
-    { "threadId": 3171927, "title": "Some clarification", "url": "https://boardgamegeek.com/thread/3171927/some-clarification", "dateMined": "2026-06-17", "entriesYielded": 2, "note": "Bonusové skórování přítel/zášť + konflikt agend BP vs. postava." },
-    { "threadId": 3695250, "title": "How to annihilate antimatter?", "url": "https://boardgamegeek.com/thread/3695250/how-to-annihilate-antimatter", "dateMined": "2026-06-17", "entriesYielded": 1, "note": "Sloučeno do jak-anihilovat-antihmotu." },
-    { "threadId": 3096985, "title": "Timed Launch and Medical Emergency Response Questions", "url": "https://boardgamegeek.com/thread/3096985", "dateMined": "2026-06-17", "entriesYielded": 1, "note": "Medical Emergency Response: kolokace ano, nanogel ne. (Timed-launch část zatím nezpracována.)" },
-    { "threadId": 2625688, "title": "The Official Stationfall Information Depot", "url": "https://boardgamegeek.com/thread/2625688", "dateMined": "2026-06-17", "entriesYielded": 0, "note": "Jen rozcestník odkazů od dev Andy Mesa, žádná Q&A." },
-    { "threadId": 3049513, "title": "General rules clarifications", "url": "https://boardgamegeek.com/thread/3049513", "dateMined": "2026-06-17", "entriesYielded": 0, "note": "Meta (jak začít), bez konkrétních pravidlových Q&A." }
+    {
+      "threadId": 3021145,
+      "title": "Massive FAQ",
+      "url": "https://boardgamegeek.com/thread/3021145/massive-faq",
+      "dateMined": "2026-06-17",
+      "entriesYielded": 22,
+      "note": "Hlavní zdroj. Autor Petr Pospíšil (CZ překladatel). Obsahuje oficiální upřesnění + dev potvrzení."
+    },
+    {
+      "threadId": 3171927,
+      "title": "Some clarification",
+      "url": "https://boardgamegeek.com/thread/3171927/some-clarification",
+      "dateMined": "2026-06-17",
+      "entriesYielded": 2,
+      "note": "Bonusové skórování přítel/zášť + konflikt agend BP vs. postava."
+    },
+    {
+      "threadId": 3695250,
+      "title": "How to annihilate antimatter?",
+      "url": "https://boardgamegeek.com/thread/3695250/how-to-annihilate-antimatter",
+      "dateMined": "2026-06-17",
+      "entriesYielded": 1,
+      "note": "Sloučeno do jak-anihilovat-antihmotu."
+    },
+    {
+      "threadId": 3096985,
+      "title": "Timed Launch and Medical Emergency Response Questions",
+      "url": "https://boardgamegeek.com/thread/3096985",
+      "dateMined": "2026-06-17",
+      "entriesYielded": 1,
+      "note": "Medical Emergency Response: kolokace ano, nanogel ne. (Timed-launch část zatím nezpracována.)"
+    },
+    {
+      "threadId": 2625688,
+      "title": "The Official Stationfall Information Depot",
+      "url": "https://boardgamegeek.com/thread/2625688",
+      "dateMined": "2026-06-17",
+      "entriesYielded": 0,
+      "note": "Jen rozcestník odkazů od dev Andy Mesa, žádná Q&A."
+    },
+    {
+      "threadId": 3049513,
+      "title": "General rules clarifications",
+      "url": "https://boardgamegeek.com/thread/3049513",
+      "dateMined": "2026-06-17",
+      "entriesYielded": 0,
+      "note": "Meta (jak začít), bez konkrétních pravidlových Q&A."
+    },
+    {
+      "threadId": 3560153,
+      "title": "More FAQ IMHO",
+      "url": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+      "dateMined": "2026-06-18",
+      "entriesYielded": 18,
+      "note": "Tony Yeung, 56 oficiálních/přijatých Q&A (Part1) + 11 nevyřešených (Part2). Vytěženo 18 jasných z Part1; Part2 (opinion/unresolved) vynecháno."
+    }
   ],
   "candidates": [
-    { "title": "More FAQ IMHO", "author": "tony0021074", "recommends": 26, "note": "Vysoká priorita — další velká agregace. ID dohledat z fóra." },
-    { "title": "Inspector End Game", "note": "14 odpovědí." },
-    { "title": "Is a pod damaged after launched annihilated?", "note": "" },
-    { "title": "Can a fugitive character cause a player to become Suspect?", "note": "" },
-    { "title": "Digital Assistant, Rat, and Stowaway", "note": "17 odpovědí — bot scripty/interakce." },
-    { "title": "What's to stop a player from triggering Abandon Ship in turn 2", "note": "17 odpovědí." },
-    { "note": "Obecně: prioritizuj vlákna s vysokým počtem doporučení/odpovědí a vlákna o konkrétních postavách (quirky) a o skórování." }
+    {
+      "title": "Inspector End Game",
+      "note": "14 odpovědí."
+    },
+    {
+      "title": "Is a pod damaged after launched annihilated?",
+      "note": ""
+    },
+    {
+      "title": "Can a fugitive character cause a player to become Suspect?",
+      "note": ""
+    },
+    {
+      "title": "Digital Assistant, Rat, and Stowaway",
+      "note": "17 odpovědí — bot scripty/interakce."
+    },
+    {
+      "title": "What's to stop a player from triggering Abandon Ship in turn 2",
+      "note": "17 odpovědí."
+    },
+    {
+      "note": "Obecně: prioritizuj vlákna s vysokým počtem doporučení/odpovědí a vlákna o konkrétních postavách (quirky) a o skórování."
+    }
   ]
 }

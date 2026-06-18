@@ -9,9 +9,10 @@ import {
   characterIds,
   glossaryIds,
   flowIds,
+  sectionIds,
 } from "@/data";
 
-const linkTargets = new Set<string>([...characterIds, ...glossaryIds, ...flowIds]);
+const linkTargets = new Set<string>([...characterIds, ...glossaryIds, ...flowIds, ...sectionIds]);
 
 function uniq(ids: readonly string[]): string[] {
   const seen = new Set<string>();
@@ -29,7 +30,7 @@ describe("data integrity", () => {
     expect(glossary).toHaveLength(110);
     expect(flows).toHaveLength(8);
     expect(projectsX).toHaveLength(8);
-    expect(faq).toHaveLength(31);
+    expect(faq).toHaveLength(49);
   });
 
   it("has unique ids within each collection", () => {

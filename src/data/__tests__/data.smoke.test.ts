@@ -12,7 +12,7 @@ describe("data package loads", () => {
     expect(glossary).toHaveLength(110);
     expect(flows).toHaveLength(8);
     expect(projectsX).toHaveLength(8);
-    expect(faq).toHaveLength(31);
+    expect(faq).toHaveLength(49);
     expect(sections).toHaveLength(41);
   });
 

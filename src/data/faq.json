@@ -3,279 +3,1120 @@
     "id": "revive-vyzaduje-kolokaci",
     "question": "Vyžaduje akce Oživení kolokaci (stejnou sekci)?",
     "answer": "Ano. Postava s nanogelem může oživit vyřazeného člověka, robota nebo nestvůru pouze ve stejné sekci, v níž se sama nachází. Člověka nelze oživit, pokud by byl okamžitě vyřazen znovu (např. bez helmy v sekci s nebezpečím udušení).",
-    "tags": ["oživení", "revive", "nanogel", "kolokace", "stejná sekce", "vyřazená postava"],
-    "ruleRefs": ["12.11"],
-    "seeAlso": ["oziveni", "nanogel", "uduseni", "helma"],
+    "tags": [
+      "oživení",
+      "revive",
+      "nanogel",
+      "kolokace",
+      "stejná sekce",
+      "vyřazená postava"
+    ],
+    "ruleRefs": [
+      "12.11"
+    ],
+    "seeAlso": [
+      "oziveni",
+      "nanogel",
+      "uduseni",
+      "helma"
+    ],
     "source": "Ref. 12.11"
   },
   {
     "id": "medical-emergency-response-kolokace",
     "question": "Musí být Medik kolokovaný a mít nanogel pro Pohotovou záchranu?",
     "answer": "Kolokaci ano, nanogel ne. Schopnost Pohotová záchrana (Emergency Response) je vlastní schopnost Medika: jako akci oživí člověka ve své sekci BEZ potřeby nanogelu (na rozdíl od běžné akce Oživení 12.11, která nanogel vyžaduje). Navíc má Medik pohyb (krok i přechodovou komorou) do sekcí s vyřazeným člověkem zdarma — proto se k oběti snadno dostane, ale oživuje ji až ve stejné sekci.",
-    "tags": ["medik", "medical", "pohotová záchrana", "emergency response", "kolokace", "nanogel", "oživení"],
-    "ruleRefs": ["12.11"],
-    "seeAlso": ["medik", "oziveni", "nanogel"],
+    "tags": [
+      "medik",
+      "medical",
+      "pohotová záchrana",
+      "emergency response",
+      "kolokace",
+      "nanogel",
+      "oživení"
+    ],
+    "ruleRefs": [
+      "12.11"
+    ],
+    "seeAlso": [
+      "medik",
+      "oziveni",
+      "nanogel"
+    ],
     "source": "BGG /thread/3096985 + karta Medika"
   },
   {
     "id": "jak-anihilovat-antihmotu",
     "question": "Jak anihilovat antihmotu?",
     "answer": "Antihmotu nelze běžně anihilovat — pokud by měla být anihilována, namísto toho okamžitě exploduje. Fakticky se jí lze „zbavit\" jen tak, že se ocitne uvnitř něčeho, co je anihilováno: v poškozeném únikovém modulu, který se vypustí (anihiluje se modul i s obsahem v mezosféře), zásahem Projektu X Paprsek smrti, nebo vhozením do Stabilní červí díry. Vždy jde ale o detonaci v daném místě — herní výsledek anihilace antihmoty se neliší.",
-    "tags": ["antihmota", "antimatter", "anihilace", "exploze", "detonace", "paprsek smrti", "červí díra", "poškozený modul"],
-    "ruleRefs": ["7.3.2", "7.3.3"],
-    "seeAlso": ["antihmota", "detonace-antihmoty", "okolni-vesmir"],
+    "tags": [
+      "antihmota",
+      "antimatter",
+      "anihilace",
+      "exploze",
+      "detonace",
+      "paprsek smrti",
+      "červí díra",
+      "poškozený modul"
+    ],
+    "ruleRefs": [
+      "7.3.2",
+      "7.3.3"
+    ],
+    "seeAlso": [
+      "antihmota",
+      "detonace-antihmoty",
+      "okolni-vesmir"
+    ],
     "source": "BGG /thread/3695250 + Ref. 7.3.3"
   },
   {
     "id": "zachranna-lod-antihmota-okolni-vesmir",
     "question": "Zasáhne exploze antihmoty v Okolním vesmíru i Záchrannou/Pirátskou loď?",
     "answer": "Ano. Záchranná i Pirátská loď jsou explozí antihmoty v Okolním vesmíru zasaženy (vše v Okolním vesmíru se anihiluje).",
-    "tags": ["antihmota", "exploze", "okolní vesmír", "záchranná loď", "pirátská loď", "rescue ship"],
-    "ruleRefs": ["7.3.2"],
-    "seeAlso": ["antihmota", "detonace-antihmoty", "okolni-vesmir"],
+    "tags": [
+      "antihmota",
+      "exploze",
+      "okolní vesmír",
+      "záchranná loď",
+      "pirátská loď",
+      "rescue ship"
+    ],
+    "ruleRefs": [
+      "7.3.2"
+    ],
+    "seeAlso": [
+      "antihmota",
+      "detonace-antihmoty",
+      "okolni-vesmir"
+    ],
     "source": "Dev Andy Mesa (Ion Discord), BGG Massive FAQ #24"
   },
   {
     "id": "chrani-helma-robota",
     "question": "Chrání helma robota?",
     "answer": "Ne. Robot je vždy považován za postavu bez helmy, a to i kdyby helmu vlastnil. Helma chrání před nebezpečím, okradením a útoky hasákem pouze lidi.",
-    "tags": ["helma", "robot", "ochrana", "bez helmy"],
-    "ruleRefs": ["8.1.1"],
-    "seeAlso": ["helma", "okradeni"],
+    "tags": [
+      "helma",
+      "robot",
+      "ochrana",
+      "bez helmy"
+    ],
+    "ruleRefs": [
+      "8.1.1"
+    ],
+    "seeAlso": [
+      "helma",
+      "okradeni"
+    ],
     "source": "Ref. 8.1.1"
   },
   {
     "id": "robot-nevyhody",
     "question": "Mají roboti oproti lidem nějaké nevýhody?",
     "answer": "Ano. Roboti sice nepotřebují helmu a přežijí v ohni i udušení, ale lze je snadno vyřadit hasákem (i když mají helmu) — a takové vyřazení nespouští podezření. Roboty také nelze ovlivnit pomocí kompromatu na podezření stejně jako lidi (vyřazení robota je „beztrestné\").",
-    "tags": ["robot", "nevýhody", "hasák", "helma", "podezření", "oheň", "udušení"],
-    "ruleRefs": ["8.1.1", "12.8"],
-    "seeAlso": ["helma", "hasak", "utok", "podezrely"],
+    "tags": [
+      "robot",
+      "nevýhody",
+      "hasák",
+      "helma",
+      "podezření",
+      "oheň",
+      "udušení"
+    ],
+    "ruleRefs": [
+      "8.1.1",
+      "12.8"
+    ],
+    "seeAlso": [
+      "helma",
+      "hasak",
+      "utok",
+      "podezrely"
+    ],
     "source": "BGG Massive FAQ #12"
   },
   {
     "id": "co-vyradi-cloveka-bez-helmy",
     "question": "Co vyřadí člověka bez helmy?",
     "answer": "Člověka bez helmy vyřadí nebezpečí (oheň i udušení) v jeho sekci, útok hasákem nebo pistolí, a vyhození do Okolního vesmíru. Helma chrání před nebezpečím i před útokem hasákem (nikoli před pistolí).",
-    "tags": ["vyřazení", "downed", "člověk", "nebezpečí", "útok", "helma"],
-    "ruleRefs": ["6.2", "12.8"],
-    "seeAlso": ["vyrazena", "uduseni", "ohen", "utok", "helma", "okolni-vesmir"],
+    "tags": [
+      "vyřazení",
+      "downed",
+      "člověk",
+      "nebezpečí",
+      "útok",
+      "helma"
+    ],
+    "ruleRefs": [
+      "6.2",
+      "12.8"
+    ],
+    "seeAlso": [
+      "vyrazena",
+      "uduseni",
+      "ohen",
+      "utok",
+      "helma",
+      "okolni-vesmir"
+    ],
     "source": "Ref. 6.2, 12.8"
   },
   {
     "id": "kdy-se-stanu-podezrelym",
     "question": "Kdy se hráč stane podezřelým?",
     "answer": "Když akce aktivního hráče během jeho fáze aktivace způsobí, že je živý ČLOVĚK vyřazen v OSVĚTLENÉ sekci se ZAPNUTÝMI kamerami. Rozhoduje poloha oběti, ne útočníka (např. u hození ohnivé bomby). Musí jít o OKAMŽITÝ následek akce (pistole, založení ohně); vkročení do poškozeného modulu nebo k nestvůře je v pořádku, protože vyřazení nastane až později (ve fázi vyhodnocení). Vyřazení robota, vyřazení postavy se schopností Psanec (Pirátka, Kyborg) i vyřazení Agentčinou pastí nebo Bojovým hejnem podezření NESPOUŠTÍ. Podezřelým se hráč stane i odmítnutím kompromatu na svou nevinnou HP.",
-    "tags": ["podezřelý", "suspect", "kamery", "osvětlená sekce", "vina", "psanec", "okamžitý následek"],
-    "ruleRefs": ["10.1.2", "10.1.3"],
-    "seeAlso": ["podezrely", "kamery", "osvetlena-sekce", "psanec", "kompromat"],
+    "tags": [
+      "podezřelý",
+      "suspect",
+      "kamery",
+      "osvětlená sekce",
+      "vina",
+      "psanec",
+      "okamžitý následek"
+    ],
+    "ruleRefs": [
+      "10.1.2",
+      "10.1.3"
+    ],
+    "seeAlso": [
+      "podezrely",
+      "kamery",
+      "osvetlena-sekce",
+      "psanec",
+      "kompromat"
+    ],
     "source": "BGG Massive FAQ #3 + Ref. 10.1"
   },
   {
     "id": "jak-udelat-z-hrace-vinneho",
     "question": "Jak udělat z hráče vinného?",
     "answer": "Přenosem důkazů úřadům (akce Přenos dat v Komunikační místnosti) se všichni ostatní podezřelí hráči stanou vinnými. Vinný hráč nemůže zvítězit, dokud se viny nezbaví. Pozn.: zachráněná HP může při pádu stanice poskytnout své vlastní důkazy úřadům a změnit se z vinného zpět na podezřelého (tím ostatní vinnými nestanou). Projekt X Paprsek smrti může anihilovat úřady a všechny vinné tak vrátit na podezřelé.",
-    "tags": ["vinný", "guilty", "důkazy", "úřady", "přenos dat", "paprsek smrti"],
-    "ruleRefs": ["10.2.1", "10.2.2", "16.3.2"],
-    "seeAlso": ["vinny", "dukazy", "prenos-dat", "podezrely"],
+    "tags": [
+      "vinný",
+      "guilty",
+      "důkazy",
+      "úřady",
+      "přenos dat",
+      "paprsek smrti"
+    ],
+    "ruleRefs": [
+      "10.2.1",
+      "10.2.2",
+      "16.3.2"
+    ],
+    "seeAlso": [
+      "vinny",
+      "dukazy",
+      "prenos-dat",
+      "podezrely"
+    ],
     "source": "BGG Massive FAQ #3 + Ref. 10.2"
   },
   {
     "id": "komu-lze-kopirovat-data",
     "question": "Komu lze kopírovat data — jen ve stejné sekci?",
     "answer": "Při zapnutých rušičkách lze kopírovat data jen postavě ve stejné sekci. Při vypnutých rušičkách lze data zkopírovat libovolné postavě ve hře, která není zachráněná ani anihilovaná. Akce Přenos dat institucím rušičky neovlivňují. Vypnuté rušičky ovlivňují i schopnosti Hacker, Live stream a Naváděná raketa.",
-    "tags": ["kopírování dat", "rušičky", "jammers", "stejná sekce", "data", "hacker"],
-    "ruleRefs": ["12.6", "13.2.2"],
-    "seeAlso": ["kopirovani", "rusicky", "data-pojem", "prenos-dat"],
+    "tags": [
+      "kopírování dat",
+      "rušičky",
+      "jammers",
+      "stejná sekce",
+      "data",
+      "hacker"
+    ],
+    "ruleRefs": [
+      "12.6",
+      "13.2.2"
+    ],
+    "seeAlso": [
+      "kopirovani",
+      "rusicky",
+      "data-pojem",
+      "prenos-dat"
+    ],
     "source": "BGG Massive FAQ #5 + Ref. 12.6"
   },
   {
     "id": "kamery-zapnout-vypnout",
     "question": "Jak zapnout/vypnout kamery?",
     "answer": "Kamery se zapínají/vypínají jako akce sekce v Bezpečnostní stanici. Poškození Bezpečnostní stanice nebo kterékoli napájecí sekce (Reaktor, Hlavní počítač, Palivové články) kamery vypne a nelze je zapnout, dokud sekce není opravena (oprava je ale automaticky nezapne). S vypnutými kamerami lze vyřazovat kohokoli bez spuštění podezření.",
-    "tags": ["kamery", "cameras", "zapnout", "vypnout", "bezpečnostní stanice", "napájecí sekce", "podezření"],
-    "ruleRefs": ["7.5", "13.14"],
-    "seeAlso": ["kamery", "podezrely", "napajeci-sekce", "zalozni-energie"],
+    "tags": [
+      "kamery",
+      "cameras",
+      "zapnout",
+      "vypnout",
+      "bezpečnostní stanice",
+      "napájecí sekce",
+      "podezření"
+    ],
+    "ruleRefs": [
+      "7.5",
+      "13.14"
+    ],
+    "seeAlso": [
+      "kamery",
+      "podezrely",
+      "napajeci-sekce",
+      "zalozni-energie"
+    ],
     "source": "BGG Massive FAQ #4 + Ref. 7.5"
   },
   {
     "id": "rusicky-zapnout-vypnout",
     "question": "Jak zapnout/vypnout rušičky?",
     "answer": "Rušičky se zapínají/vypínají jako akce ovládacího panelu v Bezpečnostní stanici nebo Hlavním počítači. Poškození Bezpečnostní stanice nebo kterékoli napájecí sekce rušičky vypne a nelze je zapnout, dokud sekce není opravena (oprava je automaticky nezapne).",
-    "tags": ["rušičky", "jammers", "zapnout", "vypnout", "ovládací panel", "hlavní počítač", "bezpečnostní stanice"],
-    "ruleRefs": ["7.4", "14.2"],
-    "seeAlso": ["rusicky", "kopirovani", "napajeci-sekce", "akce-ovladaciho-panelu"],
+    "tags": [
+      "rušičky",
+      "jammers",
+      "zapnout",
+      "vypnout",
+      "ovládací panel",
+      "hlavní počítač",
+      "bezpečnostní stanice"
+    ],
+    "ruleRefs": [
+      "7.4",
+      "14.2"
+    ],
+    "seeAlso": [
+      "rusicky",
+      "kopirovani",
+      "napajeci-sekce",
+      "akce-ovladaciho-panelu"
+    ],
     "source": "BGG Massive FAQ #5 + Ref. 7.4"
   },
   {
     "id": "pud-sebezachovy-jak-funguje",
     "question": "Jak funguje pud sebezáchovy?",
     "answer": "Postava nemůže provést akci, která by ji okamžitě vyřadila nebo anihilovala (např. střelit se pistolí, nebo skočit bez helmy do Okolního vesmíru). Platí to jen pro OKAMŽITÉ následky akce — vkročit do poškozeného modulu nebo směrem k rozzuřené nestvůře lze, protože vyřazení nastane až později (ve fázi vyhodnocení). Telepatická krysa a odhalený Digitální asistent mohou pud sebezáchovy u jiných ignorovat.",
-    "tags": ["pud sebezáchovy", "self preservation", "vyřazení", "okamžitý následek", "telepatická krysa", "digitální asistent"],
-    "ruleRefs": ["11.2"],
-    "seeAlso": ["pud-sebezachovy", "vyrazena", "telepaticka-krysa", "digitalni-asistent"],
+    "tags": [
+      "pud sebezáchovy",
+      "self preservation",
+      "vyřazení",
+      "okamžitý následek",
+      "telepatická krysa",
+      "digitální asistent"
+    ],
+    "ruleRefs": [
+      "11.2"
+    ],
+    "seeAlso": [
+      "pud-sebezachovy",
+      "vyrazena",
+      "telepaticka-krysa",
+      "digitalni-asistent"
+    ],
     "source": "BGG Massive FAQ #6 + Ref. 11.2"
   },
   {
     "id": "skore-kdyz-vyrazen-anihilovan",
     "question": "Můžu skórovat, i když je má postava vyřazená nebo anihilovaná?",
     "answer": "Ano. Postavy mohou získat body, i když jsou vyřazené nebo anihilované. Úkoly většiny postav sice vyžadují záchranu (Escape), ale ne všechny (např. Velitelka stanice nebo Medik). Postava může splnit svůj odkaz, i když se přitom obětuje.",
-    "tags": ["skórování", "body", "vyřazený", "anihilovaný", "úkoly", "záchrana"],
-    "ruleRefs": ["16.4.1", "16.4.2"],
-    "seeAlso": ["anihilovana", "vyrazena", "zachranena", "konec-hry-scoring"],
+    "tags": [
+      "skórování",
+      "body",
+      "vyřazený",
+      "anihilovaný",
+      "úkoly",
+      "záchrana"
+    ],
+    "ruleRefs": [
+      "16.4.1",
+      "16.4.2"
+    ],
+    "seeAlso": [
+      "anihilovana",
+      "vyrazena",
+      "zachranena",
+      "konec-hry-scoring"
+    ],
     "source": "BGG Massive FAQ #7"
   },
   {
     "id": "musim-ovlivnovat-kazdy-tah",
     "question": "Musím každý tah ovlivňovat (pokládat kostku vlivu)?",
     "answer": "Ne. Jako konspirátory můžeš aktivovat postavy, na které jsi položil kostky v dřívějších tazích (pokud na nich nikdo nemá víc kostek). Např. v tahu 1 položíš kostku na postavu A a aktivuješ ji, v tahu 2 na postavu B, a v tahu 3 můžeš aktivovat postavu A bez pokládání další kostky.",
-    "tags": ["ovlivnění", "influence", "kostky vlivu", "konspirátor", "aktivace"],
-    "ruleRefs": ["15.4", "15.5.2"],
-    "seeAlso": ["ovlivneni", "kostky-vlivu", "konspirator", "aktivace"],
+    "tags": [
+      "ovlivnění",
+      "influence",
+      "kostky vlivu",
+      "konspirátor",
+      "aktivace"
+    ],
+    "ruleRefs": [
+      "15.4",
+      "15.5.2"
+    ],
+    "seeAlso": [
+      "ovlivneni",
+      "kostky-vlivu",
+      "konspirator",
+      "aktivace"
+    ],
     "source": "BGG Massive FAQ #8"
   },
   {
     "id": "vyroba-kam-jde-predmet",
     "question": "Kam jde vyrobený předmět — musím ho ještě zvednout?",
     "answer": "Ne. Vyrobený předmět jde rovnou do slotu na předměty dané postavy. Vyrábět nelze, pokud postava nemá volný slot na předmět.",
-    "tags": ["výroba", "manufacture", "předmět", "slot", "zvednutí"],
-    "ruleRefs": ["13.9"],
-    "seeAlso": ["vyroba", "vlastnictvi", "zvednuti"],
+    "tags": [
+      "výroba",
+      "manufacture",
+      "předmět",
+      "slot",
+      "zvednutí"
+    ],
+    "ruleRefs": [
+      "13.9"
+    ],
+    "seeAlso": [
+      "vyroba",
+      "vlastnictvi",
+      "zvednuti"
+    ],
     "source": "BGG Massive FAQ #9 + Ref. 13.9"
   },
   {
     "id": "zvednuti-pri-plnem-slotu",
     "question": "Můžu zvednout předmět, když mám plné sloty, výměnou za jiný?",
     "answer": "Ne. Pokud máš plné sloty na předměty, musíš nejdřív nějaký předmět upustit nebo hodit, teprve pak můžeš zvednout jiný. Výjimkou je žeton kontaminace, kvůli kterému se předmět upouští zdarma.",
-    "tags": ["zvednutí", "pick up", "limit předmětů", "plné sloty", "upuštění", "kontaminace"],
-    "ruleRefs": ["12.2.2", "8.5.1"],
-    "seeAlso": ["zvednuti", "upusteni", "vlastnictvi", "kontaminovana"],
+    "tags": [
+      "zvednutí",
+      "pick up",
+      "limit předmětů",
+      "plné sloty",
+      "upuštění",
+      "kontaminace"
+    ],
+    "ruleRefs": [
+      "12.2.2",
+      "8.5.1"
+    ],
+    "seeAlso": [
+      "zvednuti",
+      "upusteni",
+      "vlastnictvi",
+      "kontaminovana"
+    ],
     "source": "BGG Massive FAQ #10 + Ref. 12.2.2"
   },
   {
     "id": "hasak-na-opravu",
     "question": "Můžu hasákem opravit roboty nebo sekce?",
     "answer": "Ne. Hasák slouží jen k útoku, okradení nebo sabotáži. Sekce opraví jen schopnosti jako Provizorní oprava nebo Rozmontování (bez předmětu). Vyřazeného robota oživíš toutéž schopností, akcí Oprava v Dílně (bez předmětu), nebo akcí Oživení (vyžaduje nanogel).",
-    "tags": ["hasák", "bludgeon", "oprava", "provizorní oprava", "rozmontování", "dílna", "robot", "sekce"],
-    "ruleRefs": ["12.8", "13.11", "12.11"],
-    "seeAlso": ["hasak", "provizorni-oprava", "rozmontovani", "oprava", "oziveni"],
+    "tags": [
+      "hasák",
+      "bludgeon",
+      "oprava",
+      "provizorní oprava",
+      "rozmontování",
+      "dílna",
+      "robot",
+      "sekce"
+    ],
+    "ruleRefs": [
+      "12.8",
+      "13.11",
+      "12.11"
+    ],
+    "seeAlso": [
+      "hasak",
+      "provizorni-oprava",
+      "rozmontovani",
+      "oprava",
+      "oziveni"
+    ],
     "source": "BGG Massive FAQ #11 + Ref. 12.8"
   },
   {
     "id": "medevac-oziveni",
     "question": "Oživí Medevac modul vyřazené lidi?",
     "answer": "Fakticky ne, ale nezáleží na tom. Postava, která se jakkoli dostane na Zemi (do mezosféry), se počítá za zachráněnou, i když je vyřazená — pro účely bodů je „jako oživená\" na Zemi.",
-    "tags": ["medevac", "oživení", "záchrana", "escaped", "vyřazený", "mezosféra"],
-    "ruleRefs": ["16.4.1"],
-    "seeAlso": ["zachranena", "vyrazena", "mezosfera"],
+    "tags": [
+      "medevac",
+      "oživení",
+      "záchrana",
+      "escaped",
+      "vyřazený",
+      "mezosféra"
+    ],
+    "ruleRefs": [
+      "16.4.1"
+    ],
+    "seeAlso": [
+      "zachranena",
+      "vyrazena",
+      "mezosfera"
+    ],
     "source": "BGG Massive FAQ #13"
   },
   {
     "id": "odhaleni-pri-pad-stanice",
     "question": "Dostane postava kostky zpět, když se odhalí až při pádu stanice?",
     "answer": "Ano — vlastní kostky vlivu se vrátí do zásoby a ostatní cizí kostky jdou na pole zrady. Většina schopností po odhalení ale v tu chvíli nemá žádný účinek; výjimkami jsou např. Pirátka, Kaskadérka nebo Inženýr.",
-    "tags": ["odhalení", "reveal", "pád stanice", "stationfall", "kostky vlivu", "pole zrady", "schopnost po odhalení"],
-    "ruleRefs": ["16.2", "15.3.1"],
-    "seeAlso": ["odhaleni", "pole-zrady", "konec-hry-scoring", "piratka", "kaskaderka", "inzenyr"],
+    "tags": [
+      "odhalení",
+      "reveal",
+      "pád stanice",
+      "stationfall",
+      "kostky vlivu",
+      "pole zrady",
+      "schopnost po odhalení"
+    ],
+    "ruleRefs": [
+      "16.2",
+      "15.3.1"
+    ],
+    "seeAlso": [
+      "odhaleni",
+      "pole-zrady",
+      "konec-hry-scoring",
+      "piratka",
+      "kaskaderka",
+      "inzenyr"
+    ],
     "source": "BGG Massive FAQ #14 + Ref. 16.2"
   },
   {
     "id": "resolve-faze-kazdy-tah",
     "question": "Probíhá fáze vyhodnocení (Resolve) každý tah, i když nejsou žádné žetony času?",
     "answer": "Ano. Fáze vyhodnocení i účinky sekcí (Magnetická komora, Fyzikální laboratoř) se odehrávají na konci každého tahu — většinou se ale nestane nic. Co se v ní může dít: vypuštění modulu s žetonem času, schopnosti po odhalení (Pirátka, Inženýr), účinky sekcí, akce nestvůry (Projekty X) a šíření Šedivého sajrajtu.",
-    "tags": ["vyhodnocení", "resolve", "fáze", "žetony času", "magnetická komora", "fyzikální laboratoř", "nestvůra"],
-    "ruleRefs": ["15.7"],
-    "seeAlso": ["aktivace", "nestvura", "antihmota"],
+    "tags": [
+      "vyhodnocení",
+      "resolve",
+      "fáze",
+      "žetony času",
+      "magnetická komora",
+      "fyzikální laboratoř",
+      "nestvůra"
+    ],
+    "ruleRefs": [
+      "15.7"
+    ],
+    "seeAlso": [
+      "aktivace",
+      "nestvura",
+      "antihmota"
+    ],
     "source": "BGG Massive FAQ #16"
   },
   {
     "id": "proc-prenaset-jina-data-nez-dukazy",
     "question": "Proč přenášet úřadům/médiím jiná data než důkazy?",
     "answer": "Kvůli úkolům. Úkoly některých postav vyžadují, aby určitý typ dat (Důkazy, Tajemství X, Digitální asistent) byl zachráněn nebo byl u konkrétní instituce (např. Černá pasažérka, Digitální asistent). Úkoly jiných postav naopak vyžadují tomu zabránit (např. Agentka).",
-    "tags": ["přenos dat", "transmit", "data", "úřady", "média", "instituce", "úkoly", "tajemství x"],
-    "ruleRefs": ["13.2", "9.6"],
-    "seeAlso": ["prenos-dat", "data-pojem", "tajemstvi-x", "dukazy", "instituce"],
+    "tags": [
+      "přenos dat",
+      "transmit",
+      "data",
+      "úřady",
+      "média",
+      "instituce",
+      "úkoly",
+      "tajemství x"
+    ],
+    "ruleRefs": [
+      "13.2",
+      "9.6"
+    ],
+    "seeAlso": [
+      "prenos-dat",
+      "data-pojem",
+      "tajemstvi-x",
+      "dukazy",
+      "instituce"
+    ],
     "source": "BGG Massive FAQ #17"
   },
   {
     "id": "tazeni-dustojnik-zamek",
     "question": "Když táhnu vyřazeného Důstojníka, projdu zamčenou chodbou?",
     "answer": "Ano — pohyb skrz zámek funguje i při tažení vyřazené postavy se schopností Důstojník a zámek se tím odstraní. Tažení se hodí např. k dotažení robota do Dílny (oprava), kohokoli do modulu (záchrana), oběti k Masožravému bioexperimentu, vyřazeného člověka z nebezpečné sekce (aby šel oživit) apod. Akce „jen pro Důstojníka\" ale přes taženého Důstojníka provádět nelze.",
-    "tags": ["tažení", "drag", "důstojník", "officer", "zámek", "pohyb", "vyřazená postava"],
-    "ruleRefs": ["12.1.2", "12.1.3"],
-    "seeAlso": ["pohyb", "dustojnik", "zamky", "vyrazena"],
+    "tags": [
+      "tažení",
+      "drag",
+      "důstojník",
+      "officer",
+      "zámek",
+      "pohyb",
+      "vyřazená postava"
+    ],
+    "ruleRefs": [
+      "12.1.2",
+      "12.1.3"
+    ],
+    "seeAlso": [
+      "pohyb",
+      "dustojnik",
+      "zamky",
+      "vyrazena"
+    ],
     "source": "BGG Massive FAQ #18 + Ref. 12.1"
   },
   {
     "id": "evakuace-vs-projekt-x",
     "question": "Spustí evakuace (Abandon Ship) Projekt X?",
     "answer": "Ne — zahájení evakuace samo o sobě Projekt X nespouští. Naopak: spuštění Projektu X (jakýmkoli způsobem) vždy zahájí evakuaci.",
-    "tags": ["evakuace", "abandon ship", "projekt x", "spuštění"],
-    "ruleRefs": ["7.6", "13.3", "7.1"],
-    "seeAlso": ["evakuace", "projekt-x", "spusteni-projektu-x-flow"],
+    "tags": [
+      "evakuace",
+      "abandon ship",
+      "projekt x",
+      "spuštění"
+    ],
+    "ruleRefs": [
+      "7.6",
+      "13.3",
+      "7.1"
+    ],
+    "seeAlso": [
+      "evakuace",
+      "projekt-x",
+      "spusteni-projektu-x-flow"
+    ],
     "source": "BGG Massive FAQ #20"
   },
   {
     "id": "uplatek-kompromat-pri-vyjednavani",
     "question": "Lze použít úplatek nebo kompromat při vyjednávání (když neaktivuji postavu)?",
     "answer": "Ne — úplatek ani kompromat nelze použít během fáze vyjednávání. Lze je ale použít během fáze aktivace, a to i předtím, než zvolíš postavu k aktivaci (např. abys někoho oživil).",
-    "tags": ["úplatek", "kompromat", "vyjednávání", "renegotiate", "aktivace"],
-    "ruleRefs": ["15.5.4", "15.5.5", "15.6"],
-    "seeAlso": ["uplatek", "kompromat", "vyjednavani", "aktivace"],
+    "tags": [
+      "úplatek",
+      "kompromat",
+      "vyjednávání",
+      "renegotiate",
+      "aktivace"
+    ],
+    "ruleRefs": [
+      "15.5.4",
+      "15.5.5",
+      "15.6"
+    ],
+    "seeAlso": [
+      "uplatek",
+      "kompromat",
+      "vyjednavani",
+      "aktivace"
+    ],
     "source": "BGG Massive FAQ #21"
   },
   {
     "id": "gravitace-jen-zeroborn",
     "question": "Má gravitace efekt jen pro postavy se schopností Narozen ve vesmíru?",
     "answer": "Ano. Gravitace (modré vs. růžové/zelené sekce) má herní dopad jen pro schopnost Narozen ve vesmíru (volný pohyb do sekcí s nulovou gravitací). Jiné dříve zvažované efekty (šíření ohně, házení po směru) byly během vývoje odstraněny.",
-    "tags": ["gravitace", "gravity", "zeroborn", "narozen ve vesmíru", "nulová gravitace"],
-    "ruleRefs": ["5.1.2"],
-    "seeAlso": ["gravitace", "narozen-ve-vesmiru"],
+    "tags": [
+      "gravitace",
+      "gravity",
+      "zeroborn",
+      "narozen ve vesmíru",
+      "nulová gravitace"
+    ],
+    "ruleRefs": [
+      "5.1.2"
+    ],
+    "seeAlso": [
+      "gravitace",
+      "narozen-ve-vesmiru"
+    ],
     "source": "BGG Massive FAQ #22"
   },
   {
     "id": "co-spusti-projekt-x",
     "question": "Co spustí Projekt X?",
     "answer": "Projekt X se spustí blackoutem, akcí Spuštění Projektu X (z Můstku nebo Kryolaboratoře, jen postavou se schopností Důstojník — ta zároveň zahájí evakuaci), nebo poškozením sekce Krypta X.",
-    "tags": ["projekt x", "spuštění", "nestvůra", "blackout", "krypta x"],
-    "ruleRefs": ["7.6.1", "13.3"],
-    "seeAlso": ["projekt-x", "spusteni-projektu-x-flow", "blackout", "dustojnik"],
+    "tags": [
+      "projekt x",
+      "spuštění",
+      "nestvůra",
+      "blackout",
+      "krypta x"
+    ],
+    "ruleRefs": [
+      "7.6.1",
+      "13.3"
+    ],
+    "seeAlso": [
+      "projekt-x",
+      "spusteni-projektu-x-flow",
+      "blackout",
+      "dustojnik"
+    ],
     "source": "Ref. 7.6.1"
   },
   {
     "id": "lze-hazet-predmety-skrz-sachty",
     "question": "Lze házet předměty skrz šachty?",
     "answer": "Ne. Skrz šachty nelze házet předměty. Pohybovat se šachtami může jen postava se schopností Tunelová krysa. Házet lze jen skrz chodby bez zámku; do Okolního vesmíru pouze akcí přechodové komory.",
-    "tags": ["házení", "throw", "šachty", "předměty", "tunelová krysa"],
-    "ruleRefs": ["5.4.1", "12.5"],
-    "seeAlso": ["hozeni", "sachty", "tunelova-krysa", "prechodova-komora"],
+    "tags": [
+      "házení",
+      "throw",
+      "šachty",
+      "předměty",
+      "tunelová krysa"
+    ],
+    "ruleRefs": [
+      "5.4.1",
+      "12.5"
+    ],
+    "seeAlso": [
+      "hozeni",
+      "sachty",
+      "tunelova-krysa",
+      "prechodova-komora"
+    ],
     "source": "Ref. 5.4, 12.5"
   },
   {
     "id": "kdo-projde-zamkem",
     "question": "Kdo může projít zámkem?",
     "answer": "Postava se schopností Důstojník projde zámkem (mimo blackout), čímž se zámek odstraní — a to i při tažení vyřazené postavy. Kdokoli může odstranit sousední zámek akcí Proražení. Při blackoutu mají Proražení všichni lidé i roboti, ale Důstojníci zámky procházet nemohou.",
-    "tags": ["zámky", "locks", "důstojník", "proražení", "pohyb", "blackout"],
-    "ruleRefs": ["12.1.3", "7.2.2"],
-    "seeAlso": ["zamky", "dustojnik", "prorazeni", "blackout", "pohyb"],
+    "tags": [
+      "zámky",
+      "locks",
+      "důstojník",
+      "proražení",
+      "pohyb",
+      "blackout"
+    ],
+    "ruleRefs": [
+      "12.1.3",
+      "7.2.2"
+    ],
+    "seeAlso": [
+      "zamky",
+      "dustojnik",
+      "prorazeni",
+      "blackout",
+      "pohyb"
+    ],
     "source": "Ref. 12.1.3, 7.2.2"
   },
   {
     "id": "bonus-pritel-zast-skore",
     "question": "Jak se počítají bonusové body za přítele a zášť?",
     "answer": "Bonusová postava může mít dole na kartě ikony přítele (Friend) nebo zášti (Grudge — červené X přes hvězdu). Za přítele získáš 1 bod za každou ikonu, pokud se daná BP zachrání (Escape). Za zášť získáš 1 bod za každou ikonu, pokud byla daná postava vyřazená (nebo anihilovaná) a NEzachránila se.",
-    "tags": ["bonusové body", "bonus character", "přítel", "friend", "zášť", "grudge", "skórování"],
-    "ruleRefs": ["16.4.5"],
-    "seeAlso": ["bonusova-postava", "konec-hry-scoring", "zachranena"],
+    "tags": [
+      "bonusové body",
+      "bonus character",
+      "přítel",
+      "friend",
+      "zášť",
+      "grudge",
+      "skórování"
+    ],
+    "ruleRefs": [
+      "16.4.5"
+    ],
+    "seeAlso": [
+      "bonusova-postava",
+      "konec-hry-scoring",
+      "zachranena"
+    ],
     "source": "BGG /thread/3171927 + Ref. 16.4.5"
   },
   {
     "id": "bp-vs-postava-konflikt-agend",
     "question": "Co když si úkol bonusové postavy odporuje s mou hlavní postavou?",
     "answer": "Skóruješ buď jedno, nebo druhé (nebo nic) — body se nesčítají, pokud se podmínky vylučují. Příklad: Kaskadérka dává +2, pokud je jediný zachráněný člověk, ale tatáž (jako BP) může dát body za záchranu — splníš jen jedno. Na začátku hry si můžeš vybrat, kterou z dvojice hraješ jako skrytou identitu a kterou jako BP, takže tenhle konflikt si do jisté míry volíš sám.",
-    "tags": ["bonusová postava", "úkoly", "konflikt", "kaskadérka", "skórování", "skrytá identita"],
-    "ruleRefs": ["16.4.5", "16.4.4"],
-    "seeAlso": ["bonusova-postava", "skryta-identita", "konec-hry-scoring", "kaskaderka"],
+    "tags": [
+      "bonusová postava",
+      "úkoly",
+      "konflikt",
+      "kaskadérka",
+      "skórování",
+      "skrytá identita"
+    ],
+    "ruleRefs": [
+      "16.4.5",
+      "16.4.4"
+    ],
+    "seeAlso": [
+      "bonusova-postava",
+      "skryta-identita",
+      "konec-hry-scoring",
+      "kaskaderka"
+    ],
     "source": "BGG /thread/3171927"
+  },
+  {
+    "id": "vedec-airlock-ne-panel",
+    "question": "Funguje Vědec na akci přechodové komory a ovládacího panelu?",
+    "answer": "Vědec funguje i na akci přechodové komory (Airlock) — místo volného zvednutí/upuštění. NEfunguje na akce ovládacího panelu (ty nejsou akce sekce).",
+    "tags": [
+      "vědec",
+      "scientist",
+      "přechodová komora",
+      "airlock",
+      "ovládací panel"
+    ],
+    "ruleRefs": [
+      "13"
+    ],
+    "seeAlso": [
+      "vedec",
+      "prechodova-komora",
+      "akce-ovladaciho-panelu"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "co-znamena-sousedni",
+    "question": "Co přesně znamená „sousední“ (adjacent)?",
+    "answer": "Sousední = propojené (pouze) nezamčenou chodbou — NE přes šachtu. Důležité pro Inspektorovu schopnost Vyšetřovatel a pro Chapadlovitou obludnost.",
+    "tags": [
+      "sousední",
+      "adjacent",
+      "chodba",
+      "šachta",
+      "vyšetřovatel"
+    ],
+    "ruleRefs": [],
+    "seeAlso": [
+      "inspektor",
+      "chodby",
+      "zamky"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "nda-manipulace-s-daty",
+    "question": "Jak NDA omezuje manipulaci s daty?",
+    "answer": "Postava s NDA nemůže data kopírovat, smazat, přenést ani být o ně okradena (včetně samotného NDA). Zachráněná HP s NDA nemůže při pádu stanice poskytnout data institucím. NDA dokáže odstranit Fyzikální laboratoř, Agentčin EMP a Entropický přízrak.",
+    "tags": [
+      "NDA",
+      "data",
+      "přenos",
+      "okradení",
+      "právník"
+    ],
+    "ruleRefs": [
+      "9"
+    ],
+    "seeAlso": [
+      "nda",
+      "data-pojem",
+      "pravnik",
+      "fyzikalni-laborator"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "poradi-faze-vyhodnoceni",
+    "question": "V jakém pořadí se řeší fáze vyhodnocení?",
+    "answer": "Pořadí: 1) žetony času aktivního hráče ve hře (schopnosti, vypuštění s odpočtem) v pořadí dle hráče, 2) žeton času na stupnici minut (odjištěná antihmota), 3) účinky sekcí, 4) akce nestvůry.",
+    "tags": [
+      "vyhodnocení",
+      "resolve",
+      "pořadí",
+      "nestvůra",
+      "žeton času"
+    ],
+    "ruleRefs": [
+      "15.7.1"
+    ],
+    "seeAlso": [
+      "nestvura",
+      "antihmota"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "co-upustit-pri-limitu",
+    "question": "Co upustím, když překročím limit předmětů?",
+    "answer": "Vybíráš si ty (aktivní hráč). Při získání předmětu musíš upustit něco JINÉHO (ne ten získaný). Neplatí pro Výrobu, Předání, Zvednutí ani Okradení — ty nelze provést, pokud máš plný slot.",
+    "tags": [
+      "limit předmětů",
+      "upustit",
+      "plný slot",
+      "kontaminace"
+    ],
+    "ruleRefs": [
+      "12.2.2"
+    ],
+    "seeAlso": [
+      "zvednuti",
+      "vlastnictvi",
+      "kontaminovana"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "sabotaz-sekce-bez-akce",
+    "question": "Lze sabotovat/poškodit i sekci bez akce?",
+    "answer": "Ano — poškodit (sabotovat) lze i sekci, která nemá žádnou akci sekce ani akci ovládacího panelu.",
+    "tags": [
+      "sabotáž",
+      "poškození",
+      "sekce bez akce"
+    ],
+    "ruleRefs": [],
+    "seeAlso": [
+      "sabotaz",
+      "poskozena-sekce"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "ucinek-sekce-pri-poskozeni",
+    "question": "Přetrvá trvalý účinek sekce, když je poškozená?",
+    "answer": "Ano — trvalý účinek sekce (např. mazání dat ve Fyzikální laboratoři) přetrvá, i když je sekce poškozená, pokud není řečeno jinak. (Poškození vypne jen aktivní akce sekce / ovládacího panelu.)",
+    "tags": [
+      "účinek sekce",
+      "poškozená sekce",
+      "fyzikální laboratoř"
+    ],
+    "ruleRefs": [],
+    "seeAlso": [
+      "poskozena-sekce",
+      "fyzikalni-laborator"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "vyradit-se-pistoli-hasakem",
+    "question": "Může se postava vyřadit pistolí nebo hasákem (při ignorování pudu sebezáchovy)?",
+    "answer": "Pistolí ANO, hasákem NE. Potvrdil designer Matt Eklund.",
+    "tags": [
+      "sebevražda",
+      "pud sebezáchovy",
+      "pistole",
+      "hasák"
+    ],
+    "ruleRefs": [
+      "11.2"
+    ],
+    "seeAlso": [
+      "pud-sebezachovy",
+      "pistole",
+      "hasak"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "kompromat-uplatek-vlastni-hp",
+    "question": "Můžu použít kompromat/úplatek na svou vlastní HP?",
+    "answer": "Kompromat na vlastní HP ANO. Úplatek na vlastní HP NE — můžeš ale uplatit svou postavu, dokud ji neodhalíš. Kompromat i úplatek lze použít na cizí HP i CP.",
+    "tags": [
+      "kompromat",
+      "úplatek",
+      "vlastní HP",
+      "bribe"
+    ],
+    "ruleRefs": [
+      "15.5.4",
+      "15.5.5"
+    ],
+    "seeAlso": [
+      "kompromat",
+      "uplatek",
+      "hracova-postava"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "strazce-obejiti-utoku",
+    "question": "Jak Strážce obejde zákaz útoku/sabotáže?",
+    "answer": "Mírotvůrce zakazuje Strážci akce Útok a Sabotáž — ale může vyřazovat/poškozovat přes akci Dálkové ovládání (Drony) nebo ovládáním Bojového hejna, a hozením ohnivé bomby.",
+    "tags": [
+      "strážce",
+      "mírotvůrce",
+      "peacekeeper",
+      "dálkové ovládání",
+      "ohnivá bomba"
+    ],
+    "ruleRefs": [],
+    "seeAlso": [
+      "strazce",
+      "mirotvurce",
+      "drony"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "predat-okrast-vyrazenou",
+    "question": "Co můžu udělat s vyřazenou postavou?",
+    "answer": "Vyřazené postavě můžeš předat předmět, zvednout od ní předmět a kopírovat jí data. NELZE ji ale okrást o předmět ani o data.",
+    "tags": [
+      "vyřazená",
+      "předání",
+      "okradení",
+      "zvednutí",
+      "down"
+    ],
+    "ruleRefs": [
+      "12.9"
+    ],
+    "seeAlso": [
+      "predani",
+      "zvednuti",
+      "okradeni",
+      "vyrazena"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "nestvura-kontaminace",
+    "question": "Lze nestvůru kontaminovat?",
+    "answer": "Ne. Nestvůru nelze kontaminovat.",
+    "tags": [
+      "nestvůra",
+      "kontaminace",
+      "monster"
+    ],
+    "ruleRefs": [],
+    "seeAlso": [
+      "nestvura",
+      "kontaminovana"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "integralni-anihilace",
+    "question": "Lze anihilovat integrální předmět?",
+    "answer": "Ano. Integrální předmět nelze běžně odstranit z vlastnictví, ale anihilován být může.",
+    "tags": [
+      "integrální",
+      "anihilace"
+    ],
+    "ruleRefs": [
+      "8.4"
+    ],
+    "seeAlso": [
+      "integralni",
+      "anihilovana"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "antihmota-po-odjisteni",
+    "question": "Lze po odjištění antihmoty ještě zabránit explozi?",
+    "answer": "Ne. Odjištěná antihmota vždy vybuchne (po 4 minutách nebo při pádu stanice) — zvrátit to nelze. Předčasnému konci zabráníš jen tím, že ji dostaneš MIMO stanici: do Okolního vesmíru nebo ji vypustíš v únikovém modulu.",
+    "tags": [
+      "antihmota",
+      "exploze",
+      "odjištěná",
+      "okolní vesmír"
+    ],
+    "ruleRefs": [
+      "7.3"
+    ],
+    "seeAlso": [
+      "antihmota",
+      "detonace-antihmoty",
+      "okolni-vesmir"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "stavy-postavy",
+    "question": "Jaké stavy může postava mít a co s ní lze dělat?",
+    "answer": "Kombinace: Živá+nezachráněná, Vyřazená+nezachráněná, Živá+zachráněná, Vyřazená+zachráněná, Anihilovaná. Ovlivnit, aktivovat i vyjednávat lze jen Živou nezachráněnou; Vyřazenou nezachráněnou jen odhalit/vyjednávat; zachráněnou/anihilovanou jen odhalit.",
+    "tags": [
+      "stavy",
+      "živá",
+      "vyřazená",
+      "zachráněná",
+      "anihilovaná"
+    ],
+    "ruleRefs": [
+      "16.4.1"
+    ],
+    "seeAlso": [
+      "ziva",
+      "vyrazena",
+      "zachranena",
+      "anihilovana"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "biolab-ohen-kontaminace",
+    "question": "Zkontaminuje mě Biolaboratoř, když v ní hoří?",
+    "answer": "Ne. Pokud v Biolaboratoři hoří oheň, postava se vstupem NEzkontaminuje — a nezkontaminuje se ani poté, co oheň odstraníš.",
+    "tags": [
+      "biolaboratoř",
+      "kontaminace",
+      "oheň"
+    ],
+    "ruleRefs": [],
+    "seeAlso": [
+      "biolaborator",
+      "kontaminovana",
+      "ohen"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "limit-tazeni",
+    "question": "Kolikrát lze za tah táhnout?",
+    "answer": "Postava nesmí v jednom tahu táhnout ani být tažena více než jednou. Bojové hejno táhne vyřazenou postavu jen o 1 sekci.",
+    "tags": [
+      "tažení",
+      "drag",
+      "limit",
+      "bojové hejno"
+    ],
+    "ruleRefs": [
+      "12.1.2"
+    ],
+    "seeAlso": [
+      "pohyb",
+      "vyrazena"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
+  },
+  {
+    "id": "klony-drony-pocet",
+    "question": "Jak se počítají Klony a Drony jako postavy?",
+    "answer": "Údržbářské klony = 1 postava, ale 3 lidé. Drony = 1 postava, ale 2 roboti (důležité pro skórování i pud sebezáchovy). Klon nemůže vyřadit klona (pud sebezáchovy). Dron může vyřadit sebe i jiného Drona přes Dálkové ovládání.",
+    "tags": [
+      "klony",
+      "drony",
+      "počet postav",
+      "pud sebezáchovy"
+    ],
+    "ruleRefs": [],
+    "seeAlso": [
+      "udrzbarske-klony",
+      "drony",
+      "pud-sebezachovy"
+    ],
+    "source": "BGG „More FAQ IMHO“ (tony0021074)",
+    "sourceUrl": "https://boardgamegeek.com/thread/3560153/more-faq-imho",
+    "harvestedAt": "2026-06-18"
   }
 ]
