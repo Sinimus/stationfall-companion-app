@@ -46,7 +46,7 @@
     "gravity": "nulova",
     "powered": true,
     "actions": [],
-    "notes": "Napájecí sekce — poškození snižuje úroveň energie."
+    "notes": "Napájecí sekce — poškození snižuje úroveň energie a navíc přidá poškození energie i do propojených sekcí."
   },
   {
     "id": "palivove-clanky",
@@ -83,7 +83,7 @@
     "zone": "dolni-prstenec",
     "gravity": "gravitace",
     "actions": [],
-    "notes": "Poškození této sekce spustí Projekt X."
+    "notes": "Poškození této sekce uvolní Projekt X a spustí evakuaci (Abandon Ship)."
   },
   {
     "id": "nadrze",
@@ -236,7 +236,7 @@
     "actions": [
       "vypusteni"
     ],
-    "notes": "Únikový modul."
+    "notes": "Únikový modul — vypuštění vyžaduje zahájení evakuace (Abandon Ship)."
   },
   {
     "id": "bryks",
@@ -247,7 +247,7 @@
     "actions": [
       "vypusteni"
     ],
-    "notes": "Hail Mary (EN). Únikový modul."
+    "notes": "Hail Mary (EN). Únikový modul — vypuštění vyžaduje zahájení evakuace (Abandon Ship)."
   },
   {
     "id": "houdini",
@@ -258,7 +258,7 @@
     "actions": [
       "vypusteni"
     ],
-    "notes": "Únikový modul."
+    "notes": "Únikový modul — vypuštění vyžaduje zahájení evakuace (Abandon Ship)."
   },
   {
     "id": "mcqueen",
@@ -269,7 +269,7 @@
     "actions": [
       "vypusteni"
     ],
-    "notes": "Únikový modul."
+    "notes": "Únikový modul — vypuštění vyžaduje zahájení evakuace (Abandon Ship)."
   },
   {
     "id": "nouzovy-unikovy-modul",
