@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { flows } from "@/data";
+import { flows, faq } from "@/data";
+import { FaqList } from "@/components/faq-list";
 
 export default function PruvodciPage() {
   return (
@@ -20,6 +21,10 @@ export default function PruvodciPage() {
             </li>
           ))}
         </ul>
+      </section>
+      <section aria-label="Otázky a kauzality">
+        <h2 className="mb-1 text-sm font-semibold text-zinc-500">Otázky &amp; kauzality</h2>
+        <FaqList faq={faq} />
       </section>
     </main>
   );
