@@ -11,7 +11,9 @@ describe("ProjectXList", () => {
         <ProjectXList projects={projectsX} />
       </TermSheetProvider>,
     );
-    expect(screen.getByText("Bojové hejno")).toBeInTheDocument();
-    expect(screen.getByText("Paprsek smrti")).toBeInTheDocument();
+    // Each card's own text self-references its name (now a tappable projectx ref), so the name
+    // appears in both the <summary> and a button — assert presence rather than uniqueness.
+    expect(screen.getAllByText("Bojové hejno").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Paprsek smrti").length).toBeGreaterThan(0);
   });
 });

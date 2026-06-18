@@ -2,7 +2,11 @@
 
 import { createContext, useContext } from "react";
 
-export type TermSheetCtx = { openTerm: (id: string) => void; close: () => void };
+export type TermSheetCtx = {
+  openTerm: (id: string) => void;
+  openProject: (id: string) => void;
+  close: () => void;
+};
 
 export const TermSheetContext = createContext<TermSheetCtx | null>(null);
 

@@ -25,4 +25,15 @@ describe("RuleText", () => {
     const link = screen.getByRole("link", { name: "Pirátka" });
     expect(link).toHaveAttribute("href", "/postavy/piratka");
   });
+
+  it("opens a Project X card from a linked name", async () => {
+    const user = userEvent.setup();
+    render(
+      <TermSheetProvider>
+        <RuleText>Pozor na Entropický přízrak.</RuleText>
+      </TermSheetProvider>,
+    );
+    await user.click(screen.getByRole("button", { name: "Entropický přízrak" }));
+    expect(screen.getByRole("dialog", { name: "Entropický přízrak" })).toBeInTheDocument();
+  });
 });

@@ -1,9 +1,10 @@
-import { characters, glossary, type GlossaryTerm } from "@/data";
+import { characters, glossary, projectsX, type GlossaryTerm, type ProjectX } from "@/data";
 
 export const glossaryById = new Map<string, GlossaryTerm>(glossary.map((g) => [g.id, g]));
 export const characterNameById = new Map<string, string>(
   characters.map((c) => [c.id, c.nameCs]),
 );
+export const projectById = new Map<string, ProjectX>(projectsX.map((p) => [p.id, p]));
 
 export type GlossaryKind = GlossaryTerm["kind"];
 

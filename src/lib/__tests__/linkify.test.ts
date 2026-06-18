@@ -28,4 +28,9 @@ describe("splitText", () => {
     const src = "Rušičky ovlivňují kopírování dat.";
     expect(splitText(src).map((p) => p.text).join("")).toBe(src);
   });
+
+  it("links a Project X name to the projectx kind", () => {
+    const parts = splitText("Pozor na Entropický přízrak v sekci.");
+    expect(parts.some((p) => p.ref?.kind === "projectx")).toBe(true);
+  });
 });

@@ -29,6 +29,8 @@ describe("CharacterDossier", () => {
       </TermSheetProvider>,
     );
     expect(screen.getByText("ZAMETENÍ DŮKAZŮ")).toBeInTheDocument();
-    expect(screen.getByText(/Mina nereaguje na Entropický přízrak/)).toBeInTheDocument();
+    // "Entropický přízrak" is now a tappable Project X ref (split out), so assert on the
+    // resilient prefix of this edge case rather than the full contiguous string.
+    expect(screen.getByText(/Mina nereaguje na/)).toBeInTheDocument();
   });
 });

@@ -20,7 +20,7 @@ function hrefFor(r: SearchResult): string {
 }
 
 export default function HledatPage() {
-  const { openTerm } = useTermSheet();
+  const { openTerm, openProject } = useTermSheet();
   const [query, setQuery] = useState("");
   const results = useMemo(() => search(query), [query]);
 
@@ -49,10 +49,12 @@ export default function HledatPage() {
           );
           return (
             <li key={`${r.type}:${r.id}`}>
-              {r.type === "glossary" ? (
+              {r.type === "glossary" || r.type === "projectx" ? (
                 <button
                   type="button"
-                  onClick={() => openTerm(r.id)}
+                  onClick={() =>
+                    r.type === "glossary" ? openTerm(r.id) : openProject(r.id)
+                  }
                   className="block w-full rounded-lg border border-zinc-200 p-3 text-left active:bg-zinc-50 dark:border-zinc-800 dark:active:bg-zinc-900"
                 >
                   {label}

@@ -1,6 +1,6 @@
-import { glossary, characters } from "@/data";
+import { glossary, characters, projectsX } from "@/data";
 
-export type LinkRef = { kind: "glossary" | "character"; id: string };
+export type LinkRef = { kind: "glossary" | "character" | "projectx"; id: string };
 export type TextPart = { text: string; ref?: LinkRef };
 
 type Entry = { ref: LinkRef; name: string };
@@ -10,6 +10,7 @@ const entries: Entry[] = [
     [g.nameCs, ...(g.aliases ?? [])].map((name) => ({ ref: { kind: "glossary" as const, id: g.id }, name })),
   ),
   ...characters.map((c) => ({ ref: { kind: "character" as const, id: c.id }, name: c.nameCs })),
+  ...projectsX.map((p) => ({ ref: { kind: "projectx" as const, id: p.id }, name: p.nameCs })),
 ].sort((a, b) => b.name.length - a.name.length);
 
 const refByLowerName = new Map<string, LinkRef>(entries.map((e) => [e.name.toLowerCase(), e.ref]));

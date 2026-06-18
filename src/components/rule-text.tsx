@@ -8,7 +8,7 @@ import { splitText } from "@/lib/linkify";
 const LINK_CLASS = "underline decoration-dotted underline-offset-2";
 
 export function RuleText({ children }: { children: string }) {
-  const { openTerm } = useTermSheet();
+  const { openTerm, openProject } = useTermSheet();
   return (
     <>
       {splitText(children).map((part, i) => {
@@ -19,6 +19,13 @@ export function RuleText({ children }: { children: string }) {
             <Link key={i} href={`/postavy/${ref.id}`} className={LINK_CLASS}>
               {part.text}
             </Link>
+          );
+        }
+        if (ref.kind === "projectx") {
+          return (
+            <button key={i} type="button" onClick={() => openProject(ref.id)} className={LINK_CLASS}>
+              {part.text}
+            </button>
           );
         }
         return (
