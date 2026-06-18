@@ -24,3 +24,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@theme {
+  --color-cat-pohybove: #f5c518;
+  --color-cat-obranne: #22c55e;
+  --color-cat-utocne: #ef4444;
+  --color-cat-konspiracni: #a855f7;
+  --color-cat-ovladaci-panel: #f97316;
+  --color-cat-doplnkove: #ec4899;
+}

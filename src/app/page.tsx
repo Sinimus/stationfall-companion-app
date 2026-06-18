@@ -1,3 +1,12 @@
+"use client";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
 export default function Home() {
-  return <main className="p-6 text-lg">Stationfall Companion — skeleton</main>;
+  const router = useRouter();
+  useEffect(() => {
+    router.replace("/postavy");
+  }, [router]);
+  return null;
 }
