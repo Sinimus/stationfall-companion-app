@@ -15,4 +15,14 @@ describe("RuleText", () => {
     await user.click(screen.getByRole("button", { name: "Antihmota" }));
     expect(screen.getByRole("dialog", { name: "Antihmota" })).toBeInTheDocument();
   });
+
+  it("renders a character name as a link to its detail page", () => {
+    render(
+      <TermSheetProvider>
+        <RuleText>Pomstí se na Pirátce? Ne — Pirátka uteče.</RuleText>
+      </TermSheetProvider>,
+    );
+    const link = screen.getByRole("link", { name: "Pirátka" });
+    expect(link).toHaveAttribute("href", "/postavy/piratka");
+  });
 });

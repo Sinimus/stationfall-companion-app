@@ -1,29 +1,31 @@
 "use client";
 
 import { Fragment } from "react";
+import Link from "next/link";
 import { useTermSheet } from "@/components/term-sheet-context";
-import { splitGlossaryText } from "@/lib/linkify";
+import { splitText } from "@/lib/linkify";
+
+const LINK_CLASS = "underline decoration-dotted underline-offset-2";
 
 export function RuleText({ children }: { children: string }) {
   const { openTerm } = useTermSheet();
-  const parts = splitGlossaryText(children);
   return (
     <>
-      {parts.map((part, i) => {
-        const id = part.id;
-        if (id !== undefined) {
+      {splitText(children).map((part, i) => {
+        const ref = part.ref;
+        if (ref === undefined) return <Fragment key={i}>{part.text}</Fragment>;
+        if (ref.kind === "character") {
           return (
-            <button
-              key={i}
-              type="button"
-              onClick={() => openTerm(id)}
-              className="underline decoration-dotted underline-offset-2"
-            >
+            <Link key={i} href={`/postavy/${ref.id}`} className={LINK_CLASS}>
               {part.text}
-            </button>
+            </Link>
           );
         }
-        return <Fragment key={i}>{part.text}</Fragment>;
+        return (
+          <button key={i} type="button" onClick={() => openTerm(ref.id)} className={LINK_CLASS}>
+            {part.text}
+          </button>
+        );
       })}
     </>
   );
