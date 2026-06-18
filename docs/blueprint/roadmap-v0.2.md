@@ -22,14 +22,13 @@ MVP = Postavy, Glosář, Průvodci (flows + Q&A), Project X, inline cross-linkin
 - **8 procedural flows** (added suspicion decision tree, pod launch, Abandon Ship, end-of-minute).
 - **FAQ evolution** — contextual "Výjimky (N)" accordion (reverse index over `faq.seeAlso`),
   provenance (`sourceUrl`/`harvestedAt`), harvest run → 49 Q&A.
+- **`lit` completeness** — 34 lit + 7 dark sections set authoritatively (0 unknown).
+- **Character-based reverse lookup** — `startItems` (glossary ids) on 9 characters; item term-sheets
+  show "Startuje s ním: &lt;char&gt; (&lt;start section&gt;)" — answers "who carries a weapon, where".
 
 ## Remaining
 - **UI/UX polish** *(top remaining)* — visual design, game iconography (item/category symbols),
   character art, card accents, nicer filters. The app is intentionally barebone today.
-- **`lit` completeness** — only 7 dark sections confirmed; the rest assumed lit (board-visible, low
-  priority since the board is on the table).
-- **Character-based reverse lookup** — "who carries a weapon / starts where" derived from character
-  setup data (nice-to-have; "where to make one" already works via section actions).
 - **BGG-forum Q&A expansion** — keep growing `faq.json` per `bgg-faq-harvest.md` (runbook + ledger).
 - **Dark-mode toggle**, **deep-links** (search → specific Q&A), **EN/bilingual** — when needed.
 

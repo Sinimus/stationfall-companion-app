@@ -1,7 +1,7 @@
 # TASK 029: Character starting items + reverse lookup ("kdo s ním startuje")
 
-> **Status:** PENDING
-> **Assigned to:** Constructor (Kilo Code)
+> **Status:** DONE (commit b623c72)
+> **Assigned to:** Constructor (Sonnet sub-agent)
 
 ## 1. Goal
 
