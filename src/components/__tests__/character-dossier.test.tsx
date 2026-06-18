@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { characters } from "@/data";
 import { CharacterDossier } from "@/components/character-dossier";
+import { TermSheetProvider } from "@/components/term-sheet";
 
 function fixture(id: string) {
   const c = characters.find((x) => x.id === id);
@@ -11,14 +12,22 @@ function fixture(id: string) {
 
 describe("CharacterDossier", () => {
   it("renders the character header and abilities", () => {
-    render(<CharacterDossier character={fixture("agentka")} />);
+    render(
+      <TermSheetProvider>
+        <CharacterDossier character={fixture("agentka")} />
+      </TermSheetProvider>,
+    );
     expect(screen.getByRole("heading", { name: "Agentka" })).toBeInTheDocument();
     expect(screen.getByText("Důstojník")).toBeInTheDocument();
     expect(screen.getByText("Granáty s nervovým plynem")).toBeInTheDocument(); // reveal ability
   });
 
   it("renders agendas (title + points) and edge cases", () => {
-    render(<CharacterDossier character={fixture("agentka")} />);
+    render(
+      <TermSheetProvider>
+        <CharacterDossier character={fixture("agentka")} />
+      </TermSheetProvider>,
+    );
     expect(screen.getByText("ZAMETENÍ DŮKAZŮ")).toBeInTheDocument();
     expect(screen.getByText(/Mina nereaguje na Entropický přízrak/)).toBeInTheDocument();
   });

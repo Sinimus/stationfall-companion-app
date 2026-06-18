@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import type { Character } from "@/data";
 import { CATEGORY_BG_CLASS, CATEGORY_LABEL, TYPE_LABEL } from "@/lib/categories";
+import { RuleText } from "@/components/rule-text";
 
 type Ability = Character["abilities"][number];
 
@@ -15,7 +16,7 @@ function AbilityRow({ ability }: { ability: Ability }) {
         </span>
         <span className="font-medium">{ability.name}</span>
       </div>
-      <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">{ability.text}</p>
+      <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-300"><RuleText>{ability.text}</RuleText></p>
     </div>
   );
 }
@@ -61,21 +62,21 @@ export function CharacterDossier({ character: c }: { character: Character }) {
               <span className="font-semibold">
                 {ag.isPlus ? "+" : "•"} {ag.points} b
               </span>{" "}
-              — {ag.text}
+              — <RuleText>{ag.text}</RuleText>
             </li>
           ))}
         </ul>
       </Section>
 
       <Section title="Bonusové body">
-        <p className="text-sm">{c.bonusPoints}</p>
+        <p className="text-sm"><RuleText>{c.bonusPoints}</RuleText></p>
       </Section>
 
       {c.edgeCases.length > 0 && (
         <Section title="Zvláštnosti">
           <ul className="list-disc space-y-1 pl-5 text-sm">
             {c.edgeCases.map((e, i) => (
-              <li key={i}>{e}</li>
+              <li key={i}><RuleText>{e}</RuleText></li>
             ))}
           </ul>
         </Section>
@@ -85,14 +86,14 @@ export function CharacterDossier({ character: c }: { character: Character }) {
         <Section title="Tipy">
           <ul className="list-disc space-y-1 pl-5 text-sm">
             {c.tips.map((t, i) => (
-              <li key={i}>{t}</li>
+              <li key={i}><RuleText>{t}</RuleText></li>
             ))}
           </ul>
         </Section>
       )}
 
       <Section title="Příprava hry">
-        <p className="text-sm">{c.setup}</p>
+        <p className="text-sm"><RuleText>{c.setup}</RuleText></p>
       </Section>
     </article>
   );
