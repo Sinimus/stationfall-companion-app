@@ -7,51 +7,81 @@
       {
         "title": "Co spustí pád stanice",
         "body": "Pád nastane, jakmile ukazatel minut dosáhne pole „0“ a otočí se žeton vstupu do atmosféry. Pokud je na žetonu ohnivá koule, pád nastane okamžitě; jinak až na konci minuty „0“. Pád může nastat i dříve explozí antihmoty na stanici.",
-        "ruleRefs": ["15.8.3", "16.1"]
+        "ruleRefs": [
+          "15.8.3",
+          "16.1"
+        ]
       },
       {
         "title": "1. Antihmota",
         "body": "Pokud je antihmota odjištěná, exploduje a anihiluje vše ve svém místě. Vyhodnoťte podle její pozice (viz průvodce Detonace antihmoty).",
-        "ruleRefs": ["7.3.2", "16.1"]
+        "ruleRefs": [
+          "7.3.2",
+          "16.1"
+        ]
       },
       {
         "title": "2. Odhalení",
         "body": "V pořadí hráčů všichni dosud neodhalení hráči odhalí svou skrytou identitu (lze i Schrödingerovo odhalení). Při odhalení během pádu stanice ale NEzískávají žádné výhody ze schopností po odhalení (pokud není řečeno jinak).",
-        "ruleRefs": ["16.2"]
+        "ruleRefs": [
+          "16.2"
+        ]
       },
       {
         "title": "3. Poskytnutí dat",
         "body": "V pořadí hráčů může každá zachráněná HP (živá i vyřazená) poskytnout libovolná data, která vlastní, libovolnému počtu institucí. Pokud hráč, který je vinen, poskytne úřadům důkazy své HP, změní svůj stav na podezřelého a může nyní vyhrát. (Ostatní podezřelí hráči se tím vinnými nestanou.)",
-        "ruleRefs": ["16.3"]
+        "ruleRefs": [
+          "16.3"
+        ]
       },
       {
         "title": "4a. Základní body (úkoly)",
         "body": "Hráči získají body za splnění úkolů svých postav. Pokud řádek úkolu začíná znaménkem „+“, musí být pro zisk splněna i podmínka nejbližšího předchozího řádku bez „+“. Za vlastnictví předmětů/dat nelze získat body, pokud postava není zachráněna.",
-        "ruleRefs": ["16.4.4"]
+        "ruleRefs": [
+          "16.4.4"
+        ]
       },
       {
         "title": "4b. Bonusové body",
         "body": "Za přítele (zachráněnou bonusovou postavu) získáte 1 bod za každý symbol přítele. Za nepřítele (vyřazenou a nezachráněnou BP) získáte 1 bod za každý symbol nepřítele.",
-        "ruleRefs": ["16.4.5"]
+        "ruleRefs": [
+          "16.4.5"
+        ]
       },
       {
         "title": "4c. Další body",
         "body": "1 bod, pokud stále vlastníte svůj nepoužitý úplatek. 1 bod za každý cizí úplatek od ostatních hráčů na kartě vaší HP.",
-        "ruleRefs": ["16.4.6"]
+        "ruleRefs": [
+          "16.4.6"
+        ]
       },
       {
         "title": "4d. Záporné body",
         "body": "Ztrácíte 1 bod za každou svou kostku vlivu mimo zásobu, která překračuje limit vlivu vaší HP.",
-        "ruleRefs": ["16.4.7", "15.4.2"]
+        "ruleRefs": [
+          "16.4.7",
+          "15.4.2"
+        ]
       },
       {
         "title": "5. Vítěz",
         "body": "Vítězem se stává hráč s nejvíce body, který není vinen. Vinný hráč nemůže vyhrát.",
-        "ruleRefs": ["16.4.8"],
+        "ruleRefs": [
+          "16.4.8"
+        ],
         "branches": [
-          { "label": "Remíza v bodech", "body": "Vítězí hráč s nejmenším počtem kostek vlivu na poli zrady." },
-          { "label": "Stále remíza", "body": "Vítězí hráč s největším počtem nepoužitých kostek vlivu. Pokud stále remíza, hráči vítězství sdílejí." },
-          { "label": "Velký počet hráčů", "body": "Ve hře s 6+ hráči mohou zvítězit 2 hráči s nejvíce body (3 hráči při 9 hráčích), kteří nejsou vinni." }
+          {
+            "label": "Remíza v bodech",
+            "body": "Vítězí hráč s nejmenším počtem kostek vlivu na poli zrady."
+          },
+          {
+            "label": "Stále remíza",
+            "body": "Vítězí hráč s největším počtem nepoužitých kostek vlivu. Pokud stále remíza, hráči vítězství sdílejí."
+          },
+          {
+            "label": "Velký počet hráčů",
+            "body": "Ve hře s 6+ hráči mohou zvítězit 2 hráči s nejvíce body (3 hráči při 9 hráčích), kteří nejsou vinni."
+          }
         ]
       }
     ]
@@ -64,21 +94,41 @@
       {
         "title": "Kdy se odjistí",
         "body": "Antihmota se odjistí, pokud je přesunuta mimo Magnetickou komoru, nebo je spuštěna autodestrukce. Otočte ji na odjištěnou (červenou) stranu a zahajte evakuaci. Umístěte žeton času aktivního hráče 4 minuty do budoucnosti na stupnici minut.",
-        "ruleRefs": ["7.3", "7.3.1", "13.5", "13.12"]
+        "ruleRefs": [
+          "7.3",
+          "7.3.1",
+          "13.5",
+          "13.12"
+        ]
       },
       {
         "title": "Kdy exploduje",
         "body": "Při vyhodnocení tohoto žetonu času odjištěná antihmota exploduje. Pokud do té doby nevybuchne, exploduje při pádu stanice. Pokud by odjištěná i neodjištěná antihmota měla být kdykoli anihilována, namísto toho okamžitě exploduje.",
-        "ruleRefs": ["7.3.1", "7.3.3", "15.7"]
+        "ruleRefs": [
+          "7.3.1",
+          "7.3.3",
+          "15.7"
+        ]
       },
       {
         "title": "Výsledek podle pozice",
         "body": "Vyhodnoťte explozi podle toho, kde se antihmota nachází:",
-        "ruleRefs": ["7.3.2"],
+        "ruleRefs": [
+          "7.3.2"
+        ],
         "branches": [
-          { "label": "Okolní vesmír", "body": "Anihilujte vše v Okolním vesmíru. Poškoďte všechny sekce se šipkami z a do Okolního vesmíru." },
-          { "label": "Mezosféra", "body": "Pokud se antihmota nachází v únikovém modulu, anihilujte tento modul a vše uvnitř něj. Pokud ji vlastní postava mimo únikový modul, anihilujte tuto postavu a vše, co vlastní." },
-          { "label": "Na stanici", "body": "Hra končí, anihilován není nikdo. Pokračujte pádem stanice." }
+          {
+            "label": "Okolní vesmír",
+            "body": "Anihilujte vše v Okolním vesmíru. Poškoďte všechny sekce se šipkami z a do Okolního vesmíru."
+          },
+          {
+            "label": "Mezosféra",
+            "body": "Pokud se antihmota nachází v únikovém modulu, anihilujte tento modul a vše uvnitř něj. Pokud ji vlastní postava mimo únikový modul, anihilujte tuto postavu a vše, co vlastní."
+          },
+          {
+            "label": "Na stanici",
+            "body": "Hra končí, anihilován není nikdo. Pokračujte pádem stanice."
+          }
         ]
       }
     ]
@@ -91,29 +141,52 @@
       {
         "title": "Běžná úroveň",
         "body": "Výchozí stav. Kamery i rušičky mohou být zapnuté. Posuňte ukazatel úrovně energie doprava při poškození napájecí sekce, doleva při její opravě.",
-        "ruleRefs": ["7.2"]
+        "ruleRefs": [
+          "7.2"
+        ]
       },
       {
         "title": "Záložní energie (1 napájecí sekce poškozena)",
         "body": "Pokud je poškozena právě jedna napájecí sekce, posuňte ukazatel na „Záložní energie“. Tím se vypnou kamery a rušičky a nemohou být zapnuty, dokud nebude tato sekce opravena. Oprava napájecí sekce opět umožní kamery a rušičky zapnout (samotná oprava je automaticky nezapne).",
-        "ruleRefs": ["7.2.1"]
+        "ruleRefs": [
+          "7.2.1"
+        ]
       },
       {
         "title": "Blackout (2+ napájecí sekce poškozeny)",
         "body": "Pokud jsou poškozeny alespoň dvě napájecí sekce, nastane blackout. Důsledky:",
-        "ruleRefs": ["7.2.2"],
+        "ruleRefs": [
+          "7.2.2"
+        ],
         "branches": [
-          { "label": "Temnota", "body": "Všechny sekce jsou považovány za temné." },
-          { "label": "Zakázané akce", "body": "Nelze provádět akce ovládacího panelu ani akce sekcí — kromě vypuštění s odpočtem (13.6) a přechodové komory (13.13)." },
-          { "label": "Evakuace bez zámků", "body": "Zahajte evakuaci, ale NEodstraňujte zámky. Spusťte Projekt X." },
-          { "label": "Proražení pro všechny", "body": "Všichni lidé i roboti získají schopnost Proražení (jako akci odstraní sousední zámek)." },
-          { "label": "Důstojníci", "body": "Postavy se schopností Důstojník se při blackoutu nemohou pohybovat skrz zámky." }
+          {
+            "label": "Temnota",
+            "body": "Všechny sekce jsou považovány za temné."
+          },
+          {
+            "label": "Zakázané akce",
+            "body": "Nelze provádět akce ovládacího panelu ani akce sekcí — kromě vypuštění s odpočtem (13.6) a přechodové komory (13.13)."
+          },
+          {
+            "label": "Evakuace bez zámků",
+            "body": "Zahajte evakuaci, ale NEodstraňujte zámky. Spusťte Projekt X."
+          },
+          {
+            "label": "Proražení pro všechny",
+            "body": "Všichni lidé i roboti získají schopnost Proražení (jako akci odstraní sousední zámek)."
+          },
+          {
+            "label": "Důstojníci",
+            "body": "Postavy se schopností Důstojník se při blackoutu nemohou pohybovat skrz zámky."
+          }
         ]
       },
       {
         "title": "Obnovení energie",
         "body": "Pokud opravíte dostatek sekcí na to, aby se úroveň energie vrátila na stupeň „Záložní energie“, všechny sekce se vrátí do původního stavu a všechny zámky jsou odstraněny.",
-        "ruleRefs": ["7.2.2.4"]
+        "ruleRefs": [
+          "7.2.2.4"
+        ]
       }
     ]
   },
@@ -125,27 +198,276 @@
       {
         "title": "Spouštěče",
         "body": "Projekt X se spustí v jedné z těchto situací:",
-        "ruleRefs": ["7.6.1"],
+        "ruleRefs": [
+          "7.6.1"
+        ],
         "branches": [
-          { "label": "Blackout", "body": "Při vzniku blackoutu se Projekt X automaticky spustí." },
-          { "label": "Akce Spuštění Projektu X", "body": "Akce sekce z Můstku nebo Kryolaboratoře (jen Důstojník); kromě spuštění také automaticky zahájí evakuaci." },
-          { "label": "Poškození Krypty X", "body": "Pokud je poškozena sekce Krypta X, Projekt X se spustí." }
+          {
+            "label": "Blackout",
+            "body": "Při vzniku blackoutu se Projekt X automaticky spustí."
+          },
+          {
+            "label": "Akce Spuštění Projektu X",
+            "body": "Akce sekce z Můstku nebo Kryolaboratoře (jen Důstojník); kromě spuštění také automaticky zahájí evakuaci."
+          },
+          {
+            "label": "Poškození Krypty X",
+            "body": "Pokud je poškozena sekce Krypta X, Projekt X se spustí."
+          }
         ]
       },
       {
         "title": "Otočení karty",
         "body": "Otočte kartu Projektu X a řiďte se pokyny na ní. Karta určuje, co se stane (může přivést nestvůru, poškodit sekce, anihilovat apod.).",
-        "ruleRefs": ["7.6", "13.3"]
+        "ruleRefs": [
+          "7.6",
+          "13.3"
+        ]
       },
       {
         "title": "Nestvůra",
         "body": "Pokud Projekt X přivede nestvůru, umístěte červenou figurku na plán dle pokynů. Nestvůra není postavou, ale může mít stejné schopnosti jako postava. Nelze ji ovlivnit ani aktivovat.",
-        "ruleRefs": ["7.6.2"]
+        "ruleRefs": [
+          "7.6.2"
+        ]
       },
       {
         "title": "Akce nestvůry",
         "body": "Nestvůra provádí své akce na konci tahu každého hráče podle pokynů na kartě Projektu X — až po vyhodnocení všech ostatních událostí daného tahu.",
-        "ruleRefs": ["15.7.3"]
+        "ruleRefs": [
+          "15.7.3"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stanu-se-podezrelym",
+    "title": "Stanu se podezřelým?",
+    "intro": "Rozhodovací strom: stane se aktivní hráč podezřelým? Projdi podmínky — stačí jediné „Ne“ a podezření nevzniká.",
+    "steps": [
+      {
+        "title": "1. Vyřadil jsi živého ČLOVĚKA?",
+        "body": "Podezření spouští jen vyřazení živého člověka tvou akcí během fáze aktivace.",
+        "branches": [
+          {
+            "label": "Ne (robot / nestvůra)",
+            "body": "Nestaneš se podezřelým."
+          },
+          {
+            "label": "Ano",
+            "body": "Pokračuj dál."
+          }
+        ],
+        "ruleRefs": [
+          "10.1.2"
+        ]
+      },
+      {
+        "title": "2. Byla sekce osvětlená?",
+        "body": "Rozhoduje poloha OBĚTI, ne útočníka (např. u hození ohnivé bomby).",
+        "branches": [
+          {
+            "label": "Ne (temná sekce)",
+            "body": "Nestaneš se podezřelým."
+          },
+          {
+            "label": "Ano",
+            "body": "Pokračuj dál."
+          }
+        ]
+      },
+      {
+        "title": "3. Byly zapnuté kamery?",
+        "body": "Při záložní energii i blackoutu jsou kamery vypnuté.",
+        "branches": [
+          {
+            "label": "Ne (vypnuté)",
+            "body": "Nestaneš se podezřelým."
+          },
+          {
+            "label": "Ano",
+            "body": "Pokračuj dál."
+          }
+        ]
+      },
+      {
+        "title": "4. Bylo vyřazení OKAMŽITÝM následkem akce?",
+        "body": "Pistole nebo založení ohně = okamžité. Vkročení k nestvůře nebo do poškozeného modulu NE — tam vyřazení nastane až ve fázi vyhodnocení.",
+        "branches": [
+          {
+            "label": "Ne (až později)",
+            "body": "Nestaneš se podezřelým."
+          },
+          {
+            "label": "Ano",
+            "body": "Pokračuj dál."
+          }
+        ]
+      },
+      {
+        "title": "5. Je oběť (nebo použitá postava) Psanec?",
+        "body": "Psanec (Pirátka, Kyborg): žádná akce s ním ani proti němu nezpůsobí podezření.",
+        "branches": [
+          {
+            "label": "Ano (Psanec)",
+            "body": "Nestaneš se podezřelým."
+          },
+          {
+            "label": "Ne",
+            "body": "⚠ Staneš se podezřelým — posuň svůj ukazatel viny na „Podezřelý“."
+          }
+        ]
+      },
+      {
+        "title": "Další zdroje podezření",
+        "body": "Podezřelým se staneš i odmítnutím požadované akce kompromatu na svou nevinnou HP. Podezření můžou způsobit i schopnosti Právníka, Společníka a Poradce.",
+        "ruleRefs": [
+          "10.1.3",
+          "15.5.5.2"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vypusteni-modulu",
+    "title": "Vypuštění únikového modulu",
+    "intro": "Jak dostat únikový modul (a postavy v něm) do mezosféry — tím jsou zachráněny.",
+    "steps": [
+      {
+        "title": "1. Splň podmínku vypuštění",
+        "body": "Modul musí splňovat svou podmínku. Většina modulů vyžaduje zahájenou evakuaci. Lékařský únikový modul (Medevac) místo toho vyžaduje na palubě vyřazenou postavu (evakuaci nepotřebuje).",
+        "ruleRefs": [
+          "5.5.4"
+        ]
+      },
+      {
+        "title": "2. Vyber typ vypuštění",
+        "body": "Tři způsoby, jak modul vypustit:",
+        "branches": [
+          {
+            "label": "Vypuštění s odpočtem (z modulu)",
+            "body": "Jsi uvnitř modulu → umísti na něj svůj žeton času. Jakmile se vyhodnotí, modul se přesune do mezosféry."
+          },
+          {
+            "label": "Vypuštění ze sekce",
+            "body": "Jsi v sekci propojené s obsazeným modulem → okamžitě přesuň modul do mezosféry."
+          },
+          {
+            "label": "Vypuštění z Můstku",
+            "body": "Jen Důstojník a až po zahájené evakuaci → okamžitě se přesunou všechny způsobilé obsazené moduly."
+          }
+        ],
+        "ruleRefs": [
+          "13.6",
+          "13.7",
+          "13.8"
+        ]
+      },
+      {
+        "title": "3. Pozor na poškozený modul",
+        "body": "Pokud vypustíš poškozený modul, je místo přesunu okamžitě anihilován i se vším uvnitř.",
+        "ruleRefs": [
+          "5.5.4"
+        ]
+      },
+      {
+        "title": "Limit míst",
+        "body": "Počet míst v modulu je omezen — nehledě na to, zda jsou postavy živé nebo vyřazené.",
+        "ruleRefs": [
+          "5.5.3"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evakuace-abandon-ship",
+    "title": "Evakuace (Abandon Ship)",
+    "intro": "Evakuace odemkne stanici pro útěk. Jak se spustí a co způsobí.",
+    "steps": [
+      {
+        "title": "Spouštěče evakuace",
+        "body": "Evakuace se zahájí jedním z těchto způsobů:",
+        "branches": [
+          {
+            "label": "Akce Zahájení evakuace",
+            "body": "Z Můstku, jen postavou se schopností Důstojník."
+          },
+          {
+            "label": "Blackout",
+            "body": "Při blackoutu se evakuace zahájí automaticky."
+          },
+          {
+            "label": "Spuštění Projektu X",
+            "body": "Jakékoli spuštění Projektu X zároveň zahájí evakuaci."
+          },
+          {
+            "label": "Autodestrukce / odjištění antihmoty",
+            "body": "Odjištění antihmoty zahájí evakuaci."
+          },
+          {
+            "label": "Konec minuty „1“",
+            "body": "Jakmile ukazatel minut dosáhne pole 1."
+          }
+        ],
+        "ruleRefs": [
+          "7.1",
+          "13.1",
+          "15.8.2"
+        ]
+      },
+      {
+        "title": "Co se stane při zahájení",
+        "body": "Otoč žeton evakuace a odstraň všechny zámky. VÝJIMKA: při blackoutu evakuaci zahaj, ale zámky NEODSTRAŇUJ.",
+        "ruleRefs": [
+          "7.1",
+          "7.2.2.1"
+        ]
+      },
+      {
+        "title": "Důsledek pro moduly",
+        "body": "Únikové moduly, jejichž jedinou podmínkou vypuštění je zahájení evakuace, lze odteď vypustit.",
+        "ruleRefs": [
+          "7.1.1"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "konec-minuty",
+    "title": "Konec minuty",
+    "intro": "Co se děje na konci každé minuty (kola), poté co odehráli všichni hráči.",
+    "steps": [
+      {
+        "title": "1. Posuň ukazatel minut",
+        "body": "Posuň ukazatel minut o jedno pole.",
+        "ruleRefs": [
+          "15.8"
+        ]
+      },
+      {
+        "title": "2. Zkontroluj pozici ukazatele",
+        "body": "Podle pole, na které ukazatel došel:",
+        "branches": [
+          {
+            "label": "Pole „1“",
+            "body": "Zahaj evakuaci (pokud ještě nebyla zahájena)."
+          },
+          {
+            "label": "Pole „0“",
+            "body": "Otoč žeton vstupu do atmosféry. Ohnivá koule → pád stanice nastane OKAMŽITĚ. Jinak pád nastane až na konci minuty 0."
+          }
+        ],
+        "ruleRefs": [
+          "15.8.2",
+          "15.8.3"
+        ]
+      },
+      {
+        "title": "3. Jinak pokračuj",
+        "body": "Pokud nenastal pád stanice, začíná další minuta tahem začínajícího hráče.",
+        "ruleRefs": [
+          "15.8.1"
+        ]
       }
     ]
   }

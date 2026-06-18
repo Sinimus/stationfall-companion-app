@@ -10,7 +10,7 @@ describe("data package loads", () => {
   it("has the expected record counts", () => {
     expect(characters).toHaveLength(28);
     expect(glossary).toHaveLength(110);
-    expect(flows).toHaveLength(4);
+    expect(flows).toHaveLength(8);
     expect(projectsX).toHaveLength(8);
     expect(faq).toHaveLength(31);
     expect(sections).toHaveLength(41);
