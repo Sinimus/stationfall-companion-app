@@ -26,4 +26,17 @@ describe("FaqList", () => {
     expect(screen.getByText("Jak zapnout/vypnout kamery?")).toBeInTheDocument();
     expect(screen.queryByText("Jak anihilovat antihmotu?")).not.toBeInTheDocument();
   });
+
+  it("opens the targeted question from the URL hash", () => {
+    window.location.hash = "#faq-jak-anihilovat-antihmotu";
+    const { container } = render(
+      <TermSheetProvider>
+        <FaqList faq={faq} />
+      </TermSheetProvider>,
+    );
+    const details = container.querySelector("#faq-jak-anihilovat-antihmotu");
+    expect(details).toBeInstanceOf(HTMLDetailsElement);
+    expect((details as HTMLDetailsElement).open).toBe(true);
+    window.location.hash = "";
+  });
 });

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import type { FaqEntry } from "@/data";
 import { characterIds } from "@/data";
@@ -19,6 +19,21 @@ export function FaqList({ faq }: { faq: FaqEntry[] }) {
   const [query, setQuery] = useState("");
   const visible = query.trim() === "" ? faq : faq.filter((e) => matches(e, query.trim()));
 
+  useEffect(() => {
+    function openFromHash() {
+      const hash = window.location.hash;
+      if (!hash.startsWith("#faq-")) return;
+      const el = document.getElementById(hash.slice(1));
+      if (el instanceof HTMLDetailsElement) {
+        el.open = true;
+        if (typeof el.scrollIntoView === "function") el.scrollIntoView();
+      }
+    }
+    openFromHash();
+    window.addEventListener("hashchange", openFromHash);
+    return () => window.removeEventListener("hashchange", openFromHash);
+  }, []);
+
   return (
     <div className="space-y-2">
       <input
@@ -36,7 +51,10 @@ export function FaqList({ faq }: { faq: FaqEntry[] }) {
         <ul className="space-y-2">
           {visible.map((entry) => (
             <li key={entry.id}>
-              <details className="rounded-lg border border-zinc-200 p-3 dark:border-zinc-800">
+              <details
+                id={`faq-${entry.id}`}
+                className="rounded-lg border border-zinc-200 p-3 dark:border-zinc-800"
+              >
                 <summary className="cursor-pointer font-medium">{entry.question}</summary>
                 <div className="mt-2 space-y-2 text-sm">
                   <p>
