@@ -3,31 +3,86 @@
     "id": "bojove-hejno",
     "nameCs": "Bojové hejno",
     "text": "Vražedné drony na dálkové ovládání. SCHOPNOSTI: Hbitost: Při akci pohybu nebo přesunu přechodovou komorou se může přesunout až o dvě sekce. Může se pohybovat skrz šachty. Provizorní oprava: Jako akci opraví sekci, ve které se nachází, nebo vyřazeného robota ve stejné sekci. POKYNY: Bojové hejno je ovládáno odpovídající akcí ovládacího panelu. Může provádět pouze akce pohybu, přesunu přechodovou komorou, útoku a provizorní opravy. Může táhnout vyřazené postavy. Útočí, jako by mělo pistoli. Bojové hejno nelze vyřadit jinak než tím, že se ocitne v nepoškozené Magnetické komoře. Při provádění akcí s Bojovým hejnem se hráč nestane podezřelým. Bojové hejno je robot a lze jej opravit. Při vyhodnocování úkolů se počítá jako robot.",
-    "trigger": "Do Krypty X umístěte nestvůru. Pod ostatní akce ovládacího panelu umístěte žeton „Ovládání Bojového hejna\". (Žeton: Proveďte pohyb, přesun přechodovou komorou, útok nebo provizorní opravu s Bojovým hejnem.)"
+    "trigger": "Do Krypty X umístěte nestvůru. Pod ostatní akce ovládacího panelu umístěte žeton „Ovládání Bojového hejna\". (Žeton: Proveďte pohyb, přesun přechodovou komorou, útok nebo provizorní opravu s Bojovým hejnem.)",
+    "modifies": [
+      {
+        "targetId": "podezrely",
+        "targetKind": "glossary",
+        "note": "Vyřazení Bojovým hejnem nespouští podezření."
+      }
+    ]
   },
   {
     "id": "entropicky-prizrak",
     "nameCs": "Entropický přízrak",
     "text": "Energetický duch. SCHOPNOSTI: Nehmotný: Může se pohybovat skrz zámky. Tunelová krysa: Může se pohybovat skrz šachty. POKYNY: Na konci každé fáze vyhodnocení: 1. Aktivní hráč musí přesunout jednu kostku vlivu z karty postavy nacházející se v sekci s Entropickým přízrakem na pole zrady, pokud je to možné. (Entropický přízrak požírá vzpomínky.) 2. Pokud v předchozím kroku nedošlo k přesunu kostky, aktivní hráč musí přesunout Entropický přízrak o jednu sekci blíže k antihmotě, pokud je to možné. 3. Pokud se Entropický přízrak přesune až k antihmotě, odjistěte ji (pokud ještě odjištěná není) a Entropický přízrak anihilujte. 4. Pokud už byla antihmota anihilována, Entropický přízrak se namísto toho přesune o jednu sekci blíže k Magnetické komoře. Pokud má aktivní hráč v kterémkoli z výše uvedených kroků na výběr více možností, vybere si jednu z nich. Entropický přízrak nelze vyřadit. Všechna data, která se kdykoli nacházejí ve stejné sekci jako Entropický přízrak, jsou okamžitě smazána.",
-    "trigger": "Do Krypty X umístěte nestvůru."
+    "trigger": "Do Krypty X umístěte nestvůru.",
+    "modifies": [
+      {
+        "targetId": "data-pojem",
+        "targetKind": "glossary",
+        "note": "Smaže všechna data ve své sekci."
+      },
+      {
+        "targetId": "agentka",
+        "targetKind": "character",
+        "note": "Agentčina Mina/past na něj nereaguje (nelze ho vyřadit)."
+      }
+    ]
   },
   {
     "id": "chapadlovita-obludnost",
     "nameCs": "Chapadlovitá obludnost",
     "text": "Rostlino-zvířecí hybrid s nečekanou chutí k jídlu. SCHOPNOSTI: Kolos: Může se pohybovat skrz zámky (čímž je odstraní). POKYNY: Na konci každé fáze vyhodnocení: 1. Aktivní hráč vybere v sekci s Chapadlovitou obludností jednu postavu nebo jeden předmět, který nikdo nevlastní, a přesune ji/jej na kartu nestvůry – byl(a) sežrán(a). Sežrané postavy nemohou provádět akce a ani s nimi nelze jakkoli interagovat. Sežraný člověk bez helmy je vyřazen. 2. Pokud v předchozím kroku Chapadlovitá obludnost nic nesežrala, přitáhne si k sobě jednu postavu nebo jeden předmět, který nikdo nevlastní, ze sousední sekce (skrz nezamčenou chodbu, ale nikoliv skrz šachtu). 3. Pokud v předchozím kroku Chapadlovitá obludnost nic nepřitáhla, aktivní hráč ji musí přesunout (včetně přesunu přechodovou komorou, pokud je možný) o jednu sekci blíže k nejbližšímu nesežranému člověku (živému nebo vyřazenému). Pokud má aktivní hráč v kterémkoli z výše uvedených kroků na výběr více možností, vybere si jednu z nich. Chapadlovitou obludnost lze vyřadit pouze ohněm a má pud sebezáchovy. Pokud je Chapadlovitá obludnost vyřazena, všechny sežrané postavy a předměty se přemístí do její sekce. Vše uvnitř Chapadlovité obludnosti se považuje za nacházející se ve stejné sekci (např. pro úkoly Telepatické krysy a pro schopnost Bod zlomu Kaskadérky).",
-    "trigger": "Do Krypty X umístěte nestvůru."
+    "trigger": "Do Krypty X umístěte nestvůru.",
+    "modifies": [
+      {
+        "targetId": "telepaticka-krysa",
+        "targetKind": "character",
+        "note": "Sežrané věci se počítají jako ve stejné sekci — relevantní pro úkoly Telepatické krysy."
+      },
+      {
+        "targetId": "kaskaderka",
+        "targetKind": "character",
+        "note": "Sežrané věci se počítají jako kolokované — relevantní pro Kaskadérčin Bod zlomu."
+      },
+      {
+        "targetId": "agentka",
+        "targetKind": "character",
+        "note": "Agentčina Mina/past na ni nereaguje."
+      }
+    ]
   },
   {
     "id": "masozravy-bioexperiment",
     "nameCs": "Masožravý bioexperiment",
     "text": "Neplánovaný test bojové entity. SCHOPNOSTI: Ostražitost: Nelze na něj zaútočit v temné sekci. Tunelová krysa: Může se pohybovat skrz šachty. POKYNY: Na konci každé fáze vyhodnocení: 1. Masožravý bioexperiment musí vyřadit jednoho živého člověka ve stejné sekci, pokud je to možné. 2. Pokud Masožravý bioexperiment v předchozím kroku nevyřadil žádného člověka, aktivní hráč jej musí přesunout o jednu sekci blíže k nejbližšímu živému člověku. Pokud má aktivní hráč v kterémkoli z výše uvedených kroků na výběr více možností, vybere si jednu z nich. Masožravý bioexperiment se brání jako člověk bez helmy a je vyřazen nebezpečím. Masožravý bioexperiment má pud sebezáchovy: pokud je jeho jedinou možností pohyb do sekce s nebezpečím, nepohne se.",
-    "trigger": "Do Krypty X umístěte nestvůru."
+    "trigger": "Do Krypty X umístěte nestvůru.",
+    "modifies": [
+      {
+        "targetId": "botanik",
+        "targetKind": "character",
+        "note": "Botanik ho ovládá schopností Kreatropismus."
+      }
+    ]
   },
   {
     "id": "paprsek-smrti",
     "nameCs": "Paprsek smrti",
     "text": "Plně funkční bitevní stanice. POKYNY: Člověk nebo robot nacházející se v Komunikační místnosti může jako jednu akci z Paprsku smrti vystřelit. Z Paprsku smrti nelze vystřelit, pokud je poškozen Reaktor a/nebo Komunikační místnost. Výstřel z Paprsku smrti poškodí Reaktor. Cílem Paprsku smrti může být jedna instituce, Záchranná/Pirátská loď nebo vypuštěný únikový modul. Cíl Paprsku smrti je anihilován a odstraněn ze hry se vším, co se nacházelo uvnitř něj. Pokud byly anihilovány úřady, všichni vinní hráči se stanou podezřelými. Hráč se po výstřelu z Paprsku smrti nestane podezřelým.",
-    "trigger": "Přes textovou bublinu sekce Komunikační místnost umístěte žeton „Paprsek smrti\"."
+    "trigger": "Přes textovou bublinu sekce Komunikační místnost umístěte žeton „Paprsek smrti\".",
+    "modifies": [
+      {
+        "targetId": "vinny",
+        "targetKind": "glossary",
+        "note": "Anihiluje úřady → všichni vinní hráči se stanou podezřelými."
+      },
+      {
+        "targetId": "podezrely",
+        "targetKind": "glossary",
+        "note": "Výstřel z Paprsku smrti nespouští podezření."
+      }
+    ]
   },
   {
     "id": "roboticky-asasin",
@@ -39,12 +94,31 @@
     "id": "stabilni-crevi-dira",
     "nameCs": "Stabilní červí díra",
     "text": "Portál do CERNu. POKYNY: Libovolné předměty a postavy, které se nacházejí v Kryptě X nebo do ní vstoupí, jsou okamžitě zachráněny (přesunuly se do CERNu). Předměty a postavy zachráněné takto se při bodování považují za nacházející se ve stejné sekci. Pokud je skrz Stabilní červí díru pronesena antihmota, antihmota okamžitě vybuchne, což anihiluje Stabilní červí díru a všechny postavy, předměty i data v CERNu.",
-    "trigger": "Poškoďte Reaktor, pokud ještě poškozen není."
+    "trigger": "Poškoďte Reaktor, pokud ještě poškozen není.",
+    "modifies": [
+      {
+        "targetId": "zachranena",
+        "targetKind": "glossary",
+        "note": "Postavy a předměty v Kryptě X jsou okamžitě zachráněny (snadný únik)."
+      }
+    ]
   },
   {
     "id": "sedivy-sajrajt",
     "nameCs": "Šedivý sajrajt",
     "text": "Šířící se nanosliz. POKYNY: Na konci fáze vyhodnocení hráče, který má tuto kartu u sebe, zasáhne Šedivý sajrajt jednorázově všechny postavy v sekcích ve svém dosahu šíření. Pokud je zasažen člověk s helmou, je jeho helma anihilována; pokud jde o člověka bez helmy nebo robota, je tato postava vyřazena. Pokud neprobíhá blackout, zvyšte poté dosah šíření Sajrajtu o jedna. Šedivý sajrajt se rozšíří do všech sekcí, jejichž vzdálenost od Krypty X je rovna dosahu šíření nebo menší. Umístěte do nich žeton Šedivého sajrajtu. Šedivý sajrajt se šíří skrz zámky, ale nikoliv skrz šachty. Jakmile dosah šíření dosáhne hodnoty 5, dojde k předčasnému (a okamžitému) pádu stanice.",
-    "trigger": "Kartu Šedivého sajrajtu dejte aktivnímu hráči. Na tuto kartu umístěte žeton Šedivého sajrajtu na hodnotu 0. Tato hodnota značí dosah šíření Šedivého sajrajtu."
+    "trigger": "Kartu Šedivého sajrajtu dejte aktivnímu hráči. Na tuto kartu umístěte žeton Šedivého sajrajtu na hodnotu 0. Tato hodnota značí dosah šíření Šedivého sajrajtu.",
+    "modifies": [
+      {
+        "targetId": "helma",
+        "targetKind": "glossary",
+        "note": "Zasažená helma je anihilována."
+      },
+      {
+        "targetId": "pad-stanice",
+        "targetKind": "glossary",
+        "note": "Při dosahu šíření 5 dojde k předčasnému pádu stanice."
+      }
+    ]
   }
 ]
