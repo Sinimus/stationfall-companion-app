@@ -25,7 +25,7 @@ for (const c of characters) {
   ].join(" ");
   add("character", c.id, c.nameCs, body);
 }
-for (const g of glossary) add("glossary", g.id, g.nameCs, g.text);
+for (const g of glossary) add("glossary", g.id, g.nameCs, `${g.text} ${(g.aliases ?? []).join(" ")}`);
 for (const f of faq) add("faq", f.id, f.question, `${f.answer} ${(f.tags ?? []).join(" ")}`);
 for (const fl of flows) {
   const body = `${fl.intro ?? ""} ${fl.steps.map((s) => `${s.title} ${s.body}`).join(" ")}`;
@@ -40,10 +40,32 @@ const index = new MiniSearch<Doc>({
 });
 index.addAll(docs);
 
+// Curated query-time synonyms (search-only; does NOT affect inline linkify).
+const SYNONYMS: Record<string, string> = {
+  zbraň: "hasák pistole",
+  zbrane: "hasák pistole",
+  zbraně: "hasák pistole",
+  weapon: "hasák pistole",
+  gun: "pistole",
+  kamera: "kamery",
+  přilba: "helma",
+  helmet: "helma",
+  bomba: "ohnivá bomba",
+};
+
+function expandQuery(query: string): string {
+  const extra = query
+    .toLowerCase()
+    .split(/\s+/)
+    .map((token) => SYNONYMS[token])
+    .filter((value): value is string => value !== undefined);
+  return extra.length > 0 ? `${query} ${extra.join(" ")}` : query;
+}
+
 export function search(query: string): SearchResult[] {
   if (query.trim() === "") return [];
   return index
-    .search(query)
+    .search(expandQuery(query))
     .map((r) => meta.get(String(r.id)))
     .filter((x): x is SearchResult => x !== undefined);
 }

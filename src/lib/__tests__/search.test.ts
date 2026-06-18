@@ -17,4 +17,13 @@ describe("search", () => {
   it("finds a Project X card", () => {
     expect(search("hejno").some((r) => r.type === "projectx")).toBe(true);
   });
+  it("finds weapons via the synonym 'zbraň'", () => {
+    const ids = search("zbraň").map((r) => r.id);
+    expect(ids).toContain("hasak");
+    expect(ids).toContain("pistole");
+  });
+
+  it("finds a term via its alias", () => {
+    expect(search("HP").some((r) => r.type === "glossary" && r.id === "hracova-postava")).toBe(true);
+  });
 });
