@@ -47,4 +47,14 @@ describe("Glossary + TermSheet", () => {
     // The definition contains the word "autodestrukce" (a glossary term) — it must be a button.
     expect(within(dialog).getByRole("button", { name: "autodestrukce" })).toBeInTheDocument();
   });
+
+  it("lists characters who start with the item (reverse lookup)", async () => {
+    const user = userEvent.setup();
+    renderBrowser();
+    await user.click(screen.getByRole("button", { name: "Pistole" }));
+    const dialog = screen.getByRole("dialog", { name: "Pistole" });
+    expect(within(dialog).getByText("Startuje s ním")).toBeInTheDocument();
+    expect(within(dialog).getByRole("link", { name: /Pirátka/ })).toBeInTheDocument();
+    expect(within(dialog).getByRole("link", { name: /Strážce/ })).toBeInTheDocument();
+  });
 });

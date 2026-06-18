@@ -57,6 +57,8 @@ export interface Character {
   setup: string;
   /** Startovní sekce, pokud je explicitně uvedena (jinak vynechat). */
   startSection?: string;
+  /** Glosářová id předmětů, které postava vlastní na začátku hry (reverzní lookup). */
+  startItems?: string[];
   /** Základní schopnosti. */
   abilities: Ability[];
   /** Schopnosti po odhalení. */

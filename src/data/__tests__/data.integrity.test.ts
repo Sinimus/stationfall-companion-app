@@ -89,4 +89,12 @@ describe("data integrity", () => {
       }
     expect(bad).toEqual([]);
   });
+
+  it("every character startItems id resolves to a glossary id", () => {
+    const bad: string[] = [];
+    for (const c of characters)
+      for (const it of c.startItems ?? [])
+        if (!glossaryIds.has(it)) bad.push(`${c.id} -> ${it}`);
+    expect(bad).toEqual([]);
+  });
 });

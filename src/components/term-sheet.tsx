@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { glossaryById, characterNameById, projectById, KIND_LABEL } from "@/lib/lookups";
 import { characterIds } from "@/data";
+import { charactersStartingWith } from "@/lib/start-items";
 import { CATEGORY_BG_CLASS, CATEGORY_LABEL } from "@/lib/categories";
 import { TermSheetContext } from "@/components/term-sheet-context";
 import { RuleText } from "@/components/rule-text";
@@ -80,6 +81,25 @@ export function TermSheetProvider({ children }: { children: ReactNode }) {
                       {term.relatedCharacterIds.map((cid) => (
                         <Link key={cid} href={`/postavy/${cid}`} onClick={close} className="text-sm underline">
                           {characterNameById.get(cid) ?? cid}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+
+                {charactersStartingWith(term.id).length > 0 ? (
+                  <div className="mt-3">
+                    <p className="text-xs font-semibold text-zinc-500">Startuje s ním</p>
+                    <div className="flex flex-wrap gap-2">
+                      {charactersStartingWith(term.id).map((sc) => (
+                        <Link
+                          key={sc.id}
+                          href={`/postavy/${sc.id}`}
+                          onClick={close}
+                          className="text-sm underline"
+                        >
+                          {sc.nameCs}
+                          {sc.startSection ? ` (${sc.startSection})` : ""}
                         </Link>
                       ))}
                     </div>

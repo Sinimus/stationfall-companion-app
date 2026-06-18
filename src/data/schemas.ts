@@ -45,6 +45,7 @@ export const characterSchema = z
     address: z.string(),
     setup: z.string(),
     startSection: z.string().optional(),
+    startItems: z.array(z.string()).optional(),
     abilities: z.array(ability),
     revealAbilities: z.array(ability),
     agendaTitle: z.string().optional(),
