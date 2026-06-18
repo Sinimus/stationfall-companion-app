@@ -50,7 +50,7 @@ preserved), and proved the data package loads with a passing smoke test.
 - `pnpm lint` — PASS: zero warnings/errors.
 
 ## Constraints Verified
-- `data/_sources/processed-threads.json` untouched; `docs/`, `.kilo/`, `.claude/` untouched.
+- `src/data/_sources/processed-threads.json` untouched; `docs/`, `.kilo/`, `.claude/` untouched.
 - Moved JSON/`schema.ts` content unchanged (git reports pure renames, 100% similarity).
 - No `any`, `as any`, or `@ts-ignore` introduced.
 

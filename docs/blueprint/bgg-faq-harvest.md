@@ -24,7 +24,7 @@ BGG is fully behind Cloudflare — the XML API and web pages both return 401/403
 1. **Connect browser:** ensure the Claude Chrome extension is paired (`tabs_context_mcp`); user
    logged into BGG. If `list_connected_browsers` is empty, `switch_browser` and click *Connect*.
 2. **Scan the rules forum** (`/boardgame/316624/stationfall/forums/66`, sort by *Top* / replies)
-   for new or high-signal threads. Compare against `data/_sources/processed-threads.json` →
+   for new or high-signal threads. Compare against `src/data/_sources/processed-threads.json` →
    skip `mined`, prioritise `candidates`, high recommends/replies, character-quirk and scoring threads.
 3. **Read each new thread:** `navigate` + `get_page_text` (captures the OP — where aggregated FAQs
    live). For Q&A whose answer is in replies, also `read_page` to capture replies. Prefer answers
@@ -38,12 +38,12 @@ BGG is fully behind Cloudflare — the XML API and web pages both return 401/403
    Petr Pospíšil CZ translation.
 6. **Dedupe** against existing `faq.json` ids/questions; merge rather than duplicate.
 7. **Validate:** unique ids, all `seeAlso` resolve, required fields present (reuse the data-integrity test).
-8. **Update the ledger** `data/_sources/processed-threads.json` (`mined` += thread, `entriesYielded`,
+8. **Update the ledger** `src/data/_sources/processed-threads.json` (`mined` += thread, `entriesYielded`,
    `lastScan`) and **commit**.
 
 ## State
 
-- Ledger: `data/_sources/processed-threads.json`.
+- Ledger: `src/data/_sources/processed-threads.json`.
 - Current `faq.json`: 31 entries; primary source = "Massive FAQ" thread (3021145).
 - Top un-mined candidate: **"More FAQ IMHO"** (tony0021074, 26 recommends).
 

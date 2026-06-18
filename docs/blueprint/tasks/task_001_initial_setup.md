@@ -16,7 +16,7 @@ existing `data/` content into `src/data/`, and prove it loads with a passing dat
 - Create: `src/data/__tests__/data.smoke.test.ts`
 - Move (git mv): `data/{characters,glossary,flows,projectsX,faq}.json`, `data/schema.ts`,
   `data/README.md` → `src/data/`
-- Keep in place: `data/_sources/processed-threads.json` (dev tooling, not bundled)
+- Keep in place: `src/data/_sources/processed-threads.json` (dev tooling, not bundled)
 
 > Note: the project root already contains `.git`, `data/`, `docs/`, `.kilo/`, `.claude/`.
 > `create-next-app` refuses a non-empty dir, so scaffold in a temp sibling dir and move files in
