@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Users, BookOpen, Route, Search } from "lucide-react";
+import { Users, BookOpen, Route, Map as MapIcon, Search } from "lucide-react";
 
 const ITEMS = [
   { href: "/postavy", label: "Postavy", Icon: Users },
   { href: "/glosar", label: "Glosář", Icon: BookOpen },
   { href: "/pruvodci", label: "Průvodci", Icon: Route },
+  { href: "/sekce", label: "Sekce", Icon: MapIcon },
   { href: "/hledat", label: "Hledat", Icon: Search },
 ] as const;
 
@@ -16,7 +17,7 @@ export function BottomNav() {
   return (
     <nav
       aria-label="Hlavní navigace"
-      className="fixed inset-x-0 bottom-0 z-10 grid grid-cols-4 border-t border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950"
+      className="fixed inset-x-0 bottom-0 z-10 grid grid-cols-5 border-t border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950"
     >
       {ITEMS.map(({ href, label, Icon }) => {
         const active = pathname === href || pathname.startsWith(`${href}/`);
