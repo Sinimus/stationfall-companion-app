@@ -25,7 +25,7 @@ function uniq(ids: readonly string[]): string[] {
 describe("data integrity", () => {
   it("parses all collections with expected counts", () => {
     expect(characters).toHaveLength(28);
-    expect(glossary).toHaveLength(109);
+    expect(glossary).toHaveLength(110);
     expect(flows).toHaveLength(4);
     expect(projectsX).toHaveLength(8);
     expect(faq).toHaveLength(31);

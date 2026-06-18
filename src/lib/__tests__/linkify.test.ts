@@ -33,4 +33,10 @@ describe("splitText", () => {
     const parts = splitText("Pozor na Entropický přízrak v sekci.");
     expect(parts.some((p) => p.ref?.kind === "projectx")).toBe(true);
   });
+
+  it("links the NDA abbreviation to its glossary term", () => {
+    // "Právník" is a character name (links first), so target the nda ref specifically.
+    const linked = splitText("Právník umístí NDA všem.").find((p) => p.ref?.id === "nda");
+    expect(linked?.ref).toEqual({ kind: "glossary", id: "nda" });
+  });
 });

@@ -516,6 +516,15 @@
     ]
   },
   {
+    "id": "nda",
+    "nameCs": "NDA",
+    "aliases": ["NDA"],
+    "kind": "data",
+    "text": "NDA (dohoda o mlčenlivosti) je typ dat. Právník ji schopností Obsílka vyrobí do vlastnictví všech kolokovaných lidí a robotů. Je důležitá pro úkoly Právníka (jeho schopnosti po odhalení s NDA pracují).",
+    "relatedCharacterIds": ["pravnik"],
+    "seeAlso": ["data-pojem"]
+  },
+  {
     "id": "ohen",
     "nameCs": "Oheň",
     "kind": "nebezpeci",
