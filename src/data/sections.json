@@ -1,0 +1,394 @@
+[
+  {
+    "id": "mustek",
+    "nameCs": "Můstek",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "actions": [
+      "evakuace",
+      "spusteni-projektu-x",
+      "autodestrukce",
+      "vypusteni"
+    ],
+    "notes": "Akce Můstku vyžadují postavu se schopností Důstojník."
+  },
+  {
+    "id": "hlavni-pocitac",
+    "nameCs": "Hlavní počítač",
+    "zone": "dolni-prstenec",
+    "gravity": "gravitace",
+    "powered": true,
+    "consolePanel": true,
+    "actions": [
+      "rusicky",
+      "hasici-system"
+    ],
+    "notes": "Napájecí sekce — poškození snižuje úroveň energie. Má ovládací panel."
+  },
+  {
+    "id": "bezpecnostni-stanice",
+    "nameCs": "Bezpečnostní stanice",
+    "zone": "horni-prstenec",
+    "gravity": "gravitace",
+    "consolePanel": true,
+    "actions": [
+      "vyroba",
+      "kamery",
+      "rusicky",
+      "hasici-system"
+    ],
+    "notes": "Jediná sekce s akcí zapnutí/vypnutí kamer. Má ovládací panel."
+  },
+  {
+    "id": "reaktor",
+    "nameCs": "Reaktor",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "powered": true,
+    "actions": [],
+    "notes": "Napájecí sekce — poškození snižuje úroveň energie."
+  },
+  {
+    "id": "palivove-clanky",
+    "nameCs": "Palivové články",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "powered": true,
+    "actions": [],
+    "notes": "Napájecí sekce — poškození snižuje úroveň energie."
+  },
+  {
+    "id": "komunikacni-mistnost",
+    "nameCs": "Komunikační místnost",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "actions": [
+      "prenos-dat"
+    ],
+    "notes": "Jediná sekce pro přenos dat institucím (úřady/média)."
+  },
+  {
+    "id": "kryolaborator",
+    "nameCs": "Kryolaboratoř",
+    "zone": "dolni-prstenec",
+    "gravity": "gravitace",
+    "actions": [
+      "spusteni-projektu-x"
+    ],
+    "notes": "Spuštění Projektu X (jako Můstek), jen Důstojník."
+  },
+  {
+    "id": "krypta-x",
+    "nameCs": "Krypta X",
+    "zone": "dolni-prstenec",
+    "gravity": "gravitace",
+    "actions": [],
+    "notes": "Poškození této sekce spustí Projekt X."
+  },
+  {
+    "id": "nadrze",
+    "nameCs": "Nádrže",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "actions": [
+      "dekontaminace"
+    ],
+    "notes": "Tanks — temná sekce. Jediná sekce pro dekontaminaci.",
+    "lit": false
+  },
+  {
+    "id": "magneticka-komora",
+    "nameCs": "Magnetická komora",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "actions": [
+      "odhozeni-antihmoty"
+    ],
+    "notes": "Drží antihmotu; mimo ni se antihmota odjistí."
+  },
+  {
+    "id": "biolaborator",
+    "nameCs": "Biolaboratoř",
+    "zone": "dolni-prstenec",
+    "gravity": "gravitace",
+    "actions": [
+      "vyroba"
+    ],
+    "notes": "Vstup sem získá Tajemství X (pokud není Biolaboratoř poškozená). Výroba Tajemství X."
+  },
+  {
+    "id": "chemicka-laborator",
+    "nameCs": "Chemická laboratoř",
+    "zone": "dolni-prstenec",
+    "gravity": "gravitace",
+    "actions": [
+      "vyroba"
+    ]
+  },
+  {
+    "id": "nanotovarna",
+    "nameCs": "Nanotovárna",
+    "zone": "dolni-prstenec",
+    "gravity": "gravitace",
+    "actions": [
+      "vyroba"
+    ]
+  },
+  {
+    "id": "3d-tiskarna",
+    "nameCs": "3D tiskárna",
+    "zone": "dolni-prstenec",
+    "gravity": "gravitace",
+    "actions": [
+      "vyroba"
+    ]
+  },
+  {
+    "id": "terapeuticka-zahrada",
+    "nameCs": "Terapeutická zahrada",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "actions": [
+      "meditace"
+    ],
+    "notes": "Meditace (vrácení kostek z pole zrady) — jen HP."
+  },
+  {
+    "id": "strojovna",
+    "nameCs": "Strojovna",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "actions": [
+      "oprava"
+    ],
+    "notes": "Oprava vyřazeného robota (v příručce též „Dílna“)."
+  },
+  {
+    "id": "pridove-prechodove-komory",
+    "nameCs": "Přídové přechodové komory",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "actions": [
+      "prechodova-komora",
+      "vypusteni"
+    ],
+    "notes": "Přídové airlock — Airlock + vypuštění ze sekce sousedního obsazeného modulu."
+  },
+  {
+    "id": "zadove-prechodove-komory",
+    "nameCs": "Záďové přechodové komory",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "lit": false,
+    "actions": [
+      "prechodova-komora",
+      "vypusteni"
+    ],
+    "notes": "Temná sekce (bez kamer) — záměrně, kvůli soubojům těsně před únikovými moduly (designer diary). Vypuštění ze sekce sousedního obsazeného modulu."
+  },
+  {
+    "id": "pridova-vzduchotechnika",
+    "nameCs": "Přídová vzduchotechnika",
+    "zone": "dolni-prstenec",
+    "gravity": "gravitace",
+    "actions": [
+      "prechodova-komora"
+    ],
+    "lit": false,
+    "notes": "Forward Exhaust — temná sekce. Airlock směrem do Okolního vesmíru."
+  },
+  {
+    "id": "zadova-vzduchotechnika",
+    "nameCs": "Záďová vzduchotechnika",
+    "zone": "horni-prstenec",
+    "gravity": "gravitace",
+    "lit": false,
+    "actions": [
+      "prechodova-komora"
+    ],
+    "notes": "Aft Exhaust — temná sekce (bez kamer). Airlock směrem do Okolního vesmíru."
+  },
+  {
+    "id": "okolni-vesmir",
+    "nameCs": "Okolní vesmír",
+    "zone": "specialni",
+    "gravity": "nulova",
+    "actions": [
+      "prechodova-komora"
+    ],
+    "notes": "Sekce mimo stanici; neodstranitelné nebezpečí udušení. Člověk sem může jen s helmou.",
+    "lit": false
+  },
+  {
+    "id": "roboticke-rameno",
+    "nameCs": "Robotické rameno",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "actions": [],
+    "notes": "Cargo Claw — lze jím odhodit/přesunout do Okolního vesmíru."
+  },
+  {
+    "id": "alcatraz",
+    "nameCs": "Alcatraz",
+    "zone": "unikovy-modul",
+    "gravity": "nulova",
+    "escapePod": true,
+    "actions": [
+      "vypusteni"
+    ],
+    "notes": "Únikový modul."
+  },
+  {
+    "id": "bryks",
+    "nameCs": "Bryks",
+    "zone": "unikovy-modul",
+    "gravity": "nulova",
+    "escapePod": true,
+    "actions": [
+      "vypusteni"
+    ],
+    "notes": "Hail Mary (EN). Únikový modul."
+  },
+  {
+    "id": "houdini",
+    "nameCs": "Houdini",
+    "zone": "unikovy-modul",
+    "gravity": "nulova",
+    "escapePod": true,
+    "actions": [
+      "vypusteni"
+    ],
+    "notes": "Únikový modul."
+  },
+  {
+    "id": "mcqueen",
+    "nameCs": "McQueen",
+    "zone": "unikovy-modul",
+    "gravity": "nulova",
+    "escapePod": true,
+    "actions": [
+      "vypusteni"
+    ],
+    "notes": "Únikový modul."
+  },
+  {
+    "id": "nouzovy-unikovy-modul",
+    "nameCs": "Nouzový únikový modul",
+    "zone": "unikovy-modul",
+    "gravity": "nulova",
+    "escapePod": true,
+    "actions": [
+      "vypusteni"
+    ],
+    "notes": "Únikový modul; vypuštění vyžaduje zahájení evakuace."
+  },
+  {
+    "id": "lekarsky-unikovy-modul",
+    "nameCs": "Lékařský únikový modul",
+    "zone": "unikovy-modul",
+    "gravity": "nulova",
+    "escapePod": true,
+    "actions": [
+      "vypusteni"
+    ],
+    "notes": "Únikový modul."
+  },
+  {
+    "id": "piratska-zachranna-lod",
+    "nameCs": "Pirátská / Záchranná loď",
+    "zone": "specialni",
+    "gravity": "nulova",
+    "actions": [],
+    "notes": "Speciální sekce; souvisí se schopnostmi Pirátky."
+  },
+  {
+    "id": "apartma",
+    "nameCs": "Apartmá",
+    "zone": "horni-prstenec",
+    "gravity": "gravitace",
+    "actions": []
+  },
+  {
+    "id": "archiv",
+    "nameCs": "Archiv",
+    "zone": "horni-prstenec",
+    "gravity": "gravitace",
+    "actions": [],
+    "lit": false,
+    "notes": "Shred Room — temná sekce. Data Mine: získej kompromat odkudkoli na stanici."
+  },
+  {
+    "id": "hydroponika",
+    "nameCs": "Hydroponika",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "actions": []
+  },
+  {
+    "id": "kuchyne",
+    "nameCs": "Kuchyně",
+    "zone": "horni-prstenec",
+    "gravity": "gravitace",
+    "actions": []
+  },
+  {
+    "id": "skladiste",
+    "nameCs": "Skladiště",
+    "zone": "horni-prstenec",
+    "gravity": "gravitace",
+    "actions": []
+  },
+  {
+    "id": "satny",
+    "nameCs": "Šatny",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "actions": [],
+    "lit": false,
+    "notes": "Locker Room — temná sekce."
+  },
+  {
+    "id": "spolecenska-mistnost",
+    "nameCs": "Společenská místnost",
+    "zone": "horni-prstenec",
+    "gravity": "gravitace",
+    "actions": []
+  },
+  {
+    "id": "solarni-bunkr",
+    "nameCs": "Solární bunkr",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "actions": [],
+    "notes": "Storm Shelter (EN)."
+  },
+  {
+    "id": "ubikace",
+    "nameCs": "Ubikace",
+    "zone": "horni-prstenec",
+    "gravity": "gravitace",
+    "actions": []
+  },
+  {
+    "id": "fyzikalni-laborator",
+    "nameCs": "Fyzikální laboratoř",
+    "zone": "dolni-prstenec",
+    "gravity": "gravitace",
+    "actions": [],
+    "notes": "Ve fázi vyhodnocení se zde smažou všechna data."
+  },
+  {
+    "id": "pridovy-uzel",
+    "nameCs": "Přídový uzel",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "actions": []
+  },
+  {
+    "id": "zadovy-uzel",
+    "nameCs": "Záďový uzel",
+    "zone": "centralni-osa",
+    "gravity": "nulova",
+    "actions": []
+  }
+]
