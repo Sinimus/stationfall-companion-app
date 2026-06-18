@@ -28,3 +28,19 @@ export const CATEGORY_BG_CLASS: Record<AbilityCategory, string> = {
   "ovladaci-panel": "bg-cat-ovladaci-panel",
   doplnkove: "bg-cat-doplnkove",
 };
+
+export type CharacterType = Character["type"];
+
+export const CHARACTER_TYPES = [
+  "clovek",
+  "robot",
+  "data",
+  "predmet",
+] as const satisfies readonly CharacterType[];
+
+export const TYPE_LABEL: Record<CharacterType, string> = {
+  clovek: "Člověk",
+  robot: "Robot",
+  data: "Data",
+  predmet: "Předmět",
+};
