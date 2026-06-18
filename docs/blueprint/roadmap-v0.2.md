@@ -34,5 +34,9 @@ Priorities below reflect the v0.1 design review (2026-06-18).
 - **Dark-mode toggle** — currently follows system.
 - **Deep-links** — search result → specific Q&A / Project X detail route.
 
+## Deployment gate
+- Public deployment (Coolify/Hetzner) is **deferred until a release intended for other players**.
+  CI (lint/test/build) is in place; the MVP is internal/review-only, not published.
+
 ## Notes
 - The shipped app stays AI-free; any AI is dev-time maintenance only.

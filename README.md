@@ -130,8 +130,10 @@ branded PNG icons are tracked for v0.2.
 
 ## Deployment
 
-Intended target: static build via CI (GitHub Actions) → **Coolify** on Hetzner. The output is a
-plain `./out` directory servable by any static host. *(CI/deploy is the final MVP task.)*
+CI (lint + test + build) runs on GitHub Actions. The build is a plain static `./out` directory
+servable by any static host; the intended target is **Coolify** on Hetzner. Public deployment is
+**intentionally deferred** until a release meant for other players — the MVP is for internal use and
+review only.
 
 ## Development workflow
 
