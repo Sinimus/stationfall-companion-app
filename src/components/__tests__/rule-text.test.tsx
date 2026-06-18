@@ -36,4 +36,13 @@ describe("RuleText", () => {
     await user.click(screen.getByRole("button", { name: "Entropický přízrak" }));
     expect(screen.getByRole("dialog", { name: "Entropický přízrak" })).toBeInTheDocument();
   });
+
+  it("renders a section name as a link to its page", () => {
+    render(
+      <TermSheetProvider>
+        <RuleText>Přesun do sekce Můstek.</RuleText>
+      </TermSheetProvider>,
+    );
+    expect(screen.getByRole("link", { name: "Můstek" })).toHaveAttribute("href", "/sekce/mustek");
+  });
 });

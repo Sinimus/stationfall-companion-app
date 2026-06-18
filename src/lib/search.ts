@@ -1,7 +1,8 @@
 import MiniSearch from "minisearch";
-import { characters, glossary, faq, flows, projectsX } from "@/data";
+import { characters, glossary, faq, flows, projectsX, sections } from "@/data";
+import { glossaryById } from "@/lib/lookups";
 
-export type ResultType = "character" | "glossary" | "faq" | "flow" | "projectx";
+export type ResultType = "character" | "glossary" | "faq" | "flow" | "projectx" | "section";
 export type SearchResult = { type: ResultType; id: string; title: string };
 
 type Doc = { ref: string; title: string; body: string };
@@ -32,6 +33,10 @@ for (const fl of flows) {
   add("flow", fl.id, fl.title, body);
 }
 for (const p of projectsX) add("projectx", p.id, p.nameCs, `${p.text} ${p.trigger ?? ""}`);
+for (const s of sections) {
+  const actionNames = s.actions.map((a) => glossaryById.get(a)?.nameCs ?? a).join(" ");
+  add("section", s.id, s.nameCs, `${actionNames} ${s.notes ?? ""}`);
+}
 
 const index = new MiniSearch<Doc>({
   idField: "ref",

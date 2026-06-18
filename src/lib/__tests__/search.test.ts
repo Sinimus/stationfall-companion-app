@@ -26,4 +26,7 @@ describe("search", () => {
   it("finds a term via its alias", () => {
     expect(search("HP").some((r) => r.type === "glossary" && r.id === "hracova-postava")).toBe(true);
   });
+  it("finds a section by its action (reverse lookup)", () => {
+    expect(search("dekontaminace").some((r) => r.type === "section" && r.id === "nadrze")).toBe(true);
+  });
 });

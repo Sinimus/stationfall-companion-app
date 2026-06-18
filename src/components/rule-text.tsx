@@ -21,6 +21,13 @@ export function RuleText({ children }: { children: string }) {
             </Link>
           );
         }
+        if (ref.kind === "section") {
+          return (
+            <Link key={i} href={`/sekce/${ref.id}`} className={LINK_CLASS}>
+              {part.text}
+            </Link>
+          );
+        }
         if (ref.kind === "projectx") {
           return (
             <button key={i} type="button" onClick={() => openProject(ref.id)} className={LINK_CLASS}>

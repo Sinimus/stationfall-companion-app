@@ -39,4 +39,14 @@ describe("splitText", () => {
     const linked = splitText("Právník umístí NDA všem.").find((p) => p.ref?.id === "nda");
     expect(linked?.ref).toEqual({ kind: "glossary", id: "nda" });
   });
+
+  it("links a section name to the section kind", () => {
+    const parts = splitText("Postava startuje v sekci Apartmá.");
+    expect(parts.some((p) => p.ref?.kind === "section" && p.ref.id === "apartma")).toBe(true);
+  });
+
+  it("prefers the glossary term over the section for a shared name", () => {
+    const linked = splitText("Okolní vesmír je nebezpečný.").find((p) => p.ref !== undefined);
+    expect(linked?.ref).toEqual({ kind: "glossary", id: "okolni-vesmir" });
+  });
 });

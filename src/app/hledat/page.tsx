@@ -11,12 +11,14 @@ const TYPE_LABEL: Record<SearchResult["type"], string> = {
   faq: "Q&A",
   flow: "Průvodce",
   projectx: "Projekt X",
+  section: "Sekce",
 };
 
 function hrefFor(r: SearchResult): string {
   if (r.type === "character") return `/postavy/${r.id}`;
   if (r.type === "flow") return `/pruvodci/${r.id}`;
   if (r.type === "faq") return `/pruvodci#faq-${r.id}`;
+  if (r.type === "section") return `/sekce/${r.id}`;
   return "/pruvodci";
 }
 
