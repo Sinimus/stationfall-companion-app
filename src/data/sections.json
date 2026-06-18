@@ -55,7 +55,7 @@
     "gravity": "nulova",
     "powered": true,
     "actions": [],
-    "notes": "Napájecí sekce — poškození snižuje úroveň energie."
+    "notes": "Napájecí sekce — poškození snižuje úroveň energie a navíc založí oheň v této sekci i v Nádržích."
   },
   {
     "id": "komunikacni-mistnost",
@@ -114,7 +114,7 @@
     "actions": [
       "vyroba"
     ],
-    "notes": "Vstup sem získá Tajemství X (pokud není Biolaboratoř poškozená). Výroba Tajemství X."
+    "notes": "Vstup do sekce postavu kontaminuje — s výjimkou případu, kdy v Biolaboratoři hoří oheň. Výroba: Tajemství X."
   },
   {
     "id": "chemicka-laborator",
