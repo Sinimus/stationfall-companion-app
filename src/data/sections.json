@@ -291,7 +291,7 @@
     "actions": [
       "vypusteni"
     ],
-    "notes": "Únikový modul."
+    "notes": "Medevac — vypuštění vyžaduje vyřazenou postavu na palubě; NEvyžaduje zahájení evakuace."
   },
   {
     "id": "piratska-zachranna-lod",
