@@ -38,4 +38,13 @@ describe("Glossary + TermSheet", () => {
     await user.click(screen.getByRole("button", { name: "Zavřít" }));
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
   });
+
+  it("linkifies keywords inside the definition text", async () => {
+    const user = userEvent.setup();
+    renderBrowser();
+    await user.click(screen.getByRole("button", { name: "Antihmota" }));
+    const dialog = screen.getByRole("dialog", { name: "Antihmota" });
+    // The definition contains the word "autodestrukce" (a glossary term) — it must be a button.
+    expect(within(dialog).getByRole("button", { name: "autodestrukce" })).toBeInTheDocument();
+  });
 });

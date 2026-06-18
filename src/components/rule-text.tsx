@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment } from "react";
-import { useTermSheet } from "@/components/term-sheet";
+import { useTermSheet } from "@/components/term-sheet-context";
 import { splitGlossaryText } from "@/lib/linkify";
 
 export function RuleText({ children }: { children: string }) {

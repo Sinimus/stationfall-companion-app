@@ -1,27 +1,14 @@
 "use client";
 
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-  type ReactNode,
-} from "react";
+import { useCallback, useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { glossaryById, characterNameById, KIND_LABEL } from "@/lib/lookups";
 import { characterIds } from "@/data";
 import { CATEGORY_BG_CLASS, CATEGORY_LABEL } from "@/lib/categories";
+import { TermSheetContext } from "@/components/term-sheet-context";
+import { RuleText } from "@/components/rule-text";
 
-type TermSheetCtx = { openTerm: (id: string) => void; close: () => void };
-
-const Ctx = createContext<TermSheetCtx | null>(null);
-
-export function useTermSheet(): TermSheetCtx {
-  const ctx = useContext(Ctx);
-  if (!ctx) throw new Error("useTermSheet must be used within TermSheetProvider");
-  return ctx;
-}
+export { useTermSheet } from "@/components/term-sheet-context";
 
 export function TermSheetProvider({ children }: { children: ReactNode }) {
   const [openId, setOpenId] = useState<string | null>(null);
@@ -40,7 +27,7 @@ export function TermSheetProvider({ children }: { children: ReactNode }) {
   const term = openId !== null ? (glossaryById.get(openId) ?? null) : null;
 
   return (
-    <Ctx.Provider value={{ openTerm, close }}>
+    <TermSheetContext.Provider value={{ openTerm, close }}>
       {children}
       {term !== null ? (
         <div className="fixed inset-0 z-50" role="presentation" onClick={close}>
@@ -75,7 +62,7 @@ export function TermSheetProvider({ children }: { children: ReactNode }) {
               </span>
             ) : null}
 
-            <p className="text-sm">{term.text}</p>
+            <p className="text-sm"><RuleText>{term.text}</RuleText></p>
 
             {term.relatedCharacterIds && term.relatedCharacterIds.length > 0 ? (
               <div className="mt-3">
@@ -146,6 +133,6 @@ export function TermSheetProvider({ children }: { children: ReactNode }) {
           </div>
         </div>
       ) : null}
-    </Ctx.Provider>
+    </TermSheetContext.Provider>
   );
 }
