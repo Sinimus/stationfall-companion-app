@@ -225,7 +225,7 @@
     "zone": "centralni-osa",
     "gravity": "nulova",
     "actions": [],
-    "notes": "Cargo Claw — lze jím odhodit/přesunout do Okolního vesmíru."
+    "notes": "Cargo Claw (Sevření): zvedni předmět nebo vyřaď postavu nacházející se v Okolním vesmíru."
   },
   {
     "id": "alcatraz",
