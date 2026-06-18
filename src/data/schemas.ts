@@ -118,6 +118,8 @@ export const faqEntrySchema = z
     ruleRefs: z.array(z.string()).optional(),
     seeAlso: z.array(z.string()).optional(),
     source: z.string().optional(),
+    sourceUrl: z.string().optional(),
+    harvestedAt: z.string().optional(),
   })
   .strict();
 

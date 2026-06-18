@@ -2,6 +2,7 @@ import type { Section } from "@/data";
 import { ZONE_LABEL, GRAVITY_LABEL } from "@/lib/sections";
 import { RuleText } from "@/components/rule-text";
 import { SectionActions } from "@/components/section-actions";
+import { FaqAccordion } from "@/components/faq-accordion";
 
 export function SectionDetail({ section: s }: { section: Section }) {
   return (
@@ -38,6 +39,8 @@ export function SectionDetail({ section: s }: { section: Section }) {
           </p>
         </section>
       ) : null}
+
+      <FaqAccordion targetId={s.id} />
     </article>
   );
 }

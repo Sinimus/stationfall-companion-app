@@ -137,6 +137,10 @@ export interface FaqEntry {
   seeAlso?: string[];
   /** Provenance/autorita odpovědi (např. "Ref. 7.3.3", "BGG Massive FAQ", "Dev Andy Mesa"). */
   source?: string;
+  /** URL zdrojového BGG vlákna (auditovatelnost). */
+  sourceUrl?: string;
+  /** Datum sklizně (YYYY-MM-DD). */
+  harvestedAt?: string;
 }
 
 export type SectionZone =

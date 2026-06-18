@@ -8,6 +8,7 @@ import { CATEGORY_BG_CLASS, CATEGORY_LABEL } from "@/lib/categories";
 import { TermSheetContext } from "@/components/term-sheet-context";
 import { RuleText } from "@/components/rule-text";
 import { ProjectXWarning } from "@/components/project-x-warning";
+import { FaqAccordion } from "@/components/faq-accordion";
 
 export { useTermSheet } from "@/components/term-sheet-context";
 
@@ -120,6 +121,8 @@ export function TermSheetProvider({ children }: { children: ReactNode }) {
                 ) : null}
 
                 <ProjectXWarning targetId={term.id} />
+
+                <FaqAccordion targetId={term.id} />
               </>
             ) : null}
 

@@ -3,6 +3,7 @@ import type { Character } from "@/data";
 import { CATEGORY_BG_CLASS, CATEGORY_LABEL, TYPE_LABEL } from "@/lib/categories";
 import { RuleText } from "@/components/rule-text";
 import { ProjectXWarning } from "@/components/project-x-warning";
+import { FaqAccordion } from "@/components/faq-accordion";
 
 type Ability = Character["abilities"][number];
 
@@ -42,6 +43,8 @@ export function CharacterDossier({ character: c }: { character: Character }) {
       </header>
 
       <ProjectXWarning targetId={c.id} />
+
+      <FaqAccordion targetId={c.id} />
 
       <Section title="Schopnosti" open>
         {c.abilities.map((a) => (
