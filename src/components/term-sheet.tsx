@@ -7,6 +7,7 @@ import { characterIds } from "@/data";
 import { CATEGORY_BG_CLASS, CATEGORY_LABEL } from "@/lib/categories";
 import { TermSheetContext } from "@/components/term-sheet-context";
 import { RuleText } from "@/components/rule-text";
+import { ProjectXWarning } from "@/components/project-x-warning";
 
 export { useTermSheet } from "@/components/term-sheet-context";
 
@@ -117,6 +118,8 @@ export function TermSheetProvider({ children }: { children: ReactNode }) {
                 {term.ruleRefs && term.ruleRefs.length > 0 ? (
                   <p className="mt-3 text-xs text-zinc-500">Pravidla: {term.ruleRefs.join(", ")}</p>
                 ) : null}
+
+                <ProjectXWarning targetId={term.id} />
               </>
             ) : null}
 

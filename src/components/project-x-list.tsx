@@ -1,5 +1,6 @@
 import type { ProjectX } from "@/data";
 import { RuleText } from "@/components/rule-text";
+import { ProjectXModifies } from "@/components/project-x-modifies";
 
 export function ProjectXList({ projects }: { projects: ProjectX[] }) {
   return (
@@ -17,6 +18,7 @@ export function ProjectXList({ projects }: { projects: ProjectX[] }) {
                   Spuštění: <RuleText>{p.trigger}</RuleText>
                 </p>
               ) : null}
+              <ProjectXModifies project={p} />
             </div>
           </details>
         </li>
