@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { flows, faq } from "@/data";
+import { flows, faq, projectsX } from "@/data";
 import { FaqList } from "@/components/faq-list";
+import { ProjectXList } from "@/components/project-x-list";
 
 export default function PruvodciPage() {
   return (
@@ -25,6 +26,10 @@ export default function PruvodciPage() {
       <section aria-label="Otázky a kauzality">
         <h2 className="mb-1 text-sm font-semibold text-zinc-500">Otázky &amp; kauzality</h2>
         <FaqList faq={faq} />
+      </section>
+      <section aria-label="Projekty X">
+        <h2 className="mb-1 text-sm font-semibold text-zinc-500">Projekty X</h2>
+        <ProjectXList projects={projectsX} />
       </section>
     </main>
   );

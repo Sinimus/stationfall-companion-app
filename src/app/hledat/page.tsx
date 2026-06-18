@@ -10,6 +10,7 @@ const TYPE_LABEL: Record<SearchResult["type"], string> = {
   glossary: "Pojem",
   faq: "Q&A",
   flow: "Průvodce",
+  projectx: "Projekt X",
 };
 
 function hrefFor(r: SearchResult): string {

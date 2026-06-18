@@ -14,4 +14,7 @@ describe("search", () => {
   it("finds a Q&A entry", () => {
     expect(search("kamery").some((r) => r.type === "faq")).toBe(true);
   });
+  it("finds a Project X card", () => {
+    expect(search("hejno").some((r) => r.type === "projectx")).toBe(true);
+  });
 });
