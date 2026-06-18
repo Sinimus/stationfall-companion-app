@@ -11,6 +11,10 @@ MVP = Postavy, Glosář, Průvodci (flows + Q&A), Project X, inline cross-linkin
 - **Live game-state tracking** — contradicts the read-only premise ("the table holds the state");
   would break the stateless static architecture and add undo + multi-device sync.
 - **Inflected linking** — nominative (1st case) is enough (user-confirmed).
+- **EN / bilingual version** — CZ-only by design (user-confirmed 2026-06-18).
+- **Dark-mode toggle / theme switching** — single fixed look; no second theme (user-confirmed
+  2026-06-18). (Note: a few legacy `dark:` Tailwind classes remain in components — harmless, can be
+  pruned during UI/UX polish.)
 
 ## Done since the v0.1 review (2026-06-18)
 - Linkify inside glossary definitions; search synonyms (aliases + curated).
@@ -29,8 +33,11 @@ MVP = Postavy, Glosář, Průvodci (flows + Q&A), Project X, inline cross-linkin
 ## Remaining
 - **UI/UX polish** *(top remaining)* — visual design, game iconography (item/category symbols),
   character art, card accents, nicer filters. The app is intentionally barebone today.
-- **BGG-forum Q&A expansion** — keep growing `faq.json` per `bgg-faq-harvest.md` (runbook + ledger).
-- **Dark-mode toggle**, **deep-links** (search → specific Q&A), **EN/bilingual** — when needed.
+- **Deep-links** (search → specific Q&A) — minor, when needed.
+
+## Deferred (not now)
+- **BGG-forum Q&A expansion** — content is sufficient for now (49 Q&A). Runbook + ledger
+  (`bgg-faq-harvest.md`, `_sources/processed-threads.json`) stay ready to resume if a gap shows up.
 
 ## Deployment gate
 - Public deployment (Coolify/Hetzner) is deferred until a release intended for other players. CI
