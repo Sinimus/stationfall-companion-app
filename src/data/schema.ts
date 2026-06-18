@@ -115,6 +115,8 @@ export interface ProjectX {
   text: string;
   /** Jak/kdy se spouští, pokud uvedeno. */
   trigger?: string;
+  /** Pravidla/postavy, které tento Projekt X mění (pro statické cross-link varování). */
+  modifies?: { targetId: string; targetKind: "glossary" | "character"; note: string }[];
 }
 
 /**

@@ -78,4 +78,14 @@ describe("data integrity", () => {
         if (!glossaryIds.has(a)) bad.push(`${s.id} -> ${a}`);
     expect(bad).toEqual([]);
   });
+
+  it("every Project X 'modifies' target resolves", () => {
+    const bad: string[] = [];
+    for (const px of projectsX)
+      for (const m of px.modifies ?? []) {
+        const ok = m.targetKind === "glossary" ? glossaryIds.has(m.targetId) : characterIds.has(m.targetId);
+        if (!ok) bad.push(`${px.id} -> ${m.targetId}`);
+      }
+    expect(bad).toEqual([]);
+  });
 });

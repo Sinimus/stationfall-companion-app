@@ -95,6 +95,17 @@ export const projectXSchema = z
     nameCs: z.string().min(1),
     text: z.string(),
     trigger: z.string().optional(),
+    modifies: z
+      .array(
+        z
+          .object({
+            targetId: z.string(),
+            targetKind: z.enum(["glossary", "character"]),
+            note: z.string(),
+          })
+          .strict(),
+      )
+      .optional(),
   })
   .strict();
 
