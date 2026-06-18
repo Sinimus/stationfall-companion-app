@@ -3,7 +3,7 @@ import { glossary } from "@/data";
 export type TextPart = { text: string; id?: string };
 
 const entries = glossary
-  .map((g) => ({ id: g.id, name: g.nameCs }))
+  .flatMap((g) => [g.nameCs, ...(g.aliases ?? [])].map((name) => ({ id: g.id, name })))
   .sort((a, b) => b.name.length - a.name.length);
 
 const idByLowerName = new Map<string, string>(

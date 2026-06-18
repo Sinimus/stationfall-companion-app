@@ -18,6 +18,7 @@
   {
     "id": "hracova-postava",
     "nameCs": "Hráčova postava (HP)",
+    "aliases": ["HP"],
     "kind": "pojem",
     "text": "Postava, kterou hráč již odhalil ze své skryté identity. Po odhalení se aktivují její Schopnosti po odhalení a může ji aktivovat jen tento hráč.",
     "ruleRefs": [
@@ -34,6 +35,7 @@
   {
     "id": "cizi-postava",
     "nameCs": "Cizí postava (CP)",
+    "aliases": ["CP"],
     "kind": "pojem",
     "text": "Postava, kterou žádný hráč zatím neodhalil jako svou. Lze ji ovlivňovat a aktivovat jako konspirátora.",
     "ruleRefs": [
@@ -63,6 +65,7 @@
   {
     "id": "bonusova-postava",
     "nameCs": "Bonusová postava (BP)",
+    "aliases": ["BP"],
     "kind": "pojem",
     "text": "Zbylé karty identity hráče (kromě skryté identity) jsou bonusové postavy, otočené o 180°. Hráč za ně získává bonusové body podle toho, zda je daná BP přítel (zachráněná) nebo nepřítel (vyřazená a nezachráněná).",
     "ruleRefs": [

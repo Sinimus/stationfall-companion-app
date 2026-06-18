@@ -59,6 +59,7 @@ export const glossaryTermSchema = z
   .object({
     id: z.string().min(1),
     nameCs: z.string().min(1),
+    aliases: z.array(z.string()).optional(),
     kind: glossaryKind,
     category: abilityCategory.optional(),
     text: z.string(),

@@ -76,6 +76,8 @@ export interface GlossaryTerm {
   /** kebab-case bez diakritiky. */
   id: string;
   nameCs: string;
+  /** Alternativní tvary pro vyhledávání a inline linkování (např. zkratky "HP"). */
+  aliases?: string[];
   kind: GlossaryKind;
   /** Jen pro kind="schopnost". */
   category?: AbilityCategory;

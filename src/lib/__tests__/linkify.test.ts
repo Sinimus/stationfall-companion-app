@@ -19,4 +19,16 @@ describe("splitGlossaryText", () => {
     const src = "Rušičky ovlivňují kopírování dat.";
     expect(splitGlossaryText(src).map((p) => p.text).join("")).toBe(src);
   });
+
+  it("links an abbreviation via alias (HP)", () => {
+    const parts = splitGlossaryText("Moje HP je v bezpečí.");
+    const linked = parts.find((p) => p.id !== undefined);
+    expect(linked?.text).toBe("HP");
+    expect(linked?.id).toBe("hracova-postava");
+  });
+
+  it("links the BP abbreviation", () => {
+    const parts = splitGlossaryText("Agentka je vaše BP.");
+    expect(parts.some((p) => p.id === "bonusova-postava" && p.text === "BP")).toBe(true);
+  });
 });
