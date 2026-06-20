@@ -1,3 +1,16 @@
+import type { LucideIcon } from "lucide-react";
+import {
+  Footprints,
+  Shield,
+  Swords,
+  EyeOff,
+  SlidersHorizontal,
+  Sparkles,
+  User,
+  Bot,
+  Database,
+  Package,
+} from "lucide-react";
 import type { Character } from "@/data";
 
 export type AbilityCategory = Character["abilities"][number]["category"];
@@ -43,4 +56,20 @@ export const TYPE_LABEL: Record<CharacterType, string> = {
   robot: "Robot",
   data: "Data",
   predmet: "Předmět",
+};
+
+export const CATEGORY_ICON: Record<AbilityCategory, LucideIcon> = {
+  pohybove: Footprints,
+  obranne: Shield,
+  utocne: Swords,
+  konspiracni: EyeOff,
+  "ovladaci-panel": SlidersHorizontal,
+  doplnkove: Sparkles,
+};
+
+export const TYPE_ICON: Record<CharacterType, LucideIcon> = {
+  clovek: User,
+  robot: Bot,
+  data: Database,
+  predmet: Package,
 };

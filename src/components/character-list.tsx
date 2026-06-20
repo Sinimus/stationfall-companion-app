@@ -9,6 +9,7 @@ import {
   CATEGORY_BG_CLASS,
   CHARACTER_TYPES,
   TYPE_LABEL,
+  TYPE_ICON,
   type AbilityCategory,
   type CharacterType,
 } from "@/lib/categories";
@@ -65,7 +66,13 @@ export function CharacterList({ characters }: { characters: Character[] }) {
               className="flex flex-col rounded-lg border border-zinc-200 p-3 active:bg-zinc-50 dark:border-zinc-800 dark:active:bg-zinc-900"
             >
               <span className="font-medium">{c.nameCs}</span>
-              <span className="text-xs text-zinc-500">{TYPE_LABEL[c.type]}</span>
+              <span className="flex items-center gap-1 text-xs text-zinc-500">
+                {(() => {
+                  const TypeIcon = TYPE_ICON[c.type];
+                  return <TypeIcon className="size-3" aria-hidden />;
+                })()}
+                {TYPE_LABEL[c.type]}
+              </span>
             </Link>
           </li>
         ))}

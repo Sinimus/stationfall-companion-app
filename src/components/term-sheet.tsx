@@ -5,7 +5,7 @@ import Link from "next/link";
 import { glossaryById, characterNameById, projectById, KIND_LABEL } from "@/lib/lookups";
 import { characterIds } from "@/data";
 import { charactersStartingWith } from "@/lib/start-items";
-import { CATEGORY_BG_CLASS, CATEGORY_LABEL } from "@/lib/categories";
+import { CategoryBadge } from "@/components/category-badge";
 import { TermSheetContext } from "@/components/term-sheet-context";
 import { RuleText } from "@/components/rule-text";
 import { Prose } from "@/components/prose";
@@ -64,11 +64,7 @@ export function TermSheetProvider({ children }: { children: ReactNode }) {
             {term !== null ? (
               <>
                 {term.category !== undefined ? (
-                  <span
-                    className={`mb-2 inline-block rounded px-1.5 py-0.5 text-xs font-medium text-white ${CATEGORY_BG_CLASS[term.category]}`}
-                  >
-                    {CATEGORY_LABEL[term.category]}
-                  </span>
+                  <CategoryBadge category={term.category} className="mb-2" />
                 ) : null}
 
                 <Prose>

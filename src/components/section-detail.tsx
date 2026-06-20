@@ -1,28 +1,56 @@
 import type { Section } from "@/data";
-import { ZONE_LABEL, GRAVITY_LABEL } from "@/lib/sections";
+import { ZONE_LABEL, GRAVITY_LABEL, ZONE_ICON, GRAVITY_ICON } from "@/lib/sections";
+import { Zap, SlidersHorizontal, Rocket, Moon } from "lucide-react";
 import { RuleText } from "@/components/rule-text";
 import { Prose } from "@/components/prose";
 import { SectionActions } from "@/components/section-actions";
 import { FaqAccordion } from "@/components/faq-accordion";
 
 export function SectionDetail({ section: s }: { section: Section }) {
+  const ZoneIcon = ZONE_ICON[s.zone];
+  const GravIcon = GRAVITY_ICON[s.gravity];
   return (
     <article className="space-y-4 p-4">
       <header>
         <h1 className="text-2xl font-semibold">{s.nameCs}</h1>
-        <p className="text-sm text-zinc-500">
-          {ZONE_LABEL[s.zone]} · {GRAVITY_LABEL[s.gravity]}
-          {s.lit === false ? " · temná (bez kamer)" : ""}
+        <p className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-zinc-500">
+          <span className="inline-flex items-center gap-1">
+            <ZoneIcon className="size-3.5" aria-hidden />
+            {ZONE_LABEL[s.zone]}
+          </span>
+          <span aria-hidden>·</span>
+          <span className="inline-flex items-center gap-1">
+            <GravIcon className="size-3.5" aria-hidden />
+            {GRAVITY_LABEL[s.gravity]}
+          </span>
+          {s.lit === false ? (
+            <>
+              <span aria-hidden>·</span>
+              <span className="inline-flex items-center gap-1">
+                <Moon className="size-3.5" aria-hidden />
+                temná (bez kamer)
+              </span>
+            </>
+          ) : null}
         </p>
         <div className="mt-2 flex flex-wrap gap-2 text-xs">
           {s.powered ? (
-            <span className="rounded bg-amber-100 px-1.5 py-0.5 dark:bg-amber-900/40">Napájecí sekce</span>
+            <span className="inline-flex items-center gap-1 rounded bg-amber-100 px-1.5 py-0.5 dark:bg-amber-900/40">
+              <Zap className="size-3" aria-hidden />
+              Napájecí sekce
+            </span>
           ) : null}
           {s.consolePanel ? (
-            <span className="rounded bg-orange-100 px-1.5 py-0.5 dark:bg-orange-900/40">Ovládací panel</span>
+            <span className="inline-flex items-center gap-1 rounded bg-orange-100 px-1.5 py-0.5 dark:bg-orange-900/40">
+              <SlidersHorizontal className="size-3" aria-hidden />
+              Ovládací panel
+            </span>
           ) : null}
           {s.escapePod ? (
-            <span className="rounded bg-green-100 px-1.5 py-0.5 dark:bg-green-900/40">Únikový modul</span>
+            <span className="inline-flex items-center gap-1 rounded bg-green-100 px-1.5 py-0.5 dark:bg-green-900/40">
+              <Rocket className="size-3" aria-hidden />
+              Únikový modul
+            </span>
           ) : null}
         </div>
       </header>

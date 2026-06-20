@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import type { Section } from "@/data";
-import { ZONE_ORDER, ZONE_LABEL, GRAVITY_LABEL } from "@/lib/sections";
+import { ZONE_ORDER, ZONE_LABEL, GRAVITY_LABEL, ZONE_ICON, GRAVITY_ICON } from "@/lib/sections";
 
 type PropFilter = "lit" | "powered" | "consolePanel";
 
@@ -55,24 +55,32 @@ export function SectionList({ sections }: { sections: Section[] }) {
           .filter((s) => s.zone === zone)
           .sort((a, b) => a.nameCs.localeCompare(b.nameCs, "cs"));
         if (group.length === 0) return null;
+        const ZoneIcon = ZONE_ICON[zone];
         return (
           <section key={zone} aria-label={ZONE_LABEL[zone]}>
-            <h2 className="mb-1 text-sm font-semibold text-zinc-500">{ZONE_LABEL[zone]}</h2>
+            <h2 className="mb-1 flex items-center gap-1.5 text-sm font-semibold text-zinc-500">
+              <ZoneIcon className="size-3.5" aria-hidden />
+              {ZONE_LABEL[zone]}
+            </h2>
             <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3">
-              {group.map((s) => (
-                <li key={s.id}>
-                  <Link
-                    href={`/sekce/${s.id}`}
-                    className="flex flex-col rounded-lg border border-zinc-200 p-3 active:bg-zinc-50 dark:border-zinc-800 dark:active:bg-zinc-900"
-                  >
-                    <span className="font-medium">{s.nameCs}</span>
-                    <span className="text-xs text-zinc-500">
-                      {GRAVITY_LABEL[s.gravity]}
-                      {s.lit === false ? " · temná" : ""}
-                    </span>
-                  </Link>
-                </li>
-              ))}
+              {group.map((s) => {
+                const GravIcon = GRAVITY_ICON[s.gravity];
+                return (
+                  <li key={s.id}>
+                    <Link
+                      href={`/sekce/${s.id}`}
+                      className="flex flex-col rounded-lg border border-zinc-200 p-3 active:bg-zinc-50 dark:border-zinc-800 dark:active:bg-zinc-900"
+                    >
+                      <span className="font-medium">{s.nameCs}</span>
+                      <span className="flex items-center gap-1 text-xs text-zinc-500">
+                        <GravIcon className="size-3" aria-hidden />
+                        {GRAVITY_LABEL[s.gravity]}
+                        {s.lit === false ? " · temná" : ""}
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </section>
         );

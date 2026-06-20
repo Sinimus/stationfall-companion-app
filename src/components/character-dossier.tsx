@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import type { Character } from "@/data";
-import { CATEGORY_BG_CLASS, CATEGORY_LABEL, TYPE_LABEL } from "@/lib/categories";
+import { TYPE_LABEL, TYPE_ICON } from "@/lib/categories";
+import { CategoryBadge } from "@/components/category-badge";
 import { RuleText } from "@/components/rule-text";
 import { Prose } from "@/components/prose";
 import { ProjectXWarning } from "@/components/project-x-warning";
@@ -12,11 +13,7 @@ function AbilityRow({ ability }: { ability: Ability }) {
   return (
     <div className="py-2">
       <div className="flex items-center gap-2">
-        <span
-          className={`rounded px-1.5 py-0.5 text-xs font-medium text-white ${CATEGORY_BG_CLASS[ability.category]}`}
-        >
-          {CATEGORY_LABEL[ability.category]}
-        </span>
+        <CategoryBadge category={ability.category} />
         <span className="font-medium">{ability.name}</span>
       </div>
       <Prose className="mt-1 text-zinc-300"><RuleText>{ability.text}</RuleText></Prose>
@@ -34,11 +31,13 @@ function Section({ title, open = false, children }: { title: string; open?: bool
 }
 
 export function CharacterDossier({ character: c }: { character: Character }) {
+  const TypeIcon = TYPE_ICON[c.type];
   return (
     <article className="p-4">
       <header className="mb-2">
         <h1 className="text-2xl font-semibold">{c.nameCs}</h1>
-        <p className="text-sm text-zinc-500">
+        <p className="flex items-center gap-1 text-sm text-zinc-500">
+          <TypeIcon className="size-3.5" aria-hidden />
           {TYPE_LABEL[c.type]} · Limit vlivu {c.influenceLimit} · {c.address}
         </p>
       </header>
