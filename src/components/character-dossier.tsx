@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import type { Character } from "@/data";
 import { CATEGORY_BG_CLASS, CATEGORY_LABEL, TYPE_LABEL } from "@/lib/categories";
 import { RuleText } from "@/components/rule-text";
+import { Prose } from "@/components/prose";
 import { ProjectXWarning } from "@/components/project-x-warning";
 import { FaqAccordion } from "@/components/faq-accordion";
 
@@ -18,7 +19,7 @@ function AbilityRow({ ability }: { ability: Ability }) {
         </span>
         <span className="font-medium">{ability.name}</span>
       </div>
-      <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-300"><RuleText>{ability.text}</RuleText></p>
+      <Prose className="mt-1 text-zinc-300"><RuleText>{ability.text}</RuleText></Prose>
     </div>
   );
 }
@@ -75,12 +76,12 @@ export function CharacterDossier({ character: c }: { character: Character }) {
       </Section>
 
       <Section title="Bonusové body">
-        <p className="text-sm"><RuleText>{c.bonusPoints}</RuleText></p>
+        <Prose><RuleText>{c.bonusPoints}</RuleText></Prose>
       </Section>
 
       {c.edgeCases.length > 0 && (
         <Section title="Zvláštnosti">
-          <ul className="list-disc space-y-1 pl-5 text-sm">
+          <ul className="list-disc space-y-1 pl-5 text-sm leading-relaxed">
             {c.edgeCases.map((e, i) => (
               <li key={i}><RuleText>{e}</RuleText></li>
             ))}
@@ -90,7 +91,7 @@ export function CharacterDossier({ character: c }: { character: Character }) {
 
       {c.tips.length > 0 && (
         <Section title="Tipy">
-          <ul className="list-disc space-y-1 pl-5 text-sm">
+          <ul className="list-disc space-y-1 pl-5 text-sm leading-relaxed">
             {c.tips.map((t, i) => (
               <li key={i}><RuleText>{t}</RuleText></li>
             ))}
@@ -99,7 +100,7 @@ export function CharacterDossier({ character: c }: { character: Character }) {
       )}
 
       <Section title="Příprava hry">
-        <p className="text-sm"><RuleText>{c.setup}</RuleText></p>
+        <Prose><RuleText>{c.setup}</RuleText></Prose>
       </Section>
     </article>
   );

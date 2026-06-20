@@ -2,6 +2,7 @@
 
 import { faqFor } from "@/lib/faq";
 import { RuleText } from "@/components/rule-text";
+import { Prose } from "@/components/prose";
 
 export function FaqAccordion({ targetId }: { targetId: string }) {
   const entries = faqFor(targetId);
@@ -15,9 +16,9 @@ export function FaqAccordion({ targetId }: { targetId: string }) {
         {entries.map((entry) => (
           <li key={entry.id}>
             <p className="font-medium">{entry.question}</p>
-            <p className="text-zinc-600 dark:text-zinc-300">
+            <Prose className="text-zinc-300">
               <RuleText>{entry.answer}</RuleText>
-            </p>
+            </Prose>
           </li>
         ))}
       </ul>

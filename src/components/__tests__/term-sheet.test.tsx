@@ -48,6 +48,14 @@ describe("Glossary + TermSheet", () => {
     expect(within(dialog).getByRole("button", { name: "autodestrukce" })).toBeInTheDocument();
   });
 
+  it("renders the definition in a constrained reading measure", async () => {
+    const user = userEvent.setup();
+    renderBrowser();
+    await user.click(screen.getByRole("button", { name: "Antihmota" }));
+    const dialog = screen.getByRole("dialog", { name: "Antihmota" });
+    expect(dialog.querySelector(".measure")).not.toBeNull();
+  });
+
   it("lists characters who start with the item (reverse lookup)", async () => {
     const user = userEvent.setup();
     renderBrowser();

@@ -8,6 +8,7 @@ import { charactersStartingWith } from "@/lib/start-items";
 import { CATEGORY_BG_CLASS, CATEGORY_LABEL } from "@/lib/categories";
 import { TermSheetContext } from "@/components/term-sheet-context";
 import { RuleText } from "@/components/rule-text";
+import { Prose } from "@/components/prose";
 import { ProjectXWarning } from "@/components/project-x-warning";
 import { FaqAccordion } from "@/components/faq-accordion";
 
@@ -70,9 +71,9 @@ export function TermSheetProvider({ children }: { children: ReactNode }) {
                   </span>
                 ) : null}
 
-                <p className="text-sm">
+                <Prose>
                   <RuleText>{term.text}</RuleText>
-                </p>
+                </Prose>
 
                 {term.relatedCharacterIds && term.relatedCharacterIds.length > 0 ? (
                   <div className="mt-3">
@@ -147,10 +148,10 @@ export function TermSheetProvider({ children }: { children: ReactNode }) {
             ) : null}
 
             {project !== null ? (
-              <div className="space-y-2 text-sm">
-                <p>
+              <div className="space-y-2">
+                <Prose>
                   <RuleText>{project.text}</RuleText>
-                </p>
+                </Prose>
                 {project.trigger ? (
                   <p className="text-xs text-zinc-500">
                     Spuštění: <RuleText>{project.trigger}</RuleText>

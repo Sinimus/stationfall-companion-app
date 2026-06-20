@@ -1,6 +1,7 @@
 import type { Section } from "@/data";
 import { ZONE_LABEL, GRAVITY_LABEL } from "@/lib/sections";
 import { RuleText } from "@/components/rule-text";
+import { Prose } from "@/components/prose";
 import { SectionActions } from "@/components/section-actions";
 import { FaqAccordion } from "@/components/faq-accordion";
 
@@ -34,9 +35,9 @@ export function SectionDetail({ section: s }: { section: Section }) {
       {s.notes ? (
         <section>
           <h2 className="mb-1 text-sm font-semibold text-zinc-500">Poznámky</h2>
-          <p className="text-sm">
+          <Prose>
             <RuleText>{s.notes}</RuleText>
-          </p>
+          </Prose>
         </section>
       ) : null}
 

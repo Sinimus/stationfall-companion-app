@@ -1,23 +1,24 @@
 import type { CausalFlow } from "@/data";
 import { RuleText } from "@/components/rule-text";
+import { Prose } from "@/components/prose";
 
 export function FlowView({ flow }: { flow: CausalFlow }) {
   return (
     <article className="p-4">
       <h1 className="text-2xl font-semibold">{flow.title}</h1>
       {flow.intro ? (
-        <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
+        <Prose className="mt-1 text-zinc-300">
           <RuleText>{flow.intro}</RuleText>
-        </p>
+        </Prose>
       ) : null}
 
       <ol className="mt-4 space-y-4">
         {flow.steps.map((step, i) => (
           <li key={i} className="rounded-lg border border-zinc-200 p-3 dark:border-zinc-800">
             <h2 className="font-semibold">{step.title}</h2>
-            <p className="mt-1 text-sm">
+            <Prose className="mt-1">
               <RuleText>{step.body}</RuleText>
-            </p>
+            </Prose>
 
             {step.branches && step.branches.length > 0 ? (
               <ul className="mt-2 space-y-1">

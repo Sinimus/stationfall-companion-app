@@ -6,6 +6,7 @@ import type { FaqEntry } from "@/data";
 import { characterIds } from "@/data";
 import { useTermSheet } from "@/components/term-sheet";
 import { RuleText } from "@/components/rule-text";
+import { Prose } from "@/components/prose";
 import { glossaryById, characterNameById } from "@/lib/lookups";
 
 function matches(entry: FaqEntry, q: string): boolean {
@@ -56,10 +57,10 @@ export function FaqList({ faq }: { faq: FaqEntry[] }) {
                 className="rounded-lg border border-zinc-200 p-3 dark:border-zinc-800"
               >
                 <summary className="cursor-pointer font-medium">{entry.question}</summary>
-                <div className="mt-2 space-y-2 text-sm">
-                  <p>
+                <div className="mt-2 space-y-2">
+                  <Prose>
                     <RuleText>{entry.answer}</RuleText>
-                  </p>
+                  </Prose>
 
                   {entry.seeAlso && entry.seeAlso.length > 0 ? (
                     <div className="flex flex-wrap gap-2">

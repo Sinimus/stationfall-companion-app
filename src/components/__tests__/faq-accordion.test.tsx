@@ -13,6 +13,15 @@ describe("FaqAccordion", () => {
     expect(screen.getByText(/Specifické interakce a výjimky/)).toBeInTheDocument();
     expect(screen.getByText("Vyžaduje akce Oživení kolokaci (stejnou sekci)?")).toBeInTheDocument();
   });
+  it("renders the answer in a constrained reading measure", () => {
+    const { container } = render(
+      <TermSheetProvider>
+        <FaqAccordion targetId="nanogel" />
+      </TermSheetProvider>,
+    );
+    expect(container.querySelector(".measure")).not.toBeNull();
+  });
+
   it("renders nothing when there is no related Q&A", () => {
     render(
       <TermSheetProvider>
