@@ -1,6 +1,6 @@
 # TASK 030: Typography foundation — fixed dark theme + Inter + reading rhythm
 
-> **Status:** PENDING
+> **Status:** DONE (commit ca381bb)
 > **Assigned to:** Constructor (Sonnet sub-agent)
 
 ## 1. Goal
