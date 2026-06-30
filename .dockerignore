@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+.git
+.github
+.kilo
+docs
+*.md
+.env
+.env.local
+.DS_Store
+coverage
+*.tsbuildinfo

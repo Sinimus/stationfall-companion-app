@@ -130,10 +130,14 @@ branded PNG icons are tracked for v0.2.
 
 ## Deployment
 
-CI (lint + test + build) runs on GitHub Actions. The build is a plain static `./out` directory
-servable by any static host; the intended target is **Coolify** on Hetzner. Public deployment is
-**intentionally deferred** until a release meant for other players — the MVP is for internal use and
-review only.
+Live at **https://stationfall.sinimus.com** (Coolify on Hetzner, behind Cloudflare).
+
+Two GitHub Actions workflows run on push to `main`: `ci.yml` (lint + test + build) validates the
+code, and `deploy.yml` builds a Docker image (multi-stage: Node static export → nginx serving
+`./out`), pushes it to `ghcr.io/sinimus/stationfall-companion-app`, then triggers a Coolify
+redeploy via its API. nginx serves the static export with clean-URL routing
+(`try_files $uri $uri.html`), long-cache for hashed `_next/static` assets, and no-cache for the
+service worker. See `Dockerfile`, `nginx.conf`, and `.github/workflows/deploy.yml`.
 
 ## Development workflow
 
