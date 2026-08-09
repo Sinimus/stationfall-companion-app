@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0e14">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Stationfall — výuka, setup, konec hry</title>
+<style>
+  :root {
+    --bg: #0b0e14;
+    --surface: #131824;
+    --surface-2: #1a2131;
+    --border: #26304a;
+    --text: #e8ecf4;
+    --muted: #9aa5bd;
+    --accent: #ffb454;
+    --accent-dim: rgba(255, 180, 84, .12);
+    --green: #4ade80;
+    --green-dim: rgba(74, 222, 128, .1);
+    --green-bd: rgba(74, 222, 128, .25);
+    --red: #f87171;
+    --red-dim: rgba(248, 113, 113, .1);
+    --red-bd: rgba(248, 113, 113, .3);
+    --radius: 16px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 0 18px 64px; }
+
+  /* Hlavička */
+  .masthead {
+    padding: calc(env(safe-area-inset-top) + 18px) 18px 12px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .kicker {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin: 0 0 4px;
+  }
+  .masthead h1 { font-size: 26px; line-height: 1.15; margin: 0; font-weight: 800; letter-spacing: -.02em; }
+
+  /* Taby (CSS-only, radio) */
+  input[name="tab"] { position: absolute; opacity: 0; pointer-events: none; }
+  .tabbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(11, 14, 20, .82);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    padding: 8px 18px calc(8px + 2px);
+    padding-top: max(8px, env(safe-area-inset-top));
+    border-bottom: 1px solid var(--border);
+  }
+  .seg {
+    display: flex;
+    max-width: 604px;
+    margin: 0 auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 3px;
+    gap: 3px;
+  }
+  .seg label {
+    flex: 1;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--muted);
+    padding: 9px 4px;
+    border-radius: 9px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
+  }
+  #tab-teach:checked ~ .tabbar label[for="tab-teach"],
+  #tab-setup:checked ~ .tabbar label[for="tab-setup"],
+  #tab-end:checked   ~ .tabbar label[for="tab-end"] {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+  .panel { display: none; }
+  #tab-teach:checked ~ .wrap #panel-teach,
+  #tab-setup:checked ~ .wrap #panel-setup,
+  #tab-end:checked   ~ .wrap #panel-end { display: block; }
+
+  .lead { color: var(--muted); margin: 20px 0 0; font-size: 16px; }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -.01em;
+    margin: 40px 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2::before {
+    content: "";
+    display: block;
+    width: 5px; height: 22px;
+    border-radius: 3px;
+    background: var(--accent);
+    flex: none;
+  }
+
+  p { margin: 0 0 14px; }
+  strong { color: #fff; }
+  em { color: var(--accent); font-style: italic; }
+  .muted { color: var(--muted); }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+    margin: 0 0 14px;
+  }
+  .card > :last-child { margin-bottom: 0; }
+
+  /* Číslované karty (zásady, setup kroky, sekvence) */
+  .rule { display: flex; gap: 14px; align-items: flex-start; }
+  .rule-num {
+    flex: none;
+    width: 32px; height: 32px;
+    border-radius: 10px;
+    background: var(--accent-dim);
+    color: var(--accent);
+    font-weight: 800;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    margin-top: 2px;
+  }
+  .rule-body :last-child { margin-bottom: 0; }
+  .rule-title { font-weight: 700; font-size: 17px; display: block; margin-bottom: 4px; }
+
+  /* Kroky výukového skriptu */
+  .step { margin-bottom: 14px; }
+  .step-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
+  .step-num { color: var(--accent); font-weight: 800; font-size: 15px; flex: none; }
+  .step-title { font-weight: 700; font-size: 18px; }
+  .badge {
+    margin-left: auto;
+    flex: none;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--muted);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    padding: 3px 9px;
+    border-radius: 99px;
+    white-space: nowrap;
+  }
+
+  blockquote {
+    margin: 12px 0;
+    padding: 12px 14px;
+    background: var(--accent-dim);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    color: #f4e9d8;
+    font-size: 16px;
+  }
+  blockquote p { margin: 0; }
+
+  ul, ol { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  li::marker { color: var(--accent); }
+
+  /* Řádkové karty (odkládaná témata) */
+  .defer { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 14px; }
+  .defer-row { padding: 13px 16px; border-bottom: 1px solid var(--border); background: var(--surface); }
+  .defer-row:last-child { border-bottom: none; }
+  .defer-topic { font-weight: 700; font-size: 16px; }
+  .defer-when { color: var(--muted); font-size: 14px; margin: 2px 0 6px; }
+  .chip {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green);
+    background: var(--green-dim);
+    border: 1px solid var(--green-bd);
+    padding: 2px 10px;
+    border-radius: 99px;
+  }
+
+  /* Body +/- */
+  .pts { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 10px; }
+  .pts:last-child { margin-bottom: 0; }
+  .pt {
+    flex: none;
+    min-width: 44px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 9px;
+    margin-top: 2px;
+  }
+  .pt-plus { color: var(--green); background: var(--green-dim); border: 1px solid var(--green-bd); }
+  .pt-minus { color: var(--red); background: var(--red-dim); border: 1px solid var(--red-bd); }
+
+  /* Tabulka počtů */
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .table-card { padding: 6px 10px; }
+  th, td { padding: 9px 8px; text-align: center; }
+  th { color: var(--muted); font-size: 12.5px; text-transform: uppercase; letter-spacing: .05em; font-weight: 700; }
+  th:first-child, td:first-child { text-align: left; }
+  tbody tr { border-top: 1px solid var(--border); }
+  td:first-child { font-weight: 800; color: var(--accent); }
+
+  /* FAQ akordeony */
+  details {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 15px 18px;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "＋";
+    margin-left: auto;
+    color: var(--accent);
+    font-weight: 400;
+    font-size: 18px;
+    transition: transform .2s ease;
+  }
+  details[open] summary::after { transform: rotate(45deg); }
+  details .answer { padding: 0 18px 15px; color: var(--muted); }
+  details .answer strong { color: var(--text); }
+
+  .summary-card {
+    background: linear-gradient(160deg, #1c2233, #131824);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 20px;
+    font-size: 16.5px;
+    color: #f4e9d8;
+  }
+  .summary-card p { margin: 0; }
+
+  .warn {
+    background: var(--red-dim);
+    border: 1px solid var(--red-bd);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    font-size: 16px;
+  }
+  .warn strong { color: var(--red); }
+
+  .refnote { color: var(--muted); font-size: 13px; margin-top: 6px; }
+
+  footer { margin-top: 48px; color: var(--muted); font-size: 13px; text-align: center; padding-bottom: env(safe-area-inset-bottom); }
+</style>
+</head>
+<body>
+
+<input type="radio" name="tab" id="tab-teach" checked>
+<input type="radio" name="tab" id="tab-setup">
+<input type="radio" name="tab" id="tab-end">
+
+<div class="masthead">
+  <p class="kicker">Stationfall · Zkáza na orbitě</p>
+  <h1>Průvodce ke stolu</h1>
+</div>
+
+<nav class="tabbar">
+  <div class="seg">
+    <label for="tab-teach">Výuka</label>
+    <label for="tab-setup">Příprava</label>
+    <label for="tab-end">Konec hry</label>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- ============================== TAB 1: VÝUKA ============================== -->
+<section class="panel" id="panel-teach">
+
+<p class="lead">Skript pro toho, kdo hru vysvětluje. Jen kostra — všechny podrobnosti a interakce řeší companion (glosář, průvodci, Q&amp;A).</p>
+
+<h2>Princip výuky: ledovec</h2>
+<p>Stationfall není složitý svým jádrem — je složitý <strong>šířkou mikropravidel</strong> (109 pojmů, 23 akcí, stavy, předměty, nebezpečí…). Chyba, kterou dělá většina učitelů, je snaha vysvětlit šířku předem. Nedělejte to.</p>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">1</div>
+  <div class="rule-body"><strong>Učte jen smyčku, ne obsah.</strong> Co hráč dělá v tahu a proč — to je 10 minut. Co dělá plamenomet, kdy vybuchne antihmota a co je dekontaminace, to nikdo nepotřebuje vědět, dokud to neleží na stole.</div>
+</div></div>
+<div class="card"><div class="rule">
+  <div class="rule-num">2</div>
+  <div class="rule-body"><strong>Žádný pojem nevysvětlujte dřív, než se objeví ve hře.</strong> Až se objeví → ťuknout v companionu (glosář má každé klíčové slovo prokliknutelné).</div>
+</div></div>
+<div class="card"><div class="rule">
+  <div class="rule-num">3</div>
+  <div class="rule-body"><strong>Jeden mentální posun musí sednout hned:</strong> <em>nejsi figurka na plánu</em>. To je jediná věc, kterou když hráči nepochopí, hra se rozpadne. Všechno ostatní se dá dohnat za hry.</div>
+</div></div>
+
+<h2>Výukový skript (~10–12 minut)</h2>
+
+<div class="card step">
+  <div class="step-head"><span class="step-num">1</span><span class="step-title">Téma a háček</span><span class="badge">1 min</span></div>
+  <blockquote><p>„Vesmírná stanice padá z orbity. Za pár minut shoří v atmosféře. Každý na palubě — důstojník, vědec, miliardář, i ta umělá inteligence — chce stihnout něco svého: něco ukrást, něco zničit, někoho odhalit, nebo prostě přežít. <strong>Jeden z nich jsi ty.</strong> Ale nikdo neví který.“</p></blockquote>
+</div>
+
+<div class="card step">
+  <div class="step-head"><span class="step-num">2</span><span class="step-title">Velký twist: postavy nepatří nikomu</span><span class="badge">2–3 min</span></div>
+  <p>Tohle je srdce hry, věnujte tomu nejvíc péče:</p>
+  <ul>
+    <li>Postavy na stanici jsou <strong>společné</strong>. Nikdo „nemá svou figurku“.</li>
+    <li>Každý hráč má <strong>skrytou identitu</strong> — tajně <em>je</em> jednou z postav na plánu. Zbylé karty identity jsou jeho <strong>bonusové postavy</strong> (přítel a nepřítel — body navíc podle jejich osudu).</li>
+    <li>Postavy ovládáte přes <strong>kostky vlivu</strong> (každý jich má 8 ve své barvě). Položíte kostky na kartu postavy → stává se vaším <strong>konspirátorem</strong>: máte na ní alespoň jednu kostku a nikdo jiný jich tam nemá víc. Není to napořád — <strong>kdo přiloží víc kostek, kontrolu přebere.</strong></li>
+    <li><strong>Aktivovat (hrát) můžete jen své konspirátory.</strong> Klidně i postavu, kterou tajně je někdo jiný — a v tom je celá hra.</li>
+  </ul>
+  <blockquote><p>Ověřovací otázka na stůl: <em>„Takže když dám dvě kostky na Důstojníka, můžu s ním hrát — i když je Důstojník tajně někdo z vás?“</em> Ano. Přesně tak.</p></blockquote>
+</div>
+
+<div class="card step">
+  <div class="step-head"><span class="step-num">3</span><span class="step-title">Tah</span><span class="badge">2 min</span></div>
+  <p>Tah má čtyři fáze, v tomto pořadí:</p>
+  <ol>
+    <li><strong>Odhalení</strong> <em>(volitelné)</em> — můžete odhalit svou skrytou identitu (viz krok 4).</li>
+    <li><strong>Ovlivnění</strong> <em>(volitelné)</em> — položte libovolný počet kostek vlivu ze zásoby na <strong>jednu</strong> kartu postavy.</li>
+    <li><strong>Aktivace</strong> — položte aktivační disk na kartu svého živého konspirátora a proveďte s ním <strong>2 akce</strong> (nebo jen <strong>1</strong>, pokud je vyčerpaný — už na něm leží disk z této minuty). Zvednutí/upuštění předmětu je k tomu <strong>zdarma</strong> (volná akce). <strong>Nebo místo aktivace vyjednávání:</strong> vezmete si disk zpět a smíte si vrátit jednu kostku vlivu z libovolné karty.</li>
+    <li><strong>Vyhodnocení</strong> — leží-li vaše <strong>žetony času</strong> na plánu z minulé minuty, teď se stane, co slibovaly (odpočty: vypuštění modulu, antihmota…). Bez žetonů se nic neděje; hráči si na to sáhnou sami u první odložené akce.</li>
+  </ol>
+  <p>K akcím řekněte jen tohle: pohyb, zvednutí/upuštění, útok — a všechno ostatní je napsané <strong>na kartách a na plánu</strong> (akce sekcí). Jediné obecné pravidlo, které stojí za zmínku: <strong>pud sebezáchovy</strong> — postava neprovede akci, která by ji samu okamžitě vyřadila. A ukažte <strong>úplatek</strong>: každý ho má od začátku jeden — jednou za tah jím přimějete cizí postavu k jedné akci navíc; nepoužitý je na konci bod.</p>
+</div>
+
+<div class="card step">
+  <div class="step-head"><span class="step-num">4</span><span class="step-title">Odhalení</span><span class="badge">1–2 min</span></div>
+  <ul>
+    <li><strong>Proč se odhalit:</strong> postava se stane <strong>vaší hráčovou postavou</strong> — už ji smíte aktivovat jen vy a zapnou se její <strong>schopnosti po odhalení</strong> (často silné).</li>
+    <li><strong>Cena:</strong> všichni teď vědí, o co vám jde. Vaše kostky z karty se vám vrátí, <strong>cizí kostky z ní jdou na pole zrady</strong> (jejich majitelé je dostávají zpět jen obtížně).</li>
+    <li><strong>Kdy:</strong> to je celé dilema hry — dřív = síla a jistota, později = utajení. Neřešte za hráče, jen pojmenujte trade-off.</li>
+  </ul>
+</div>
+
+<div class="card step">
+  <div class="step-head"><span class="step-num">5</span><span class="step-title">Cíl a konec hry</span><span class="badge">2 min</span></div>
+  <ul>
+    <li>Hra trvá <strong>10–15 minut</strong> (kol podle počtu hráčů); na konci poslední minuty přijde <strong>pád stanice</strong> a bodování.</li>
+    <li>Body dává především <strong>splněný úkol vaší identity</strong> — každá karta postavy má vlastní bodované řádky. Většinou to znamená dostat sebe (nebo správné předměty či data) do bezpečí: <strong>únikovým modulem do mezosféry = zachráněno</strong>.</li>
+    <li><strong>Bonusové postavy:</strong> body, pokud váš <em>přítel</em> skončí zachráněný a <em>nepřítel</em> vyřazený.</li>
+    <li><strong>Pokuta za vliv:</strong> každá kostka nad <strong>limit vlivu</strong> postavy (bílá kostka na kartě), která na konci není ve vaší zásobě, = −1 bod.</li>
+    <li><strong>Vina:</strong> kdo provádí špinavou práci před zapnutými <strong>kamerami</strong> v osvětlené sekci, stane se <strong>podezřelým</strong>. Když pak někdo odešle <strong>důkazy</strong> úřadům, podezřelí se stanou <strong>vinnými</strong> — a <strong>vinný hráč nemůže vyhrát</strong>. Pro výuku stačí: <em>„zločiny páchejte potmě, nebo ať u toho nejste vidět.“</em></li>
+  </ul>
+</div>
+
+<div class="card step">
+  <div class="step-head"><span class="step-num">6</span><span class="step-title">„Zbytek je v companionu“</span><span class="badge">1 min</span></div>
+  <p>Ustanovte pravidlo stolu a ukažte tři pilíře aplikace:</p>
+  <blockquote><p>„Cokoli dalšího — stavy, předměty, antihmota, Projekt X, energie — neřešíme teď. Až to přijde na stůl, najdeme to tady: <strong>postavy</strong> (schopnosti, úkoly, zvláštnosti), <strong>glosář</strong> (každý pojem, vše proklikané) a <strong>průvodci + Q&amp;A</strong> (krokové postupy pro složité situace). Funguje offline.“</p></blockquote>
+  <p>Tím výuka končí. Rozdejte identity a hrajte.</p>
+</div>
+
+<h2>Co záměrně NEvysvětlovat</h2>
+<p>Každé odložené téma má v companionu své místo — sáhněte po něm, až se vynoří.</p>
+<div class="defer">
+  <div class="defer-row"><div class="defer-topic">Stavy (vyřazená, kontaminovaná, zachráněná…)</div><div class="defer-when">první útok / nebezpečí</div><span class="chip">glosář → stavy</span></div>
+  <div class="defer-row"><div class="defer-topic">Předměty a data (helma, kufřík, kompromat, NDA…)</div><div class="defer-when">první zvednutí</div><span class="chip">glosář → předměty / data</span></div>
+  <div class="defer-row"><div class="defer-topic">Antihmota</div><div class="defer-when">někdo ji odjistí</div><span class="chip">průvodce Detonace antihmoty</span></div>
+  <div class="defer-row"><div class="defer-topic">Úroveň energie, blackout</div><div class="defer-when">první sabotáž energie</div><span class="chip">průvodce Úroveň energie a blackout</span></div>
+  <div class="defer-row"><div class="defer-topic">Projekt X a nestvůra</div><div class="defer-when">někdo ho spustí</div><span class="chip">průvodce Spuštění Projektu X</span></div>
+  <div class="defer-row"><div class="defer-topic">Evakuace a vypouštění modulů</div><div class="defer-when">první útěk</div><span class="chip">průvodci Evakuace · Vypuštění modulu</span></div>
+  <div class="defer-row"><div class="defer-topic">Podezření a vina do detailu</div><div class="defer-when">první „zločin“</div><span class="chip">průvodce Stanu se podezřelým?</span></div>
+  <div class="defer-row"><div class="defer-topic">Konec minuty (úklid kola)</div><div class="defer-when">konec 1. minuty</div><span class="chip">průvodce Konec minuty</span></div>
+  <div class="defer-row"><div class="defer-topic">Závěrečné bodování krok za krokem</div><div class="defer-when">konec hry</div><span class="chip">průvodce Pád stanice · tab Konec hry</span></div>
+  <div class="defer-row"><div class="defer-topic">Schrödingerovo odhalení</div><div class="defer-when">pokročilý tah, 3+ hráčů</div><span class="chip">glosář → pojmy</span></div>
+  <div class="defer-row"><div class="defer-topic">Zvláštnosti konkrétních postav</div><div class="defer-when">podle rozdaných identit</div><span class="chip">stránka postavy → zvláštnosti</span></div>
+</div>
+
+<h2>Choreografie u stolu</h2>
+<div class="card">
+  <ul>
+    <li><strong>Postavte stanici před výukou</strong> — twist z kroku 2 se vysvětluje mnohem líp, když můžete ukazovat na karty postav a bílé kostky limitů.</li>
+    <li><strong>Identity rozdejte až po výuce.</strong> Hráč, který už ví, kým je, poslouchá jen půlkou hlavy a zbytek času čte svoji kartu.</li>
+    <li>Po rozdání dejte 3–4 minuty ticha: každý si přečte svou identitu a bonusové postavy; k tomu se hodí <strong>stránka postavy v companionu</strong> (úkoly s rozpadem bodů + tipy).</li>
+    <li>Companion ať si otevře <strong>každý na svém telefonu</strong> (je to PWA, funguje offline — stačí jednou načíst). Minimálně ale jeden „pravidlový telefon“ na stole.</li>
+    <li>Počítejte s tím, že <strong>první dvě minuty (kola) budou pomalé</strong> — hráči osahávají akce a plán. Neurychlujte to výkladem navíc; odpovídejte až na položené otázky.</li>
+  </ul>
+</div>
+
+<h2>Otázky, které zaručeně přijdou</h2>
+<details>
+  <summary>„Kterou figurkou jsem já?“</summary>
+  <div class="answer">Žádnou. Všechny jsou společné; ty tajně <strong>jsi</strong> jedna z nich, ale hraješ přes kostky vlivu klidně i jinými.</div>
+</details>
+<details>
+  <summary>„Proč bych hýbal cizí postavou?“</summary>
+  <div class="answer">Protože ti pomáhá k úkolu (odnese ti předmět, otevře dveře, někoho vyřadí) — a maskuje, kým doopravdy jsi.</div>
+</details>
+<details>
+  <summary>„Můžeme mít konspirátora oba?“</summary>
+  <div class="answer">Na jedné kartě může mít kostky víc hráčů; konspirátorem je pro každého, kdo tam má <strong>aspoň jednu kostku a nikdo jiný víc</strong>.</div>
+</details>
+<details>
+  <summary>„Kdy se mám odhalit?“</summary>
+  <div class="answer">Až budeš sílu po odhalení potřebovat víc než utajení. Neexistuje správná odpověď; <strong>to je ta hra</strong>.</div>
+</details>
+<details>
+  <summary>„Co dělá X?“</summary>
+  <div class="answer">Companion, glosář. Vážně. Od toho je.</div>
+</details>
+
+<h2>Shrnutí jedním dechem</h2>
+<div class="summary-card">
+  <p>Stanice padá, každý z vás tajně je jednou z postav na plánu. Postavy jsou společné — ovládáš je kostkami vlivu, hraješ svými konspirátory, dvě akce za tah. V pravou chvíli se odhalíš, splníš úkol své identity a dostaneš sebe nebo správné věci do únikového modulu. Body: úkol + přítel/nepřítel − kostky nad limit. A nenech se u toho natočit kamerami, vinný nevyhrává. Všechno ostatní je v aplikaci.</p>
+</div>
+
+</section>
+
+<!-- ============================== TAB 2: PŘÍPRAVA ============================== -->
+<section class="panel" id="panel-setup">
+
+<p class="lead">Kompletní příprava partie podle Referenční příručky (kap. 2). Projděte shora dolů.</p>
+
+<h2>Počty podle hráčů</h2>
+<div class="card table-card">
+  <table>
+    <thead><tr><th>Hráči</th><th>Postavy ve hře</th><th>Karty identity / hráč</th><th>Start minut</th></tr></thead>
+    <tbody>
+      <tr><td>2</td><td>12</td><td>3</td><td>12</td></tr>
+      <tr><td>3</td><td>12</td><td>3</td><td>15</td></tr>
+      <tr><td>4</td><td>12</td><td>2</td><td>13</td></tr>
+      <tr><td>5</td><td>14</td><td>2</td><td>12</td></tr>
+      <tr><td>6</td><td>15</td><td>2</td><td>11</td></tr>
+      <tr><td>7</td><td>17</td><td>2</td><td>11</td></tr>
+      <tr><td>8</td><td>19</td><td>2</td><td>10</td></tr>
+      <tr><td>9</td><td>20</td><td>2</td><td>10</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Postup přípravy</h2>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">1</div>
+  <div class="rule-body"><span class="rule-title">Vylosujte postavy</span>
+  Zamíchejte balíček karet postav a doberte počet podle tabulky. Karty vyložte <strong>lícem nahoru</strong> vedle herního plánu (do dvou sloupců).</div>
+</div></div>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">2</div>
+  <div class="rule-body"><span class="rule-title">Rozdejte identity</span>
+  Vezměte karty identity <strong>odpovídající vylosovaným postavám</strong>, zamíchejte je lícem dolů a rozdejte každému hráči skrytě počet podle tabulky. Zbytek vraťte do krabice bez prohlížení.</div>
+</div></div>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">3</div>
+  <div class="rule-body"><span class="rule-title">Volba skryté identity</span>
+  Každý hráč si z rozdaných karet <strong>vybere jednu jako skrytou identitu</strong>. Zbylé se stanou jeho <strong>bonusovými postavami</strong>: otočí je o 180°, zasune za kartu identity tak, aby mu koukala jen horní část (jméno + symboly bonusových bodů). Vše drží v tajnosti.</div>
+</div></div>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">4</div>
+  <div class="rule-body"><span class="rule-title">Únikové moduly</span>
+  Zelené únikové moduly umístěte na plán <strong>šipkou nahoru</strong>, propojené se <strong>Záďovými přechodovými komorami</strong> (pokud karta některé postavy neříká jinak).</div>
+</div></div>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">5</div>
+  <div class="rule-body"><span class="rule-title">Vybavte karty postav</span>
+  Na každou kartu postavy položte <strong>předměty, data a žetony kontaminace</strong> vyznačené na jejím pravém a horním okraji.</div>
+</div></div>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">6</div>
+  <div class="rule-body"><span class="rule-title">Kompromaty</span>
+  Vezměte kompromaty postav ve hře (jeden na postavu, kromě Dronů), zamíchejte lícem dolů a rozmístěte na symboly kompromatu <strong>odspodu plánu nahoru — nejdřív všechny fialové symboly, pak zelené</strong>, dokud kompromaty stačí.</div>
+</div></div>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">7</div>
+  <div class="rule-body"><span class="rule-title">Figurky a žetony postav</span>
+  Figurku každé postavy postavte do <strong>startovní sekce uvedené na její kartě</strong>. Destičky/žetony patřící k postavám umístěte podle pokynů na jejich rubu. <em>Pozor: některé postavy mají vlastní pokyny pro přípravu — najdete je i v companionu na stránce postavy (Setup).</em></div>
+</div></div>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">8</div>
+  <div class="rule-body"><span class="rule-title">Žetony sekcí</span>
+  Rozmístěte destičky/žetony do sekcí podle symbolů natištěných na plánu; zbytek nechte ve společné zásobě vedle plánu.</div>
+</div></div>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">9</div>
+  <div class="rule-body"><span class="rule-title">Společné ukazatele</span>
+  <ul>
+    <li><strong>Ukazatel minut</strong> na stupnici minut — pozice podle počtu hráčů (tabulka výše).</li>
+    <li><strong>Kamery</strong>: ZAPNUTO. <strong>Rušičky</strong>: ZAPNUTO.</li>
+    <li><strong>Úroveň energie</strong>: „Běžná úroveň“.</li>
+    <li><strong>Ukazatel evakuace</strong> na pole „Evakuace“ zelenou stranou nahoru.</li>
+    <li><strong>Vstup do atmosféry</strong>: zamíchejte 3 žetony, jeden lícem dolů na pole „0“ stupnice minut, zbylé dva vraťte do krabice <em>bez prohlížení</em>.</li>
+  </ul></div>
+</div></div>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">10</div>
+  <div class="rule-body"><span class="rule-title">Projekt X</span>
+  Zamíchejte karty Projektu X, jednu náhodnou položte <strong>lícem dolů pod Kryptu X</strong>. Zbytek do krabice bez prohlížení.</div>
+</div></div>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">11</div>
+  <div class="rule-body"><span class="rule-title">Komponenty hráčů</span>
+  Každý hráč si vezme barvu a k ní: <strong>8 kostek vlivu · 3 žetony času · aktivační disk · žeton viny · žeton úplatku · žeton odhalení</strong>. Žeton viny položí na pozici <strong>„Nevinen“</strong>.</div>
+</div></div>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">12</div>
+  <div class="rule-body"><span class="rule-title">Začínající hráč</span>
+  Náhodně určete začínajícího hráče a dejte mu žeton prvního hráče. Hraje se po směru hodinových ručiček.</div>
+</div></div>
+
+<h2>Zvláštní počty hráčů</h2>
+<div class="card">
+  <ul>
+    <li><strong>2, 3 nebo 6+ hráčů a týmová varianta</strong> mají dodatečná pravidla (Referenční příručka, kap. 17) — např. hra 2 hráčů používá ukazatele minut pro pořadí postav a nemá Schrödingerovo odhalení.</li>
+    <li><strong>Sólo a doplnění počtu</strong>: boti (druhá strana karet postav + karty skriptů) — pravidla „Automatická stanice“ v Pravidlech pro rychlý start.</li>
+  </ul>
+</div>
+
+</section>
+
+<!-- ============================== TAB 3: KONEC HRY ============================== -->
+<section class="panel" id="panel-end">
+
+<p class="lead">Kdy hra končí, přesná závěrečná sekvence, bodování a tiebreakery. Kopíruje průvodce „Pád stanice a počítání bodů“ v companionu.</p>
+
+<h2>Co spustí pád stanice</h2>
+<div class="card">
+  <ul>
+    <li><strong>Minuta „1“:</strong> jakmile ukazatel minut dosáhne pole „1“, <strong>automaticky začíná evakuace</strong> (ještě ne konec hry, ale poslední zvonění).</li>
+    <li><strong>Minuta „0“:</strong> otočte <strong>žeton vstupu do atmosféry</strong>. Je-li na něm <strong>ohnivá koule → pád stanice okamžitě</strong>. Jinak pád nastane <strong>na konci minuty „0“</strong>.</li>
+    <li><strong>Předčasně:</strong> exploze <strong>antihmoty na stanici</strong> způsobí pád stanice hned.</li>
+  </ul>
+</div>
+
+<h2>Závěrečná sekvence — přesně v tomto pořadí</h2>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">1</div>
+  <div class="rule-body"><span class="rule-title">Antihmota</span>
+  Pokud je antihmota <strong>odjištěná</strong>, exploduje a anihiluje vše ve svém místě. Vyhodnoťte podle její pozice — přesné větve má průvodce <em>Detonace antihmoty</em> v companionu.</div>
+</div></div>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">2</div>
+  <div class="rule-body"><span class="rule-title">Odhalení všech</span>
+  V pořadí hráčů odhalí <strong>všichni dosud neodhalení</strong> svou skrytou identitu (lze i Schrödingerovo odhalení). Při tomto odhalení už ale <strong>NEzískávají žádné výhody ze schopností po odhalení</strong> (pokud není řečeno jinak).</div>
+</div></div>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">3</div>
+  <div class="rule-body"><span class="rule-title">Poskytnutí dat</span>
+  V pořadí hráčů může každá <strong>zachráněná HP</strong> (živá i vyřazená) poskytnout svá data libovolným institucím (úřady / média). <em>Fígl pro viníky:</em> pokud vinný hráč poskytne úřadům <strong>důkazy své HP</strong>, stane se jen podezřelým a může vyhrát (ostatní podezřelí se tím vinnými nestanou).</div>
+</div></div>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">4</div>
+  <div class="rule-body"><span class="rule-title">Počítání bodů</span>
+  <div class="pts"><span class="pt pt-plus">+</span><div><strong>Základní body</strong> — splněné řádky úkolů vaší HP. Řádek začínající „+“ platí jen se splněným nejbližším předchozím řádkem bez „+“. Body za vlastnictví předmětů/dat jen, je-li postava <strong>zachráněná</strong>.</div></div>
+  <div class="pts"><span class="pt pt-plus">+</span><div><strong>Bonusové body</strong> — 1 bod za každý symbol <strong>přítele</strong> (BP zachráněná) a 1 bod za každý symbol <strong>nepřítele</strong> (BP vyřazená a nezachráněná).</div></div>
+  <div class="pts"><span class="pt pt-plus">+</span><div><strong>Úplatky</strong> — 1 bod za váš nepoužitý úplatek + 1 bod za každý cizí úplatek na kartě vaší HP.</div></div>
+  <div class="pts"><span class="pt pt-minus">−1</span><div><strong>Za každou vaši kostku vlivu mimo zásobu nad limit vlivu vaší HP</strong> (bílá kostka na kartě).</div></div>
+</div>
+</div></div>
+
+<div class="card"><div class="rule">
+  <div class="rule-num">5</div>
+  <div class="rule-body"><span class="rule-title">Vítěz</span>
+  Vyhrává hráč s <strong>nejvíce body, který není vinen</strong>.</div>
+</div></div>
+
+<div class="warn"><strong>Vinný hráč nemůže vyhrát.</strong> Jedinou cestou ven je zbavit se viny — např. krokem 3 (vlastní důkazy úřadům), pokud to karta postavy neříká jinak.</div>
+
+<h2>Tiebreakery (při shodě bodů)</h2>
+<div class="card"><div class="rule">
+  <div class="rule-num">1</div>
+  <div class="rule-body">Vítězí hráč s <strong>nejmenším počtem kostek vlivu na poli zrady</strong>.</div>
+</div></div>
+<div class="card"><div class="rule">
+  <div class="rule-num">2</div>
+  <div class="rule-body">Stále shoda? Vítězí hráč s <strong>největším počtem nepoužitých kostek vlivu</strong> (v zásobě).</div>
+</div></div>
+<div class="card"><div class="rule">
+  <div class="rule-num">3</div>
+  <div class="rule-body">Stále shoda? Hráči <strong>vítězství sdílejí</strong>.</div>
+</div></div>
+
+<h2>Více vítězů (velké hry)</h2>
+<div class="card">
+  <p>Ve hře s <strong>6 a více hráči</strong> vítězí <strong>2 hráči</strong> s nejvíce body, kteří nejsou vinni (<strong>3 hráči</strong> při 9 hráčích). Při hře s boty se boti do tohoto počtu nepočítají.</p>
+</div>
+
+<p class="refnote">Zdroj: Referenční příručka kap. 15.8 a 16; shodné s průvodcem „Pád stanice a počítání bodů“ v companionu.</p>
+
+</section>
+
+<footer>Stationfall · Zkáza na orbitě — materiál ke companion aplikaci</footer>
+
+</div>
+</body>
+</html>
