@@ -49,6 +49,6 @@ jobs:
           COOLIFY_TOKEN: ${{ secrets.COOLIFY_TOKEN }}
           COOLIFY_APP_UUID: ${{ secrets.COOLIFY_APP_UUID }}
         run: |
-          curl --fail-with-body -sS -X GET \
+          curl --fail-with-body -sS -X POST \
             "https://coolify.sinimus.com/api/v1/deploy?uuid=${COOLIFY_APP_UUID}&force=false" \
             -H "Authorization: Bearer ${COOLIFY_TOKEN}"
