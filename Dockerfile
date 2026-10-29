@@ -1,9 +1,9 @@
 # syntax=docker/dockerfile:1
 
 # --- Build stage: Next.js static export to ./out ---
-# node:22-slim (glibc) avoids musl native-binary friction with the
+# node:24-slim (glibc) avoids musl native-binary friction with the
 # pnpm 10 toolchain (oxide / unrs-resolver / sharp).
-FROM node:22-slim AS build
+FROM node:24-slim AS build
 WORKDIR /app
 
 # Pin pnpm explicitly (no corepack signature drift).
