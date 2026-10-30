@@ -1,0 +1,7 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>Sinimus/renovate-config",
+    "github>Sinimus/renovate-config:lockfile"
+  ]
+}
