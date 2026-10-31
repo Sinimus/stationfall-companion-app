@@ -1,9 +1,14 @@
 name: CI
 
 on:
-  push:
-    branches: [main]
   pull_request:
+    branches: [main]
+  # deploy.yml calls this workflow, so a push to main deploys only after the
+  # same checks a pull request has to pass
+  workflow_call:
+
+permissions:
+  contents: read
 
 jobs:
   build:
@@ -31,3 +36,69 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+  # Builds the production image without pushing it, so a broken Dockerfile or
+  # nginx.conf fails on the pull request instead of in the deploy after the merge
+  docker-build:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          load: true
+          tags: stationfall-companion:ci
+
+      - name: Smoke test the image
+        run: |
+          docker run --detach --name smoke --publish 8080:80 stationfall-companion:ci
+          for i in $(seq 1 30); do
+            if curl --silent --fail --output page.html http://localhost:8080/; then
+              echo "Container answered on attempt ${i}"
+              break
+            fi
+            sleep 2
+          done
+          set -e
+          curl --silent --fail --output page.html http://localhost:8080/
+          grep --quiet '<title>Stationfall Companion</title>' page.html
+
+      # Browser test against the same running container: every page and
+      # interaction in e2e/ must work in the image the deploy ships
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Chromium
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Browser test the image
+        run: pnpm test:e2e
+        env:
+          E2E_BASE_URL: http://localhost:8080
+
+      - name: Upload Playwright traces
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-traces
+          path: test-results/
+          retention-days: 7
+
+      - name: Container logs and cleanup
+        if: always()
+        run: |
+          docker logs smoke || true
+          docker rm --force smoke || true

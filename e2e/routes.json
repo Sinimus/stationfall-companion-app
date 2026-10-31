@@ -1,0 +1,7 @@
+[
+  { "path": "/postavy", "role": "heading", "name": "Postavy" },
+  { "path": "/glosar", "role": "heading", "name": "Glosář" },
+  { "path": "/sekce", "role": "heading", "name": "Sekce" },
+  { "path": "/pruvodci", "role": "heading", "name": "Průvodci" },
+  { "path": "/hledat", "role": "searchbox", "name": "Hledat" }
+]
