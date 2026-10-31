@@ -14,3 +14,6 @@ onlyBuiltDependencies: []
 #   fallback when none matches the platform.
 ignoredBuiltDependencies:
   - unrs-resolver
+minimumReleaseAgeExclude:
+  # Renovate security update: pnpm@10.34.5
+  - pnpm@10.34.5
