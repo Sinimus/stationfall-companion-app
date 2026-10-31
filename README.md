@@ -106,7 +106,8 @@ pnpm dev        # http://localhost:3000  (/ redirects to /postavy)
 ```
 
 ```bash
-pnpm test       # Vitest (37 tests): data integrity, components, search, linkify, PWA
+pnpm test       # Vitest (75 tests): data integrity, components, search, linkify, PWA
+pnpm test:e2e   # Playwright against a running production image (see Browser test)
 pnpm lint       # ESLint, zero warnings
 pnpm build      # static export to ./out  (manifest.webmanifest, sw.js, all static pages)
 ```
@@ -120,6 +121,25 @@ links), component behavior (filters, dossier, term sheet, cross-link opening, se
 the search/linkify libraries. UI is verified both in unit tests and by asserting the rendered static
 export.
 
+## Browser test
+
+Vitest runs in jsdom and never loads the Next bundle in a browser, so `e2e/` holds a Playwright smoke
+test that runs against the production image (the nginx stage of the `Dockerfile`). The headings are
+already in the static HTML, which is why the test also needs interactions that exist only after
+hydration. Every test fails on an uncaught page error or a `console.error`.
+
+Covered: the five list pages (`e2e/routes.json`), every character, section and flow page, the
+client-side redirect from `/`, search that finds a character and opens it, and the glossary sheet
+opening and closing.
+
+```bash
+pnpm exec playwright install chromium     # once
+docker build -t stationfall-companion:e2e .
+docker run --rm --detach --name stationfall-e2e --publish 8080:80 stationfall-companion:e2e
+pnpm test:e2e                             # E2E_BASE_URL overrides http://localhost:8080
+docker rm --force stationfall-e2e
+```
+
 ## Offline / PWA
 
 The app is a fully static export. `public/sw.js` is a small hand-written service worker
@@ -132,8 +152,10 @@ branded PNG icons are tracked for v0.2.
 
 Live at **https://stationfall.sinimus.com** (Coolify on Hetzner, behind Cloudflare).
 
-Two GitHub Actions workflows run on push to `main`: `ci.yml` (lint + test + build) validates the
-code, and `deploy.yml` builds a Docker image (multi-stage: Node static export → nginx serving
+Two GitHub Actions workflows: `ci.yml` runs on pull requests (lint, unit tests, build, then the
+production image with a container smoke test and the browser test), and `deploy.yml` runs on push to
+`main`. `deploy.yml` calls `ci.yml` first, so nothing reaches the registry or Coolify unless the
+same checks pass. After them it builds a Docker image (multi-stage: Node static export → nginx serving
 `./out`), pushes it to `ghcr.io/sinimus/stationfall-companion-app`, then triggers a Coolify
 redeploy via its API. nginx serves the static export with clean-URL routing
 (`try_files $uri $uri.html`), long-cache for hashed `_next/static` assets, and no-cache for the
