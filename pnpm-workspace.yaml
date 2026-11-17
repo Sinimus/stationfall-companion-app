@@ -17,3 +17,5 @@ ignoredBuiltDependencies:
 minimumReleaseAgeExclude:
   # Renovate security update: pnpm@10.34.5
   - pnpm@10.34.5
+  # Renovate security update: next@16.4.5
+  - next@16.4.5
